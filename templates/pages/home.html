@@ -58,7 +58,7 @@
               <a href="#" class="font-bold text-brand-accent">ENG</a>
             </nav>
 
-            <div class="flex flex-wrap items-center gap-2">
+            <div class="flex flex-wrap items-center gap-6">
               <button
                 class="rounded-[10px] bg-brand-accent px-5 py-2.5 text-sm font-bold text-[#262626] transition hover:bg-brand-strong"
               >
@@ -76,62 +76,55 @@
 
       <main>
         <!-- Hero Section -->
-        <section class="relative py-8 md:py-10">
+        <section class="relative">
           <div
-            class="hero-glow pointer-events-none absolute left-0 top-10 h-72 w-72"
+            class="absolute left-[-465px] top-[42px] w-[930px] h-[878px] z-0"
+            style="
+              background: radial-gradient(
+                50% 50% at 50% 50%,
+                rgba(93, 214, 44, 0.55) 0%,
+                rgba(93, 214, 44, 0) 100%
+              );
+            "
           ></div>
-          <div
-            class="mx-auto w-[min(1180px,calc(100%-32px))] overflow-hidden rounded-b-[26px] border border-white/5 bg-black/95 shadow-glow"
-          >
+
+          <div class="mx-auto w-full max-w-section relative z-10">
             <div
-              class="grid items-center gap-7 px-5 py-8 md:px-8 md:py-10 lg:grid-cols-[1.08fr_0.92fr] lg:px-11"
+              class="flex items-center gap-5 md:gap-0 flex-col md:flex-row h-full w-full"
             >
-              <div>
-                <div
-                  class="inline-flex items-center gap-2 rounded-full border border-brand-accent/30 bg-brand-accent/10 px-3 py-2 text-xs text-[#ebffe0]"
-                >
-                  <i class="fa-solid fa-graduation-cap"></i>
-                  Japanese learning platform in Bangla
-                </div>
+              <div class="flex-1">
                 <h1
-                  class="mt-5 max-w-[560px] font-changa-one text-4xl font-bold leading-none text-brand-accent sm:text-5xl lg:text-[4.7rem]"
+                  class="font-changa-one text-4xl text-brand-accent sm:text-5xl md:text-7xl leading-[80px]"
                 >
                   Learn Japanese in Bangla Step By Step
                 </h1>
-                <p class="mt-4 max-w-[420px] text-lg text-white">
+                <p class="mt-6 max-w-[460px] text-3xl font-semibold text-white">
                   Live classes, practice tools &amp; real speaking training
                 </p>
               </div>
 
-              <div
-                class="relative grid min-h-[280px] place-items-center md:min-h-[360px]"
-              >
-                <div
-                  class="hero-art-glow absolute inset-[20%_12%_10%] rounded-full"
-                ></div>
+              <div class="max-w-[550px] w-full h-full">
                 <img
-                  src="../../static/assets/home/japanesse_class.svg"
+                  src="../../static/assets/home/Frame.svg"
                   alt="Japanese class illustration"
-                  class="relative z-10 w-full max-w-[420px] drop-shadow-[0_34px_38px_rgba(0,0,0,0.55)]"
+                  class="xl:min-w-[600px] aspect-square xl:-ml-12"
                 />
               </div>
             </div>
 
             <div
-              class="mx-5 mb-5 flex flex-col gap-4 rounded-2xl border border-white/5 bg-[#050505] px-4 py-4 md:mx-7 md:mb-8 md:flex-row md:items-center md:justify-between md:px-5"
+              class="flex flex-col gap-4 rounded-2xl border border-white/5 bg-[#050505] px-11 py-11 md:flex-row md:items-center md:justify-between"
             >
-              <div class="flex flex-wrap items-center gap-6">
+              <div class="flex items-center gap-6">
                 <div class="flex items-center gap-3">
                   <img
                     src="../../static/assets/icons/rocket_icon.svg"
                     alt="Rocket icon"
-                    class="h-6 w-6 object-contain"
+                    class="size-[55px] object-contain"
                   />
-                  <div>
-                    <span class="block text-xs text-brand-muted"
-                      >Enrollment Started:</span
-                    >
-                    <strong class="mt-1 block text-base">31 April, 2026</strong>
+                  <div class="text-lg font-semibold flex flex-wrap">
+                    Enrollment Started:
+                    <span class="text-2xl">31 April, 2026</span>
                   </div>
                 </div>
 
@@ -139,25 +132,38 @@
                   <img
                     src="../../static/assets/icons/timer_icon.svg"
                     alt="Timer icon"
-                    class="h-6 w-6 object-contain"
+                    class="size-[55px] object-contain"
                   />
-                  <div>
-                    <span class="block text-xs text-brand-muted"
-                      >Deadline:</span
-                    >
-                    <strong class="mt-1 block text-base">31 May, 2026</strong>
+                  <div class="text-lg font-semibold flex flex-wrap">
+                    Deadline: <span class="text-2xl">31 May, 2026</span>
                   </div>
                 </div>
               </div>
 
-              <div class="flex flex-wrap gap-3">
+              <div class="flex gap-6">
                 <button
-                  class="rounded-xl bg-brand-accent px-5 py-3 text-sm font-bold text-black shadow-glow transition hover:bg-brand-strong"
+                  class="rounded-[10px] px-7 py-4 text-2xl font-semibold text-[#262626] text-nowrap"
+                  style="
+                    background: linear-gradient(
+                      90deg,
+                      #5dd62c 0%,
+                      #afff8f 35.33%,
+                      #5dd62c 100%
+                    );
+                  "
                 >
                   Enroll Now
                 </button>
                 <button
-                  class="rounded-xl border border-white/10 bg-[#0e0e0e] px-5 py-3 text-sm font-bold text-white transition hover:bg-white/5"
+                  class="rounded-[10px] px-7 py-4 text-2xl font-semibold text-[#262626] text-nowrap"
+                  style="
+                    background: linear-gradient(
+                      90deg,
+                      #5dd62c 0%,
+                      #afff8f 35.33%,
+                      #5dd62c 100%
+                    );
+                  "
                 >
                   Free Practice
                 </button>
@@ -168,20 +174,161 @@
         <!-- End Hero Section -->
 
         <!-- Course Levels Section -->
-        <section id="courses" class="py-9">
-          <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
-            <h2
-              class="font-inter text-3xl font-bold leading-tight md:text-[2.45rem]"
-            >
+        <section id="courses" class="mt-[100px]">
+          <div class="max-w-section mx-auto">
+            <h2 class="font-inter text-[44px] font-semibold leading-tight">
               Choose Your Course Levels
             </h2>
-            <p class="mt-3 max-w-[820px] text-[0.95rem] text-brand-muted">
-              Structured courses designed for every phase of your journey. Start
-              from beginner N5 and move toward advanced JLPT levels with guided
-              lessons and practice.
+            <p class="mt-2 w-full text-sm text-brand-muted">
+              Structured courses designed for every stage of your journey. Start
+              from beginner level and gradually move toward advanced JLPT levels
+              with guided lessons.
             </p>
+          </div>
 
-            <div class="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+          <!-- /* Component 1 */
+
+position: absolute;
+width: 280px;
+height: 316px;
+left: 119px;
+top: 1008px;
+
+
+
+/* Rectangle 14 */
+
+position: absolute;
+left: 13.52%;
+right: 55.29%;
+top: 89.87%;
+bottom: 3.23%;
+
+/* theme color */
+background: #5DD62C;
+transform: matrix(1, 0.02, -0.02, 1, 0, 0);
+
+
+/* Rectangle 16 */
+
+position: absolute;
+left: 54.8%;
+right: 14.01%;
+top: 0.95%;
+bottom: 92.15%;
+
+/* theme color */
+background: #5DD62C;
+transform: matrix(1, 0.02, -0.02, 1, 0, 0);
+
+
+/* Rectangle 10 */
+
+position: absolute;
+width: 280px;
+left: calc(50% - 280px/2 + 2px);
+top: 0%;
+bottom: 0%;
+
+background: rgba(0, 0, 0, 0.16);
+border-radius: 15px;
+
+
+/* Level Name: N5 */
+
+position: absolute;
+left: 7.47%;
+right: 7.17%;
+top: 60.76%;
+bottom: 30.06%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+/* identical to box height */
+
+/* white text */
+color: #FFFFFF;
+
+
+
+/* Duration: 3month */
+
+position: absolute;
+left: 7.47%;
+right: 7.17%;
+top: 71.52%;
+bottom: 22.78%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+
+/* white text */
+color: #FFFFFF;
+
+
+
+/* Rectangle 15 */
+
+position: absolute;
+left: 8.54%;
+right: 6.81%;
+top: 6.65%;
+bottom: 46.52%;
+
+background: url(n5-kanji_1280x.png);
+border-radius: 15px;
+
+
+/* Component 43 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 60px;
+gap: 10px;
+
+position: absolute;
+width: 239.15px;
+height: 39px;
+left: 20px;
+top: 256px;
+
+/* G- Button */
+background: #38EF08;
+border-radius: 15px;
+
+
+/* View Details */
+
+width: 94px;
+height: 19px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+
+/* Black text */
+color: #262626;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+ -->
+
+          <div class="mt-3 bg-[#1A1A1A] py-[38px]">
+            <div class="max-w-section mx-auto mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
               <article
                 class="overflow-hidden rounded-2xl border border-brand-line bg-brand-card shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
               >
