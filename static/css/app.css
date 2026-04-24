@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa+One:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  color-scheme: dark;
+  --page-bg:
+    radial-gradient(circle at 0% 0%, rgba(99, 242, 22, 0.26), transparent 28%),
+    radial-gradient(
+      circle at 100% 15%,
+      rgba(99, 242, 22, 0.12),
+      transparent 18%
+    ),
+    linear-gradient(180deg, #080808 0%, #0b0b0b 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.page-shell {
+  min-height: 100vh;
+  background: var(--page-bg);
+}
+
+.hero-glow {
+  background: radial-gradient(circle, rgba(99, 242, 22, 0.24), transparent 70%);
+}
+
+.hero-art-glow {
+  background: radial-gradient(circle, rgba(99, 242, 22, 0.42), transparent 62%);
+  filter: blur(10px);
+}
+
+.live-section {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.22)),
+    radial-gradient(circle at 50% 0%, rgba(99, 242, 22, 0.17), transparent 28%);
+}
+
+.live-stripes {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(99, 242, 22, 0.02) 0 12px,
+    rgba(99, 242, 22, 0.35) 12px 22px,
+    rgba(0, 0, 0, 0.18) 22px 34px
+  );
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

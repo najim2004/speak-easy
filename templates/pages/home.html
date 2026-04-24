@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maharaf Japanese Landing Page</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../static/css/app.css" />
+    <script src="../../static/js/tailwind.config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="bg-brand-bg font-inter text-brand-text">
+    <div class="page-shell">
+      <!-- Header Section -->
+      <header
+        class="sticky top-0 z-40 border-b border-white/5 bg-[rgba(0,0,0,1)]"
+      >
+        <div
+          class="mx-auto flex max-w-section w-full items-center justify-between gap-5 py-3"
+        >
+          <a href="#" class="flex items-center gap-3">
+            <img
+              src="../../static/assets/common/logo.svg"
+              alt="Speak Easy Japanese logo"
+              class="h-10"
+            />
+            <div>
+              <span class="block text-sm font-semibold">Speak Easy</span>
+              <span class="block text-sm font-semibold text-brand-accent"
+                >Japanese</span
+              >
+            </div>
+          </a>
+
+          <div class="flex items-center gap-9">
+            <nav class="hidden items-center gap-5 text-sm text-white lg:flex">
+              <a
+                href="#courses"
+                class="transition hover:text-brand-accent space-x-1"
+                ><span>Courses</span><i class="fa-solid fa-angle-down"></i
+              ></a>
+              <a href="#practice" class="transition hover:text-brand-accent"
+                >Practice Lab</a
+              >
+              <a href="#teachers" class="transition hover:text-brand-accent"
+                >Meet</a
+              >
+              <a href="#trusted" class="transition hover:text-brand-accent"
+                >FAQ</a
+              >
+              <a href="#" class="font-bold text-brand-accent">ENG</a>
+            </nav>
+
+            <div class="flex flex-wrap items-center gap-2">
+              <button
+                class="rounded-[10px] bg-brand-accent px-5 py-2.5 text-sm font-bold text-[#262626] transition hover:bg-brand-strong"
+              >
+                Enroll now
+              </button>
+              <button
+                class="rounded-[10px] border-2 border-brand-accent px-4 py-2.5 text-sm font-bold text-brand-accent hover:text-white transition hover:bg-brand-accent/50"
+              >
+                Login
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <!-- Hero Section -->
+        <section class="relative py-8 md:py-10">
+          <div
+            class="hero-glow pointer-events-none absolute left-0 top-10 h-72 w-72"
+          ></div>
+          <div
+            class="mx-auto w-[min(1180px,calc(100%-32px))] overflow-hidden rounded-b-[26px] border border-white/5 bg-black/95 shadow-glow"
+          >
+            <div
+              class="grid items-center gap-7 px-5 py-8 md:px-8 md:py-10 lg:grid-cols-[1.08fr_0.92fr] lg:px-11"
+            >
+              <div>
+                <div
+                  class="inline-flex items-center gap-2 rounded-full border border-brand-accent/30 bg-brand-accent/10 px-3 py-2 text-xs text-[#ebffe0]"
+                >
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  Japanese learning platform in Bangla
+                </div>
+                <h1
+                  class="mt-5 max-w-[560px] font-changa-one text-4xl font-bold leading-none text-brand-accent sm:text-5xl lg:text-[4.7rem]"
+                >
+                  Learn Japanese in Bangla Step By Step
+                </h1>
+                <p class="mt-4 max-w-[420px] text-lg text-white">
+                  Live classes, practice tools &amp; real speaking training
+                </p>
+              </div>
+
+              <div
+                class="relative grid min-h-[280px] place-items-center md:min-h-[360px]"
+              >
+                <div
+                  class="hero-art-glow absolute inset-[20%_12%_10%] rounded-full"
+                ></div>
+                <img
+                  src="../../static/assets/home/japanesse_class.svg"
+                  alt="Japanese class illustration"
+                  class="relative z-10 w-full max-w-[420px] drop-shadow-[0_34px_38px_rgba(0,0,0,0.55)]"
+                />
+              </div>
+            </div>
+
+            <div
+              class="mx-5 mb-5 flex flex-col gap-4 rounded-2xl border border-white/5 bg-[#050505] px-4 py-4 md:mx-7 md:mb-8 md:flex-row md:items-center md:justify-between md:px-5"
+            >
+              <div class="flex flex-wrap items-center gap-6">
+                <div class="flex items-center gap-3">
+                  <img
+                    src="../../static/assets/icons/rocket_icon.svg"
+                    alt="Rocket icon"
+                    class="h-6 w-6 object-contain"
+                  />
+                  <div>
+                    <span class="block text-xs text-brand-muted"
+                      >Enrollment Started:</span
+                    >
+                    <strong class="mt-1 block text-base">31 April, 2026</strong>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <img
+                    src="../../static/assets/icons/timer_icon.svg"
+                    alt="Timer icon"
+                    class="h-6 w-6 object-contain"
+                  />
+                  <div>
+                    <span class="block text-xs text-brand-muted"
+                      >Deadline:</span
+                    >
+                    <strong class="mt-1 block text-base">31 May, 2026</strong>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-3">
+                <button
+                  class="rounded-xl bg-brand-accent px-5 py-3 text-sm font-bold text-black shadow-glow transition hover:bg-brand-strong"
+                >
+                  Enroll Now
+                </button>
+                <button
+                  class="rounded-xl border border-white/10 bg-[#0e0e0e] px-5 py-3 text-sm font-bold text-white transition hover:bg-white/5"
+                >
+                  Free Practice
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Hero Section -->
+
+        <!-- Course Levels Section -->
+        <section id="courses" class="py-9">
+          <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
+            <h2
+              class="font-inter text-3xl font-bold leading-tight md:text-[2.45rem]"
+            >
+              Choose Your Course Levels
+            </h2>
+            <p class="mt-3 max-w-[820px] text-[0.95rem] text-brand-muted">
+              Structured courses designed for every phase of your journey. Start
+              from beginner N5 and move toward advanced JLPT levels with guided
+              lessons and practice.
+            </p>
+
+            <div class="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+              <article
+                class="overflow-hidden rounded-2xl border border-brand-line bg-brand-card shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+              >
+                <div
+                  class="h-44 bg-gradient-to-b from-[#fbfbfb] to-[#d8d8d8] p-2.5"
+                >
+                  <img
+                    src="../../static/assets/courses-ref.png"
+                    alt="Japanese N5 course"
+                    class="h-full w-full rounded-xl object-cover"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="text-base font-semibold">Level Name: N5</h3>
+                  <p class="mb-3 mt-1 text-sm text-brand-muted">
+                    Duration: 3 months
+                  </p>
+                  <button
+                    class="w-full rounded-xl bg-brand-accent px-4 py-2.5 text-sm font-bold text-black shadow-glow transition hover:bg-brand-strong"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="overflow-hidden rounded-2xl border border-brand-line bg-brand-card shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+              >
+                <div
+                  class="h-44 bg-gradient-to-b from-[#fbfbfb] to-[#d8d8d8] p-2.5"
+                >
+                  <img
+                    src="../../static/assets/courses-ref.png"
+                    alt="Japanese N4 course"
+                    class="h-full w-full rounded-xl object-cover"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="text-base font-semibold">Level Name: N4</h3>
+                  <p class="mb-3 mt-1 text-sm text-brand-muted">
+                    Duration: 4 months
+                  </p>
+                  <button
+                    class="w-full rounded-xl bg-brand-accent px-4 py-2.5 text-sm font-bold text-black shadow-glow transition hover:bg-brand-strong"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="overflow-hidden rounded-2xl border border-brand-line bg-brand-card shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+              >
+                <div
+                  class="h-44 bg-gradient-to-b from-[#fbfbfb] to-[#d8d8d8] p-2.5"
+                >
+                  <img
+                    src="../../static/assets/courses-ref.png"
+                    alt="Japanese N3 course"
+                    class="h-full w-full rounded-xl object-cover"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="text-base font-semibold">Level Name: N3</h3>
+                  <p class="mb-3 mt-1 text-sm text-brand-muted">
+                    Duration: 6 months
+                  </p>
+                  <button
+                    class="w-full rounded-xl bg-brand-accent px-4 py-2.5 text-sm font-bold text-black shadow-glow transition hover:bg-brand-strong"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="overflow-hidden rounded-2xl border border-brand-line bg-brand-card shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+              >
+                <div
+                  class="h-44 bg-gradient-to-b from-[#fbfbfb] to-[#d8d8d8] p-2.5"
+                >
+                  <img
+                    src="../../static/assets/courses-ref.png"
+                    alt="Japanese N2 course"
+                    class="h-full w-full rounded-xl object-cover"
+                  />
+                </div>
+                <div class="p-4">
+                  <h3 class="text-base font-semibold">Level Name: N2</h3>
+                  <p class="mb-3 mt-1 text-sm text-brand-muted">
+                    Duration: 8 months
+                  </p>
+                  <button
+                    class="w-full rounded-xl bg-brand-accent px-4 py-2.5 text-sm font-bold text-black shadow-glow transition hover:bg-brand-strong"
+                  >
+                    View Details
+                  </button>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <!-- End Course Levels Section -->
+
+        <!-- Live Classes Section -->
+        <section id="live" class="live-section relative py-9">
+          <div
+            class="live-stripes pointer-events-none absolute inset-x-0 bottom-4 h-40 opacity-80"
+          ></div>
+          <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-32px))]">
+            <h2
+              class="font-inter text-3xl font-bold leading-tight md:text-[2.45rem]"
+            >
+              Join Our Interactive Live Classes
+            </h2>
+            <p class="mt-3 max-w-[820px] text-[0.95rem] text-brand-muted">
+              Learn directly from experienced Japanese teachers, ask questions,
+              practice speaking, and interact with other learners in real-time
+              classes.
+            </p>
+
+            <div
+              class="mt-7 grid gap-5 rounded-[18px] border border-brand-accent/25 bg-gradient-to-b from-[rgba(26,47,8,0.94)] to-[rgba(33,33,33,0.96)] p-5 shadow-glow lg:grid-cols-[1fr_1.1fr]"
+            >
+              <div>
+                <h3 class="font-inter text-3xl font-bold">
+                  N5 - Online Batch 26
+                </h3>
+                <div class="mt-5 grid gap-3">
+                  <div class="flex items-start gap-3 text-white">
+                    <i
+                      class="fa-regular fa-calendar mt-1 text-brand-accent"
+                    ></i>
+                    <span>Live classes 3 days per week</span>
+                  </div>
+                  <div class="flex items-start gap-3 text-white">
+                    <i class="fa-regular fa-clock mt-1 text-brand-accent"></i>
+                    <span>24/7 AI Doubt Solver</span>
+                  </div>
+                  <div class="flex items-start gap-3 text-white">
+                    <i
+                      class="fa-solid fa-circle-check mt-1 text-brand-accent"
+                    ></i>
+                    <span
+                      >Full revision and special support before the exam</span
+                    >
+                  </div>
+                </div>
+                <button
+                  class="mt-6 rounded-xl border border-white/10 bg-[#0e0e0e] px-5 py-3 text-sm font-bold text-white transition hover:bg-white/5"
+                >
+                  Join Demo Class
+                </button>
+              </div>
+
+              <div
+                class="relative min-h-[280px] overflow-hidden rounded-2xl border border-white/5"
+              >
+                <span
+                  class="absolute left-1/2 top-3 z-10 -translate-x-1/2 rounded-full bg-[#ff3737] px-3 py-1 text-xs font-bold text-white"
+                >
+                  LIVE
+                </span>
+                <span
+                  class="absolute left-4 top-1/2 z-10 grid h-[74px] w-[74px] -translate-y-1/2 place-items-center rounded-full bg-[#ffd500] text-2xl font-extrabold text-black shadow-[0_12px_24px_rgba(0,0,0,0.35)]"
+                >
+                  N5
+                </span>
+                <img
+                  src="../../static/assets/home/n5_live.jpg"
+                  alt="Japanese live class"
+                  class="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div class="mt-6 grid gap-4 md:grid-cols-3">
+              <article
+                class="overflow-hidden rounded-2xl border border-brand-line bg-[#202020]"
+              >
+                <div class="relative h-32">
+                  <img
+                    src="../../static/assets/home/n5_live.jpg"
+                    alt="N5 class preview day 3"
+                    class="h-full w-full object-cover"
+                  />
+                  <span
+                    class="absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-black/80 text-white"
+                  >
+                    <i class="fa-solid fa-play"></i>
+                  </span>
+                </div>
+                <strong class="block px-4 py-3 text-[0.98rem]"
+                  >N5 Day-3 | Batch-07 | Alen</strong
+                >
+              </article>
+
+              <article
+                class="overflow-hidden rounded-2xl border border-brand-line bg-[#202020]"
+              >
+                <div class="relative h-32">
+                  <img
+                    src="../../static/assets/home/n5_live.jpg"
+                    alt="N5 class preview day 4"
+                    class="h-full w-full object-cover"
+                  />
+                  <span
+                    class="absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-black/80 text-white"
+                  >
+                    <i class="fa-solid fa-play"></i>
+                  </span>
+                </div>
+                <strong class="block px-4 py-3 text-[0.98rem]"
+                  >N5 Day-4 | Batch-07 | Alen</strong
+                >
+              </article>
+
+              <article
+                class="overflow-hidden rounded-2xl border border-brand-line bg-[#202020]"
+              >
+                <div class="relative h-32">
+                  <img
+                    src="../../static/assets/home/n5_live.jpg"
+                    alt="N5 class preview day 5"
+                    class="h-full w-full object-cover"
+                  />
+                  <span
+                    class="absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-black/80 text-white"
+                  >
+                    <i class="fa-solid fa-play"></i>
+                  </span>
+                </div>
+                <strong class="block px-4 py-3 text-[0.98rem]"
+                  >N5 Day-5 | Batch-07 | Alen</strong
+                >
+              </article>
+            </div>
+          </div>
+        </section>
+        <!-- End Live Classes Section -->
+
+        <!-- Practice Lab Section -->
+        <section id="practice" class="py-9">
+          <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
+            <h2
+              class="font-inter text-3xl font-bold leading-tight md:text-[2.45rem]"
+            >
+              Practice Lab Preview
+            </h2>
+            <p class="mt-3 max-w-[820px] text-[0.95rem] text-brand-muted">
+              Sharpen your Japanese skills with interactive tools. Practice
+              grammar, listening, flashcards and quizzes in one place.
+            </p>
+
+            <div class="mt-7 flex flex-col gap-4 lg:flex-row lg:items-stretch">
+              <div class="grid flex-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+                <article
+                  class="rounded-2xl border border-white/10 bg-gradient-to-b from-[#313131] to-[#252525] px-3 py-5 text-center"
+                >
+                  <div
+                    class="mx-auto mb-4 grid h-[70px] w-[70px] place-items-center rounded-[20px] bg-brand-accent/15"
+                  >
+                    <img
+                      src="../../static/assets/icons/logos_grammarly-icon.svg"
+                      alt="Grammar sheets"
+                      class="h-10 w-10 object-contain"
+                    />
+                  </div>
+                  <h3 class="text-[1.05rem] font-semibold">Grammar sheets</h3>
+                  <p class="mt-1 text-sm text-brand-muted">
+                    Practice JLPT Grammar
+                  </p>
+                </article>
+
+                <article
+                  class="rounded-2xl border border-white/10 bg-gradient-to-b from-[#313131] to-[#252525] px-3 py-5 text-center"
+                >
+                  <div
+                    class="mx-auto mb-4 grid h-[70px] w-[70px] place-items-center rounded-[20px] bg-brand-accent/15"
+                  >
+                    <img
+                      src="../../static/assets/icons/material-symbols_quiz-rounded.svg"
+                      alt="Quiz"
+                      class="h-10 w-10 object-contain"
+                    />
+                  </div>
+                  <h3 class="text-[1.05rem] font-semibold">Quiz</h3>
+                  <p class="mt-1 text-sm text-brand-muted">
+                    Practice JLPT Quiz
+                  </p>
+                </article>
+
+                <article
+                  class="rounded-2xl border border-white/10 bg-gradient-to-b from-[#313131] to-[#252525] px-3 py-5 text-center"
+                >
+                  <div
+                    class="mx-auto mb-4 grid h-[70px] w-[70px] place-items-center rounded-[20px] bg-brand-accent/15"
+                  >
+                    <img
+                      src="../../static/assets/icons/Clipboard.svg"
+                      alt="Flashcards"
+                      class="h-10 w-10 object-contain"
+                    />
+                  </div>
+                  <h3 class="text-[1.05rem] font-semibold">Flashcards</h3>
+                  <p class="mt-1 text-sm text-brand-muted">
+                    Practice JLPT Flashcards
+                  </p>
+                </article>
+
+                <article
+                  class="rounded-2xl border border-white/10 bg-gradient-to-b from-[#313131] to-[#252525] px-3 py-5 text-center"
+                >
+                  <div
+                    class="mx-auto mb-4 grid h-[70px] w-[70px] place-items-center rounded-[20px] bg-brand-accent/15"
+                  >
+                    <img
+                      src="../../static/assets/icons/listening_icon.svg"
+                      alt="Listening"
+                      class="h-10 w-10 object-contain"
+                    />
+                  </div>
+                  <h3 class="text-[1.05rem] font-semibold">Listening</h3>
+                  <p class="mt-1 text-sm text-brand-muted">
+                    Practice JLPT Audio
+                  </p>
+                </article>
+              </div>
+
+              <div
+                class="grid h-11 w-11 place-items-center self-center rounded-full border border-brand-accent/35 bg-brand-accent/10 text-brand-accent"
+              >
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Practice Lab Section -->
+
+        <!-- Course Features Section -->
+        <section class="py-9">
+          <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
+            <h2
+              class="font-inter text-3xl font-bold leading-tight md:text-[2.45rem]"
+            >
+              Course Features
+            </h2>
+            <p class="mt-3 max-w-[820px] text-[0.95rem] text-brand-muted">
+              Combine live classes, practice tools and AI-powered feedback to
+              make learning Japanese simple, interactive and effective.
+            </p>
+
+            <div class="mt-6 grid gap-5 lg:grid-cols-3">
+              <article
+                class="rounded-2xl border border-brand-accent/15 bg-gradient-to-b from-[#1a2c12] to-[#13220d] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+              >
+                <div class="mb-4 flex items-center gap-3">
+                  <img
+                    src="../../static/assets/icons/Online learning.svg"
+                    alt="Live classes"
+                    class="h-8 w-8 object-contain"
+                  />
+                  <h3 class="text-xl font-semibold">Live Classes</h3>
+                </div>
+                <p class="text-[0.9rem] leading-7 text-[#dbdbdb]">
+                  Our live classes are conducted by experienced teachers so you
+                  can learn through direct interaction, ask questions instantly
+                  and practice naturally.
+                </p>
+              </article>
+
+              <article
+                class="rounded-2xl border border-brand-accent/15 bg-gradient-to-b from-[#1a2c12] to-[#13220d] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+              >
+                <div class="mb-4 flex items-center gap-3">
+                  <img
+                    src="../../static/assets/icons/Learning.svg"
+                    alt="Practice lab"
+                    class="h-8 w-8 object-contain"
+                  />
+                  <h3 class="text-xl font-semibold">Practice Lab</h3>
+                </div>
+                <p class="text-[0.9rem] leading-7 text-[#dbdbdb]">
+                  Build fluency with structured exercises, daily tasks, guided
+                  listening sessions, flashcards and interactive revision
+                  materials.
+                </p>
+              </article>
+
+              <article
+                class="rounded-2xl border border-brand-accent/15 bg-gradient-to-b from-[#1a2c12] to-[#13220d] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+              >
+                <div class="mb-4 flex items-center gap-3">
+                  <img
+                    src="../../static/assets/icons/Human brain.svg"
+                    alt="AI homework"
+                    class="h-8 w-8 object-contain"
+                  />
+                  <h3 class="text-xl font-semibold">AI Homework</h3>
+                </div>
+                <p class="text-[0.9rem] leading-7 text-[#dbdbdb]">
+                  Submit writing and receive instant AI-assisted feedback on
+                  grammar, sentence structure and vocabulary choices for faster
+                  improvement.
+                </p>
+              </article>
+
+              <article
+                class="rounded-2xl border border-brand-accent/15 bg-gradient-to-b from-[#1a2c12] to-[#13220d] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+              >
+                <div class="mb-4 flex items-center gap-3">
+                  <img
+                    src="../../static/assets/icons/rocket_icon.svg"
+                    alt="Progress tracking"
+                    class="h-8 w-8 object-contain"
+                  />
+                  <h3 class="text-xl font-semibold">Progress Tracking</h3>
+                </div>
+                <p class="text-[0.9rem] leading-7 text-[#dbdbdb]">
+                  Follow your learning journey clearly with progress markers,
+                  lesson completion status and smart revision suggestions.
+                </p>
+              </article>
+
+              <article
+                class="rounded-2xl border border-brand-accent/15 bg-gradient-to-b from-[#1a2c12] to-[#13220d] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+              >
+                <div class="mb-4 flex items-center gap-3">
+                  <img
+                    src="../../static/assets/icons/Help.svg"
+                    alt="Mentor support"
+                    class="h-8 w-8 object-contain"
+                  />
+                  <h3 class="text-xl font-semibold">Mentor Support</h3>
+                </div>
+                <p class="text-[0.9rem] leading-7 text-[#dbdbdb]">
+                  Whenever you get stuck, our mentors are there to answer
+                  questions, explain tough topics and keep you moving
+                  confidently.
+                </p>
+              </article>
+
+              <article
+                class="rounded-2xl border border-brand-accent/15 bg-gradient-to-b from-[#1a2c12] to-[#13220d] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+              >
+                <div class="mb-4 flex items-center gap-3">
+                  <img
+                    src="../../static/assets/icons/Career choice.svg"
+                    alt="Career guide"
+                    class="h-8 w-8 object-contain"
+                  />
+                  <h3 class="text-xl font-semibold">Career Guide</h3>
+                </div>
+                <p class="text-[0.9rem] leading-7 text-[#dbdbdb]">
+                  Explore study and work opportunities with clear guidance
+                  around JLPT levels, Japan-focused goals and next-step
+                  planning.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+        <!-- End Course Features Section -->
+
+        <!-- Trusted Learners Section -->
+        <section id="trusted" class="py-9">
+          <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
+            <h2
+              class="font-inter text-3xl font-bold leading-tight md:text-[2.45rem]"
+            >
+              Trusted by Hundreds of Japanese Learners
+            </h2>
+            <p class="mt-3 max-w-[820px] text-[0.95rem] text-brand-muted">
+              Real learners are already using our classes and tools to improve
+              their Japanese, batch by batch.
+            </p>
+          </div>
+
+          <div
+            class="mt-7 bg-gradient-to-b from-brand-accent/20 to-brand-accent/30 py-5"
+          >
+            <div
+              class="mx-auto grid w-[min(1180px,calc(100%-32px))] gap-4 md:grid-cols-3 xl:grid-cols-5"
+            >
+              <article
+                class="flex items-center gap-3 rounded-xl bg-white p-3 text-black"
+              >
+                <img
+                  src="../../static/assets/avatars/user1.png"
+                  alt="Esther Howard"
+                  class="h-12 w-12 rounded-full object-cover"
+                />
+                <div>
+                  <span class="block text-xs font-bold text-[#3f8f15]"
+                    >JLPT-N2</span
+                  >
+                  <strong class="block text-base">Esther Howard</strong>
+                  <small class="block text-xs text-[#555]">Batch - 5A</small>
+                  <div class="mt-1 text-xs text-[#5bb80f]">
+                    <i class="fa-solid fa-star"></i> 4.8
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="flex items-center gap-3 rounded-xl bg-white p-3 text-black"
+              >
+                <img
+                  src="../../static/assets/avatars/user1.png"
+                  alt="Arlene McCoy"
+                  class="h-12 w-12 rounded-full object-cover"
+                />
+                <div>
+                  <span class="block text-xs font-bold text-[#3f8f15]"
+                    >JLPT-N1</span
+                  >
+                  <strong class="block text-base">Arlene McCoy</strong>
+                  <small class="block text-xs text-[#555]">Batch - 8A</small>
+                  <div class="mt-1 text-xs text-[#5bb80f]">
+                    <i class="fa-solid fa-star"></i> 4.9
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="flex items-center gap-3 rounded-xl bg-white p-3 text-black"
+              >
+                <img
+                  src="../../static/assets/avatars/user1.png"
+                  alt="Jane Cooper"
+                  class="h-12 w-12 rounded-full object-cover"
+                />
+                <div>
+                  <span class="block text-xs font-bold text-[#3f8f15]"
+                    >JLPT-N2</span
+                  >
+                  <strong class="block text-base">Jane Cooper</strong>
+                  <small class="block text-xs text-[#555]">Batch - 7A</small>
+                  <div class="mt-1 text-xs text-[#5bb80f]">
+                    <i class="fa-solid fa-star"></i> 4.8
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="flex items-center gap-3 rounded-xl bg-white p-3 text-black"
+              >
+                <img
+                  src="../../static/assets/avatars/user1.png"
+                  alt="Ronal Richards"
+                  class="h-12 w-12 rounded-full object-cover"
+                />
+                <div>
+                  <span class="block text-xs font-bold text-[#3f8f15]"
+                    >JLPT-N2</span
+                  >
+                  <strong class="block text-base">Ronal Richards</strong>
+                  <small class="block text-xs text-[#555]">Batch - 5C</small>
+                  <div class="mt-1 text-xs text-[#5bb80f]">
+                    <i class="fa-solid fa-star"></i> 4.7
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="flex items-center gap-3 rounded-xl bg-white p-3 text-black"
+              >
+                <img
+                  src="../../static/assets/avatars/user1.png"
+                  alt="Jacob Jones"
+                  class="h-12 w-12 rounded-full object-cover"
+                />
+                <div>
+                  <span class="block text-xs font-bold text-[#3f8f15]"
+                    >JLPT-N1</span
+                  >
+                  <strong class="block text-base">Jacob Jones</strong>
+                  <small class="block text-xs text-[#555]">Batch - 9A</small>
+                  <div class="mt-1 text-xs text-[#5bb80f]">
+                    <i class="fa-solid fa-star"></i> 4.8
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <!-- End Trusted Learners Section -->
+
+        <!-- Teachers Section -->
+        <section id="teachers" class="py-9">
+          <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
+            <h2
+              class="font-inter text-3xl font-bold leading-tight md:text-[2.45rem]"
+            >
+              Meet Our Expert Japanese Teachers
+            </h2>
+            <p class="mt-3 max-w-[820px] text-[0.95rem] text-brand-muted">
+              Learn from experienced instructors who guide you step by step,
+              help you build confidence and keep your speaking practice
+              consistent.
+            </p>
+
+            <div class="mt-6 grid gap-5 lg:grid-cols-3">
+              <article
+                class="flex gap-3 rounded-xl border border-white/10 bg-[#2b2b2b] p-4"
+              >
+                <img
+                  src="../../static/assets/avatars/user1.png"
+                  alt="Devon Lane"
+                  class="h-[54px] w-[54px] rounded-full object-cover"
+                />
+                <div>
+                  <h3 class="text-[1.08rem] font-semibold">Devon Lane</h3>
+                  <small class="mb-2 block text-sm text-[#cfcfcf]"
+                    >Senior Japanese Instructor</small
+                  >
+                  <p class="text-[0.85rem] leading-6 text-brand-muted">
+                    Focuses on clear explanations, beginner-friendly lessons and
+                    practical conversation habits for everyday Japanese.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="flex gap-3 rounded-xl border border-white/10 bg-[#2b2b2b] p-4"
+              >
+                <img
+                  src="../../static/assets/avatars/user1.png"
+                  alt="Jacob Jones"
+                  class="h-[54px] w-[54px] rounded-full object-cover"
+                />
+                <div>
+                  <h3 class="text-[1.08rem] font-semibold">Jacob Jones</h3>
+                  <small class="mb-2 block text-sm text-[#cfcfcf]"
+                    >JLPT Preparation Mentor</small
+                  >
+                  <p class="text-[0.85rem] leading-6 text-brand-muted">
+                    Specializes in exam strategy, grammar breakdowns and helping
+                    students move smoothly from N5 to N3.
+                  </p>
+                </div>
+              </article>
+
+              <article
+                class="flex gap-3 rounded-xl border border-white/10 bg-[#2b2b2b] p-4"
+              >
+                <img
+                  src="../../static/assets/avatars/user1.png"
+                  alt="Jenny Wilson"
+                  class="h-[54px] w-[54px] rounded-full object-cover"
+                />
+                <div>
+                  <h3 class="text-[1.08rem] font-semibold">Jenny Wilson</h3>
+                  <small class="mb-2 block text-sm text-[#cfcfcf]"
+                    >Speaking Practice Coach</small
+                  >
+                  <p class="text-[0.85rem] leading-6 text-brand-muted">
+                    Helps learners improve pronunciation, listening confidence
+                    and natural sentence building through guided speaking
+                    sessions.
+                  </p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+        <!-- End Teachers Section -->
+
+        <!-- Call To Action Section -->
+        <section class="py-9">
+          <div
+            class="mx-auto flex w-[min(1180px,calc(100%-32px))] flex-col items-start justify-between gap-6 py-7 md:flex-row md:items-center"
+          >
+            <h2
+              class="font-inter text-4xl font-bold leading-none text-brand-accent md:text-[3.4rem]"
+            >
+              Start Your<br />Japanese Journey Today
+            </h2>
+            <div class="flex flex-wrap gap-3">
+              <button
+                class="rounded-xl bg-brand-accent px-5 py-3 text-sm font-bold text-black shadow-glow transition hover:bg-brand-strong"
+              >
+                Enroll Now
+              </button>
+              <button
+                class="rounded-xl border border-white/10 bg-[#0e0e0e] px-5 py-3 text-sm font-bold text-white transition hover:bg-white/5"
+              >
+                Free Practice
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- End Call To Action Section -->
+      </main>
+
+      <!-- Footer Section -->
+      <footer class="bg-[#202020] text-[#ddd]">
+        <div
+          class="mx-auto grid w-[min(1180px,calc(100%-32px))] gap-8 py-12 md:grid-cols-[1fr_1fr_1.3fr]"
+        >
+          <div>
+            <h4 class="mb-4 text-[0.95rem] font-semibold text-white">
+              Navigation
+            </h4>
+            <ul class="grid gap-2 text-sm text-[#c9c9c9]">
+              <li><a href="#">Home</a></li>
+              <li><a href="#courses">Courses</a></li>
+              <li><a href="#live">Live Classes</a></li>
+              <li><a href="#teachers">Teachers</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="mb-4 text-[0.95rem] font-semibold text-white">
+              Collaborate
+            </h4>
+            <ul class="grid gap-2 text-sm text-[#c9c9c9]">
+              <li>Affiliates</li>
+              <li>Ambassadors</li>
+              <li>Support</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="mb-4 text-[0.95rem] font-semibold text-white">
+              Follow us
+            </h4>
+            <div class="mb-3 flex gap-2.5">
+              <a
+                href="#"
+                aria-label="Facebook"
+                class="grid h-[34px] w-[34px] place-items-center rounded-full bg-white/10"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                aria-label="Twitter"
+                class="grid h-[34px] w-[34px] place-items-center rounded-full bg-white/10"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a
+                href="#"
+                aria-label="Instagram"
+                class="grid h-[34px] w-[34px] place-items-center rounded-full bg-white/10"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="#"
+                aria-label="YouTube"
+                class="grid h-[34px] w-[34px] place-items-center rounded-full bg-white/10"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+
+            <p class="text-sm text-[#c9c9c9]">Payment method</p>
+            <div class="mt-3 flex flex-wrap gap-2.5">
+              <img
+                src="../../static/assets/icons/mastercard_icon.svg"
+                alt="Mastercard"
+                class="h-6"
+              />
+              <img
+                src="../../static/assets/icons/visacard_icon.svg"
+                alt="Visa card"
+                class="h-6"
+              />
+            </div>
+
+            <div class="mt-3 flex flex-wrap gap-2.5">
+              <img
+                src="../../static/assets/icons/playstore_icon.svg"
+                alt="Get it on Play Store"
+                class="h-10"
+              />
+              <img
+                src="../../static/assets/icons/apple_store.svg"
+                alt="Download on the App Store"
+                class="h-10"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="border-t border-white/10">
+          <div
+            class="mx-auto flex w-[min(1180px,calc(100%-32px))] flex-col items-start justify-between gap-3 py-4 text-sm text-[#bdbdbd] md:flex-row md:items-center"
+          >
+            <span>© Copyright 2026 Maharaf Japanese. All rights reserved.</span>
+            <span>Privacy policy</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer Section -->
+    </div>
+  </body>
+</html>
