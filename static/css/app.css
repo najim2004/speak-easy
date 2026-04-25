@@ -38,12 +38,6 @@ body {
   filter: blur(10px);
 }
 
-.live-section {
-  background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.22)),
-    radial-gradient(circle at 50% 0%, rgba(99, 242, 22, 0.17), transparent 28%);
-}
-
 .live-stripes {
   background: repeating-linear-gradient(
     90deg,

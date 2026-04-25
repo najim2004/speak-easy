@@ -186,247 +186,108 @@
             </p>
           </div>
 
-          <!-- /* Component 1 */
-
-position: absolute;
-width: 280px;
-height: 316px;
-left: 119px;
-top: 1008px;
-
-
-
-/* Rectangle 14 */
-
-position: absolute;
-left: 13.52%;
-right: 55.29%;
-top: 89.87%;
-bottom: 3.23%;
-
-/* theme color */
-background: #5DD62C;
-transform: matrix(1, 0.02, -0.02, 1, 0, 0);
-
-
-/* Rectangle 16 */
-
-position: absolute;
-left: 54.8%;
-right: 14.01%;
-top: 0.95%;
-bottom: 92.15%;
-
-/* theme color */
-background: #5DD62C;
-transform: matrix(1, 0.02, -0.02, 1, 0, 0);
-
-
-/* Rectangle 10 */
-
-position: absolute;
-width: 280px;
-left: calc(50% - 280px/2 + 2px);
-top: 0%;
-bottom: 0%;
-
-background: rgba(0, 0, 0, 0.16);
-border-radius: 15px;
-
-
-/* Level Name: N5 */
-
-position: absolute;
-left: 7.47%;
-right: 7.17%;
-top: 60.76%;
-bottom: 30.06%;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 29px;
-/* identical to box height */
-
-/* white text */
-color: #FFFFFF;
-
-
-
-/* Duration: 3month */
-
-position: absolute;
-left: 7.47%;
-right: 7.17%;
-top: 71.52%;
-bottom: 22.78%;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-
-/* white text */
-color: #FFFFFF;
-
-
-
-/* Rectangle 15 */
-
-position: absolute;
-left: 8.54%;
-right: 6.81%;
-top: 6.65%;
-bottom: 46.52%;
-
-background: url(n5-kanji_1280x.png);
-border-radius: 15px;
-
-
-/* Component 43 */
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 10px 60px;
-gap: 10px;
-
-position: absolute;
-width: 239.15px;
-height: 39px;
-left: 20px;
-top: 256px;
-
-/* G- Button */
-background: #38EF08;
-border-radius: 15px;
-
-
-/* View Details */
-
-width: 94px;
-height: 19px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-
-/* Black text */
-color: #262626;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
- -->
-
           <div class="mt-3 bg-[#1A1A1A] py-[38px]">
-            <div class="max-w-section mx-auto mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <div
+              class="max-w-section mx-auto mt-6 grid justify-items-center gap-5 md:grid-cols-2 xl:grid-cols-4"
+            >
               <article
-                class="overflow-hidden rounded-2xl border border-brand-line bg-brand-card shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+                class="relative h-[316px] w-full max-w-[280px] overflow-hidden rounded-[15px] border border-white/30 bg-[#101010] bg-[radial-gradient(circle_at_6%_92%,rgba(93,214,44,0.18),transparent_28%),radial-gradient(circle_at_92%_2%,rgba(93,214,44,0.14),transparent_25%)] text-white shadow-[inset_0_0_18px_rgba(255,255,255,0.03)]"
               >
-                <div
-                  class="h-44 bg-gradient-to-b from-[#fbfbfb] to-[#d8d8d8] p-2.5"
+                <img
+                  src="../../static/assets/home/level_name_n5.png"
+                  alt="Japanese N5 course"
+                  class="absolute left-6 top-[21px] h-[148px] w-[237px] rounded-[15px] object-cover"
+                />
+                <h3
+                  class="absolute left-[21px] top-[191px] m-0 text-2xl font-bold leading-[29px]"
                 >
-                  <img
-                    src="../../static/assets/courses-ref.png"
-                    alt="Japanese N5 course"
-                    class="h-full w-full rounded-xl object-cover"
-                  />
-                </div>
-                <div class="p-4">
-                  <h3 class="text-base font-semibold">Level Name: N5</h3>
-                  <p class="mb-3 mt-1 text-sm text-brand-muted">
-                    Duration: 3 months
-                  </p>
-                  <button
-                    class="w-full rounded-xl bg-brand-accent px-4 py-2.5 text-sm font-bold text-black shadow-glow transition hover:bg-brand-strong"
-                  >
-                    View Details
-                  </button>
-                </div>
+                  Level Name: N5
+                </h3>
+                <p
+                  class="absolute left-[21px] top-[229px] m-0 text-base leading-[19px]"
+                >
+                  Duration: 3month
+                </p>
+                <button
+                  class="absolute left-5 top-64 flex h-[39px] w-[239px] items-center justify-center rounded-[15px] bg-[#2cf000] text-base font-normal leading-[19px] text-[#262626] transition hover:-translate-y-px hover:bg-brand-strong"
+                >
+                  View Details
+                </button>
               </article>
 
               <article
-                class="overflow-hidden rounded-2xl border border-brand-line bg-brand-card shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+                class="relative h-[316px] w-full max-w-[280px] overflow-hidden rounded-[15px] border border-white/30 bg-[#101010] bg-[radial-gradient(circle_at_6%_92%,rgba(93,214,44,0.18),transparent_28%),radial-gradient(circle_at_92%_2%,rgba(93,214,44,0.14),transparent_25%)] text-white shadow-[inset_0_0_18px_rgba(255,255,255,0.03)]"
               >
-                <div
-                  class="h-44 bg-gradient-to-b from-[#fbfbfb] to-[#d8d8d8] p-2.5"
+                <img
+                  src="../../static/assets/home/level_name_n4.jpg"
+                  alt="Japanese N4 course"
+                  class="absolute left-6 top-[21px] h-[148px] w-[237px] rounded-[15px] object-cover"
+                />
+                <h3
+                  class="absolute left-[21px] top-[191px] m-0 text-2xl font-bold leading-[29px]"
                 >
-                  <img
-                    src="../../static/assets/courses-ref.png"
-                    alt="Japanese N4 course"
-                    class="h-full w-full rounded-xl object-cover"
-                  />
-                </div>
-                <div class="p-4">
-                  <h3 class="text-base font-semibold">Level Name: N4</h3>
-                  <p class="mb-3 mt-1 text-sm text-brand-muted">
-                    Duration: 4 months
-                  </p>
-                  <button
-                    class="w-full rounded-xl bg-brand-accent px-4 py-2.5 text-sm font-bold text-black shadow-glow transition hover:bg-brand-strong"
-                  >
-                    View Details
-                  </button>
-                </div>
+                  Level Name: N4
+                </h3>
+                <p
+                  class="absolute left-[21px] top-[229px] m-0 text-base leading-[19px]"
+                >
+                  Duration: 4month
+                </p>
+                <button
+                  class="absolute left-5 top-64 flex h-[39px] w-[239px] items-center justify-center rounded-[15px] bg-[#2cf000] text-base font-normal leading-[19px] text-[#262626] transition hover:-translate-y-px hover:bg-brand-strong"
+                >
+                  View Details
+                </button>
               </article>
 
               <article
-                class="overflow-hidden rounded-2xl border border-brand-line bg-brand-card shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+                class="relative h-[316px] w-full max-w-[280px] overflow-hidden rounded-[15px] border border-white/30 bg-[#101010] bg-[radial-gradient(circle_at_6%_92%,rgba(93,214,44,0.18),transparent_28%),radial-gradient(circle_at_92%_2%,rgba(93,214,44,0.14),transparent_25%)] text-white shadow-[inset_0_0_18px_rgba(255,255,255,0.03)]"
               >
-                <div
-                  class="h-44 bg-gradient-to-b from-[#fbfbfb] to-[#d8d8d8] p-2.5"
+                <img
+                  src="../../static/assets/home/level_name_n3.jpg"
+                  alt="Japanese N3 course"
+                  class="absolute left-6 top-[21px] h-[148px] w-[237px] rounded-[15px] object-cover"
+                />
+                <h3
+                  class="absolute left-[21px] top-[191px] m-0 text-2xl font-bold leading-[29px]"
                 >
-                  <img
-                    src="../../static/assets/courses-ref.png"
-                    alt="Japanese N3 course"
-                    class="h-full w-full rounded-xl object-cover"
-                  />
-                </div>
-                <div class="p-4">
-                  <h3 class="text-base font-semibold">Level Name: N3</h3>
-                  <p class="mb-3 mt-1 text-sm text-brand-muted">
-                    Duration: 6 months
-                  </p>
-                  <button
-                    class="w-full rounded-xl bg-brand-accent px-4 py-2.5 text-sm font-bold text-black shadow-glow transition hover:bg-brand-strong"
-                  >
-                    View Details
-                  </button>
-                </div>
+                  Level Name: N3
+                </h3>
+                <p
+                  class="absolute left-[21px] top-[229px] m-0 text-base leading-[19px]"
+                >
+                  Duration: 6month
+                </p>
+                <button
+                  class="absolute left-5 top-64 flex h-[39px] w-[239px] items-center justify-center rounded-[15px] bg-[#2cf000] text-base font-normal leading-[19px] text-[#262626] transition hover:-translate-y-px hover:bg-brand-strong"
+                >
+                  View Details
+                </button>
               </article>
 
               <article
-                class="overflow-hidden rounded-2xl border border-brand-line bg-brand-card shadow-[0_12px_28px_rgba(0,0,0,0.22)]"
+                class="relative h-[316px] w-full max-w-[280px] overflow-hidden rounded-[15px] border border-white/30 bg-[#101010] bg-[radial-gradient(circle_at_6%_92%,rgba(93,214,44,0.18),transparent_28%),radial-gradient(circle_at_92%_2%,rgba(93,214,44,0.14),transparent_25%)] text-white shadow-[inset_0_0_18px_rgba(255,255,255,0.03)]"
               >
-                <div
-                  class="h-44 bg-gradient-to-b from-[#fbfbfb] to-[#d8d8d8] p-2.5"
+                <img
+                  src="../../static/assets/home/level_name_n2.jpg"
+                  alt="Japanese N2 course"
+                  class="absolute left-6 top-[21px] h-[148px] w-[237px] rounded-[15px] object-cover"
+                />
+                <h3
+                  class="absolute left-[21px] top-[191px] m-0 text-2xl font-bold leading-[29px]"
                 >
-                  <img
-                    src="../../static/assets/courses-ref.png"
-                    alt="Japanese N2 course"
-                    class="h-full w-full rounded-xl object-cover"
-                  />
-                </div>
-                <div class="p-4">
-                  <h3 class="text-base font-semibold">Level Name: N2</h3>
-                  <p class="mb-3 mt-1 text-sm text-brand-muted">
-                    Duration: 8 months
-                  </p>
-                  <button
-                    class="w-full rounded-xl bg-brand-accent px-4 py-2.5 text-sm font-bold text-black shadow-glow transition hover:bg-brand-strong"
-                  >
-                    View Details
-                  </button>
-                </div>
+                  Level Name: N2
+                </h3>
+                <p
+                  class="absolute left-[21px] top-[229px] m-0 text-base leading-[19px]"
+                >
+                  Duration: 8month
+                </p>
+                <button
+                  class="absolute left-5 top-64 flex h-[39px] w-[239px] items-center justify-center rounded-[15px] bg-[#2cf000] text-base font-normal leading-[19px] text-[#262626] transition hover:-translate-y-px hover:bg-brand-strong"
+                >
+                  View Details
+                </button>
               </article>
             </div>
           </div>
@@ -434,135 +295,158 @@ flex-grow: 0;
         <!-- End Course Levels Section -->
 
         <!-- Live Classes Section -->
-        <section id="live" class="live-section relative py-9">
-          <div
-            class="live-stripes pointer-events-none absolute inset-x-0 bottom-4 h-40 opacity-80"
-          ></div>
-          <div class="relative z-10 mx-auto w-[min(1180px,calc(100%-32px))]">
+        <section id="live" class="live-section relative pt-16 pb-[104px]">
+          <div class="mx-auto max-w-section w-full">
             <h2
-              class="font-inter text-3xl font-bold leading-tight md:text-[2.45rem]"
+              class="font-inter text-3xl font-semibold leading-tight text-white md:text-[44px] md:leading-[53px]"
             >
               Join Our Interactive Live Classes
             </h2>
-            <p class="mt-3 max-w-[820px] text-[0.95rem] text-brand-muted">
+            <p
+              class="mt-[10px] font-inter text-base font-semibold leading-[19px] text-[#C1C1C1] w-full"
+            >
               Learn directly from experienced Japanese teachers, ask questions,
               practice speaking, and interact with other learners in real-time
               classes.
             </p>
 
             <div
-              class="mt-7 grid gap-5 rounded-[18px] border border-brand-accent/25 bg-gradient-to-b from-[rgba(26,47,8,0.94)] to-[rgba(33,33,33,0.96)] p-5 shadow-glow lg:grid-cols-[1fr_1.1fr]"
+              class="mt-[50px] flex justify-between items-center w-full max-w-section gap-5 overflow-hidden rounded-[15px] bg-white/1 p-5 md:p-11 shadow-[inset_0_23px_56px_-36px_#000000,inset_0_7px_11px_-4px_#1B5304,inset_0_-68px_68px_-64px_#489529,inset_0_98px_100px_-48px_rgba(18,18,19,0.3),inset_0_4px_18px_#184207,inset_0_1px_40px_#44BD12] backdrop-blur-[50px]"
             >
               <div>
-                <h3 class="font-inter text-3xl font-bold">
+                <h3
+                  class="mb-10 text-[40px] font-semibold leading-[48px] text-white"
+                >
                   N5 - Online Batch 26
                 </h3>
-                <div class="mt-5 grid gap-3">
-                  <div class="flex items-start gap-3 text-white">
-                    <i
-                      class="fa-regular fa-calendar mt-1 text-brand-accent"
-                    ></i>
-                    <span>Live classes 3 days per week</span>
-                  </div>
-                  <div class="flex items-start gap-3 text-white">
-                    <i class="fa-regular fa-clock mt-1 text-brand-accent"></i>
-                    <span>24/7 AI Doubt Solver</span>
-                  </div>
-                  <div class="flex items-start gap-3 text-white">
-                    <i
-                      class="fa-solid fa-circle-check mt-1 text-brand-accent"
-                    ></i>
+                <div class="space-y-10">
+                  <div class="flex items-center gap-2">
+                    <img
+                      class="size-[26px] object-contain"
+                      src="../../static/assets/icons/bookmark.svg"
+                    />
                     <span
+                      class="text-[26px] font-semibold leading-[31px] text-[#C1C1C1]"
+                      >Live classes 3 days per week</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <img
+                      class="size-[26px] object-contain"
+                      src="../../static/assets/icons/clock.svg"
+                    />
+                    <span
+                      class="text-[26px] font-semibold leading-[31px] text-[#C1C1C1]"
+                      >24/7 AI Doubt Solver</span
+                    >
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <img
+                      class="size-[26px] object-contain"
+                      src="../../static/assets/icons/headphone.svg"
+                    />
+                    <span
+                      class="font-inter text-[26px] font-semibold leading-[31px] text-[#C1C1C1]"
                       >Full revision and special support before the exam</span
                     >
                   </div>
                 </div>
                 <button
-                  class="mt-6 rounded-xl border border-white/10 bg-[#0e0e0e] px-5 py-3 text-sm font-bold text-white transition hover:bg-white/5"
+                  class="mt-[38px] flex h-[59px] w-full max-w-[459px] items-center justify-center gap-2.5 rounded-[10px] bg-black px-[130px] py-[15px] text-2xl font-semibold leading-[29px] text-brand-accent shadow-[inset_7px_8px_8px_rgba(184,184,184,0.25)]"
                 >
                   Join Demo Class
                 </button>
               </div>
 
               <div
-                class="relative min-h-[280px] overflow-hidden rounded-2xl border border-white/5"
+                class="max-h-[384px] max-w-[584px] w-full overflow-hidden rounded-[15px] border border-white/5"
               >
-                <span
-                  class="absolute left-1/2 top-3 z-10 -translate-x-1/2 rounded-full bg-[#ff3737] px-3 py-1 text-xs font-bold text-white"
-                >
-                  LIVE
-                </span>
-                <span
-                  class="absolute left-4 top-1/2 z-10 grid h-[74px] w-[74px] -translate-y-1/2 place-items-center rounded-full bg-[#ffd500] text-2xl font-extrabold text-black shadow-[0_12px_24px_rgba(0,0,0,0.35)]"
-                >
-                  N5
-                </span>
                 <img
-                  src="../../static/assets/home/n5_live.jpg"
+                  src="../../static/assets/home/japanesse_class.svg"
                   alt="Japanese live class"
                   class="h-full w-full object-cover"
                 />
               </div>
             </div>
 
-            <div class="mt-6 grid gap-4 md:grid-cols-3">
+            <div
+              class="mt-[67px] grid justify-items-center gap-5 md:grid-cols-3"
+            >
               <article
-                class="overflow-hidden rounded-2xl border border-brand-line bg-[#202020]"
+                class="relative h-[266px] w-full max-w-[384px] overflow-hidden rounded-[15px] bg-[#D9D9D9]"
               >
-                <div class="relative h-32">
+                <div class="absolute left-0 top-0 h-[198px] w-full">
                   <img
                     src="../../static/assets/home/n5_live.jpg"
                     alt="N5 class preview day 3"
-                    class="h-full w-full object-cover"
+                    class="h-full w-full rounded-t-[15px] object-cover"
                   />
+                  <div
+                    class="absolute inset-0 rounded-t-[15px] bg-gray-500/55"
+                  ></div>
                   <span
-                    class="absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-black/80 text-white"
+                    class="absolute left-[144px] top-[51px] grid h-[97px] w-[97px] place-items-center"
                   >
-                    <i class="fa-solid fa-play"></i>
+                    <i
+                      class="fa-solid fa-play text-[97px] leading-none text-black [-webkit-text-stroke:2px_#A9A9A9]"
+                    ></i>
                   </span>
                 </div>
-                <strong class="block px-4 py-3 text-[0.98rem]"
-                  >N5 Day-3 | Batch-07 | Alen</strong
+                <strong
+                  class="absolute left-5 top-[213px] h-[34px] w-[343px] font-inter text-[28px] font-semibold leading-[34px] text-black"
+                  >N5 Day-3| Batch o7| Alen</strong
                 >
               </article>
 
               <article
-                class="overflow-hidden rounded-2xl border border-brand-line bg-[#202020]"
+                class="relative h-[266px] w-full max-w-[384px] overflow-hidden rounded-[15px] bg-[#D9D9D9]"
               >
-                <div class="relative h-32">
+                <div class="absolute left-0 top-0 h-[198px] w-full">
                   <img
                     src="../../static/assets/home/n5_live.jpg"
                     alt="N5 class preview day 4"
-                    class="h-full w-full object-cover"
+                    class="h-full w-full rounded-t-[15px] object-cover"
                   />
+                  <div
+                    class="absolute inset-0 rounded-t-[15px] bg-gray-500/55"
+                  ></div>
                   <span
-                    class="absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-black/80 text-white"
+                    class="absolute left-[144px] top-[51px] grid h-[97px] w-[97px] place-items-center"
                   >
-                    <i class="fa-solid fa-play"></i>
+                    <i
+                      class="fa-solid fa-play text-[97px] leading-none text-black [-webkit-text-stroke:2px_#A9A9A9]"
+                    ></i>
                   </span>
                 </div>
-                <strong class="block px-4 py-3 text-[0.98rem]"
-                  >N5 Day-4 | Batch-07 | Alen</strong
+                <strong
+                  class="absolute left-5 top-[213px] h-[34px] w-[343px] font-inter text-[28px] font-semibold leading-[34px] text-black"
+                  >N5 Day-4| Batch o7| Alen</strong
                 >
               </article>
 
               <article
-                class="overflow-hidden rounded-2xl border border-brand-line bg-[#202020]"
+                class="relative h-[266px] w-full max-w-[384px] overflow-hidden rounded-[15px] bg-[#D9D9D9]"
               >
-                <div class="relative h-32">
+                <div class="absolute left-0 top-0 h-[198px] w-full">
                   <img
                     src="../../static/assets/home/n5_live.jpg"
                     alt="N5 class preview day 5"
-                    class="h-full w-full object-cover"
+                    class="h-full w-full rounded-t-[15px] object-cover"
                   />
+                  <div
+                    class="absolute inset-0 rounded-t-[15px] bg-gray-500/55"
+                  ></div>
                   <span
-                    class="absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full bg-black/80 text-white"
+                    class="absolute left-[144px] top-[51px] grid h-[97px] w-[97px] place-items-center"
                   >
-                    <i class="fa-solid fa-play"></i>
+                    <i
+                      class="fa-solid fa-play text-[97px] leading-none text-black [-webkit-text-stroke:2px_#A9A9A9]"
+                    ></i>
                   </span>
                 </div>
-                <strong class="block px-4 py-3 text-[0.98rem]"
-                  >N5 Day-5 | Batch-07 | Alen</strong
+                <strong
+                  class="absolute left-5 top-[213px] h-[34px] w-[343px] font-inter text-[28px] font-semibold leading-[34px] text-black"
+                  >N5 Day-5| Batch o7| Alen</strong
                 >
               </article>
             </div>
@@ -571,88 +455,112 @@ flex-grow: 0;
         <!-- End Live Classes Section -->
 
         <!-- Practice Lab Section -->
-        <section id="practice" class="py-9">
-          <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
-            <h2
-              class="font-inter text-3xl font-bold leading-tight md:text-[2.45rem]"
-            >
+        <section id="practice" class="pt-14">
+          <div class="mx-auto max-w-section w-full">
+            <h2 class="text-[44px] font-semibold leading-[53px] text-white">
               Practice Lab Preview
             </h2>
-            <p class="mt-3 max-w-[820px] text-[0.95rem] text-brand-muted">
+            <p
+              class="mt-[10px] w-[818px] text-base font-semibold leading-[19px] text-[#C1C1C1]"
+            >
               Sharpen your Japanese skills with interactive tools. Practice
-              grammar, listening, flashcards and quizzes in one place.
+              grammar, vocabulary, listening and speaking.
             </p>
 
-            <div class="mt-7 flex flex-col gap-4 lg:flex-row lg:items-stretch">
-              <div class="grid flex-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <div class="mt-11 flex flex-col gap-4 lg:flex-row lg:items-stretch">
+              <div class="grid flex-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
                 <article
-                  class="rounded-2xl border border-white/10 bg-gradient-to-b from-[#313131] to-[#252525] px-3 py-5 text-center"
+                  class="relative h-[278px] overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center"
                 >
                   <div
-                    class="mx-auto mb-4 grid h-[70px] w-[70px] place-items-center rounded-[20px] bg-brand-accent/15"
+                    class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center"
                   >
                     <img
                       src="../../static/assets/icons/logos_grammarly-icon.svg"
                       alt="Grammar sheets"
-                      class="h-10 w-10 object-contain"
+                      class="h-[122px] w-[122px] object-contain"
                     />
                   </div>
-                  <h3 class="text-[1.05rem] font-semibold">Grammar sheets</h3>
-                  <p class="mt-1 text-sm text-brand-muted">
+                  <h3
+                    class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white"
+                  >
+                    Grammar sheets
+                  </h3>
+                  <p
+                    class="absolute left-0 top-[220px] w-full font-inter text-[22px] leading-[27px] text-[#C1C1C1]"
+                  >
                     Practice JLPT Grammar
                   </p>
                 </article>
 
                 <article
-                  class="rounded-2xl border border-white/10 bg-gradient-to-b from-[#313131] to-[#252525] px-3 py-5 text-center"
+                  class="relative h-[278px] overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center"
                 >
                   <div
-                    class="mx-auto mb-4 grid h-[70px] w-[70px] place-items-center rounded-[20px] bg-brand-accent/15"
+                    class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center"
                   >
                     <img
                       src="../../static/assets/icons/material-symbols_quiz-rounded.svg"
                       alt="Quiz"
-                      class="h-10 w-10 object-contain"
+                      class="h-[122px] w-[122px] object-contain"
                     />
                   </div>
-                  <h3 class="text-[1.05rem] font-semibold">Quiz</h3>
-                  <p class="mt-1 text-sm text-brand-muted">
+                  <h3
+                    class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white"
+                  >
+                    Quiz
+                  </h3>
+                  <p
+                    class="absolute left-0 top-[220px] w-full font-inter text-[22px] leading-[27px] text-[#C1C1C1]"
+                  >
                     Practice JLPT Quiz
                   </p>
                 </article>
 
                 <article
-                  class="rounded-2xl border border-white/10 bg-gradient-to-b from-[#313131] to-[#252525] px-3 py-5 text-center"
+                  class="relative h-[278px] overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center"
                 >
                   <div
-                    class="mx-auto mb-4 grid h-[70px] w-[70px] place-items-center rounded-[20px] bg-brand-accent/15"
+                    class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center"
                   >
                     <img
-                      src="../../static/assets/icons/Clipboard.svg"
+                      src="../../static/assets/icons/arcticons_flashcards.svg"
                       alt="Flashcards"
-                      class="h-10 w-10 object-contain"
+                      class="h-[122px] w-[122px] object-contain"
                     />
                   </div>
-                  <h3 class="text-[1.05rem] font-semibold">Flashcards</h3>
-                  <p class="mt-1 text-sm text-brand-muted">
+                  <h3
+                    class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white"
+                  >
+                    Flashcards
+                  </h3>
+                  <p
+                    class="absolute left-0 top-[220px] w-full font-inter text-[22px] leading-[27px] text-[#C1C1C1]"
+                  >
                     Practice JLPT Flashcards
                   </p>
                 </article>
 
                 <article
-                  class="rounded-2xl border border-white/10 bg-gradient-to-b from-[#313131] to-[#252525] px-3 py-5 text-center"
+                  class="relative h-[278px] overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center"
                 >
                   <div
-                    class="mx-auto mb-4 grid h-[70px] w-[70px] place-items-center rounded-[20px] bg-brand-accent/15"
+                    class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center"
                   >
                     <img
                       src="../../static/assets/icons/listening_icon.svg"
                       alt="Listening"
-                      class="h-10 w-10 object-contain"
+                      class="h-[122px] w-[122px] object-contain"
                     />
                   </div>
-                  <h3 class="text-[1.05rem] font-semibold">Listening</h3>
-                  <p class="mt-1 text-sm text-brand-muted">
+                  <h3
+                    class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white"
+                  >
+                    Listening
+                  </h3>
+                  <p
+                    class="absolute left-0 top-[220px] w-full font-inter text-[22px] leading-[27px] text-[#C1C1C1]"
+                  >
                     Practice JLPT Audio
                   </p>
                 </article>
@@ -669,123 +577,170 @@ flex-grow: 0;
         <!-- End Practice Lab Section -->
 
         <!-- Course Features Section -->
-        <section class="py-9">
+        <section class="pt-[104px]">
           <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
             <h2
-              class="font-inter text-3xl font-bold leading-tight md:text-[2.45rem]"
+              class="w-[351px] font-inter text-[44px] font-semibold leading-[53px] text-white"
             >
               Course Features
             </h2>
-            <p class="mt-3 max-w-[820px] text-[0.95rem] text-brand-muted">
-              Combine live classes, practice tools and AI-powered feedback to
-              make learning Japanese simple, interactive and effective.
+            <p
+              class="mt-[10px] w-[944px] font-inter text-base font-semibold leading-[19px] text-[#C1C1C1]"
+            >
+              Combine live classes, practice tools, and AI-powered feedback.
+              Designed to make learning Japanese simple and effective.
             </p>
 
-            <div class="mt-6 grid gap-5 lg:grid-cols-3">
+            <div
+              class="mt-[50px] grid justify-items-center gap-6 lg:grid-cols-3"
+            >
               <article
-                class="rounded-2xl border border-brand-accent/15 bg-gradient-to-b from-[#1a2c12] to-[#13220d] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+                class="h-[353px] w-full max-w-[383px] rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]"
               >
-                <div class="mb-4 flex items-center gap-3">
+                <div class="flex items-center gap-[15px]">
                   <img
                     src="../../static/assets/icons/Online learning.svg"
                     alt="Live classes"
-                    class="h-8 w-8 object-contain"
+                    class="h-[60px] w-[60px] shrink-0 object-contain"
                   />
-                  <h3 class="text-xl font-semibold">Live Classes</h3>
+                  <h3
+                    class="text-[32px] font-semibold leading-[39px] text-white"
+                  >
+                    Live Classes
+                  </h3>
                 </div>
-                <p class="text-[0.9rem] leading-7 text-[#dbdbdb]">
-                  Our live classes are conducted by experienced teachers so you
-                  can learn through direct interaction, ask questions instantly
-                  and practice naturally.
+                <p class="mt-7 text-base leading-[19px] text-white">
+                  Our live classes are conducted by experienced Japanese
+                  language teachers who guide students step by step. In these
+                  sessions, you can interact directly with the instructor, ask
+                  questions, and participate in real-time discussions. The
+                  classes also focus on pronunciation, conversation practice,
+                  and real-life communication so that you can build confidence
+                  in speaking Japanese.
                 </p>
               </article>
 
               <article
-                class="rounded-2xl border border-brand-accent/15 bg-gradient-to-b from-[#1a2c12] to-[#13220d] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+                class="h-[353px] w-full max-w-[383px] rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]"
               >
-                <div class="mb-4 flex items-center gap-3">
-                  <img
-                    src="../../static/assets/icons/Learning.svg"
-                    alt="Practice lab"
-                    class="h-8 w-8 object-contain"
-                  />
-                  <h3 class="text-xl font-semibold">Practice Lab</h3>
-                </div>
-                <p class="text-[0.9rem] leading-7 text-[#dbdbdb]">
-                  Build fluency with structured exercises, daily tasks, guided
-                  listening sessions, flashcards and interactive revision
-                  materials.
-                </p>
-              </article>
-
-              <article
-                class="rounded-2xl border border-brand-accent/15 bg-gradient-to-b from-[#1a2c12] to-[#13220d] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
-              >
-                <div class="mb-4 flex items-center gap-3">
+                <div class="flex items-center gap-[15px]">
                   <img
                     src="../../static/assets/icons/Human brain.svg"
-                    alt="AI homework"
-                    class="h-8 w-8 object-contain"
+                    alt="Practice lab"
+                    class="h-[60px] w-[60px] shrink-0 object-contain"
                   />
-                  <h3 class="text-xl font-semibold">AI Homework</h3>
+                  <h3
+                    class="text-[32px] font-semibold leading-[39px] text-white"
+                  >
+                    Practice Lab
+                  </h3>
                 </div>
-                <p class="text-[0.9rem] leading-7 text-[#dbdbdb]">
-                  Submit writing and receive instant AI-assisted feedback on
-                  grammar, sentence structure and vocabulary choices for faster
-                  improvement.
+                <p class="mt-7 text-base leading-[19px] text-white">
+                  The Practice Lab is an interactive learning space where you
+                  can strengthen your Japanese skills through different tools.
+                  It includes grammar sheets, quizzes, flashcards, listening
+                  exercises, and speaking practice activities. These tools allow
+                  you to review lessons, test your knowledge, and practice
+                  regularly so that you can improve faster and retain what you
+                  learn.
                 </p>
               </article>
 
               <article
-                class="rounded-2xl border border-brand-accent/15 bg-gradient-to-b from-[#1a2c12] to-[#13220d] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+                class="h-[353px] w-full max-w-[383px] rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]"
               >
-                <div class="mb-4 flex items-center gap-3">
+                <div class="flex items-center gap-[15px]">
                   <img
-                    src="../../static/assets/icons/rocket_icon.svg"
-                    alt="Progress tracking"
-                    class="h-8 w-8 object-contain"
+                    src="../../static/assets/icons/Learning.svg"
+                    alt="AI homework"
+                    class="h-[60px] w-[60px] shrink-0 object-contain"
                   />
-                  <h3 class="text-xl font-semibold">Progress Tracking</h3>
+                  <h3
+                    class="text-[32px] font-semibold leading-[39px] text-white"
+                  >
+                    AI Homework
+                  </h3>
                 </div>
-                <p class="text-[0.9rem] leading-7 text-[#dbdbdb]">
-                  Follow your learning journey clearly with progress markers,
-                  lesson completion status and smart revision suggestions.
+                <p class="mt-7 text-base leading-[19px] text-white">
+                  With AI-powered homework checking, you can submit your writing
+                  or assignments and receive instant feedback. The system
+                  analyzes your sentences, identifies grammar mistakes, and
+                  suggests improvements in vocabulary and sentence structure.
+                  This helps you quickly understand your errors and continuously
+                  improve your writing skills.
                 </p>
               </article>
 
               <article
-                class="rounded-2xl border border-brand-accent/15 bg-gradient-to-b from-[#1a2c12] to-[#13220d] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+                class="h-[353px] w-full max-w-[383px] rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]"
               >
-                <div class="mb-4 flex items-center gap-3">
+                <div class="flex items-center gap-[15px]">
+                  <img
+                    src="../../static/assets/icons/Clipboard.svg"
+                    alt="Progress tracking"
+                    class="h-[60px] w-[60px] shrink-0 object-contain"
+                  />
+                  <h3
+                    class="text-[32px] font-semibold leading-[39px] text-white"
+                  >
+                    Progress Tracking
+                  </h3>
+                </div>
+                <p class="mt-7 text-base leading-[19px] text-white">
+                  Our progress tracking system allows you to monitor your
+                  learning journey easily. You can see how many lessons you have
+                  completed, track your quiz scores, and observe improvements in
+                  different skills. This feature helps you stay motivated and
+                  understand where you need more practice.
+                </p>
+              </article>
+
+              <article
+                class="h-[353px] w-full max-w-[383px] rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]"
+              >
+                <div class="flex items-center gap-[15px]">
                   <img
                     src="../../static/assets/icons/Help.svg"
                     alt="Mentor support"
-                    class="h-8 w-8 object-contain"
+                    class="h-[60px] w-[60px] shrink-0 object-contain"
                   />
-                  <h3 class="text-xl font-semibold">Mentor Support</h3>
+                  <h3
+                    class="text-[32px] font-semibold leading-[39px] text-white"
+                  >
+                    Mentor Support
+                  </h3>
                 </div>
-                <p class="text-[0.9rem] leading-7 text-[#dbdbdb]">
-                  Whenever you get stuck, our mentors are there to answer
-                  questions, explain tough topics and keep you moving
-                  confidently.
+                <p class="mt-7 text-base leading-[19px] text-white">
+                  Whenever you face difficulties in your learning journey,
+                  mentors are available to guide you. They help answer your
+                  questions, clarify difficult topics, and provide advice on how
+                  to study more effectively. Mentor support ensures that you
+                  never feel stuck while learning Japanese.
                 </p>
               </article>
 
               <article
-                class="rounded-2xl border border-brand-accent/15 bg-gradient-to-b from-[#1a2c12] to-[#13220d] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+                class="h-[353px] w-full max-w-[383px] rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]"
               >
-                <div class="mb-4 flex items-center gap-3">
+                <div class="flex items-center gap-[15px]">
                   <img
                     src="../../static/assets/icons/Career choice.svg"
                     alt="Career guide"
-                    class="h-8 w-8 object-contain"
+                    class="h-[60px] w-[60px] shrink-0 object-contain"
                   />
-                  <h3 class="text-xl font-semibold">Career Guide</h3>
+                  <h3
+                    class="text-[32px] font-semibold leading-[39px] text-white"
+                  >
+                    Career Guide
+                  </h3>
                 </div>
-                <p class="text-[0.9rem] leading-7 text-[#dbdbdb]">
-                  Explore study and work opportunities with clear guidance
-                  around JLPT levels, Japan-focused goals and next-step
-                  planning.
+                <p class="mt-7 text-base leading-[19px] text-white">
+                  Learning Japanese can open many opportunities for jobs and
+                  higher studies. Our career guidance feature helps you
+                  understand different career paths related to the Japanese
+                  language. You will receive information about certifications,
+                  job opportunities, and study options that can help you plan
+                  your future.
                 </p>
               </article>
             </div>
@@ -794,123 +749,793 @@ flex-grow: 0;
         <!-- End Course Features Section -->
 
         <!-- Trusted Learners Section -->
-        <section id="trusted" class="py-9">
-          <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
+        <section
+          id="trusted"
+          class="overflow-hidden bg-[rgba(73,255,0,0.2)] py-[52px] mt-[100px]"
+        >
+          <div class="mx-auto max-w-section">
             <h2
-              class="font-inter text-3xl font-bold leading-tight md:text-[2.45rem]"
+              class="text-[44px] font-semibold leading-[53px] text-white"
             >
               Trusted by Hundreds of Japanese Learners
             </h2>
-            <p class="mt-3 max-w-[820px] text-[0.95rem] text-brand-muted">
-              Real learners are already using our classes and tools to improve
-              their Japanese, batch by batch.
+            <p
+              class="mt-[9px] max-w-[696px] text-center text-base font-semibold leading-[19px] text-[#C1C1C1]"
+            >
+              See how students are successfully learning Japanese with our
+              courses and practice tools.
             </p>
           </div>
 
-          <div
-            class="mt-7 bg-gradient-to-b from-brand-accent/20 to-brand-accent/30 py-5"
-          >
-            <div
-              class="mx-auto grid w-[min(1180px,calc(100%-32px))] gap-4 md:grid-cols-3 xl:grid-cols-5"
-            >
+          <div class="mt-14 space-y-5">
+            <div class="flex w-max gap-5 px-2.5">
               <article
-                class="flex items-center gap-3 rounded-xl bg-white p-3 text-black"
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
               >
-                <img
-                  src="../../static/assets/avatars/user1.png"
-                  alt="Esther Howard"
-                  class="h-12 w-12 rounded-full object-cover"
-                />
-                <div>
-                  <span class="block text-xs font-bold text-[#3f8f15]"
-                    >JLPT-N2</span
-                  >
-                  <strong class="block text-base">Esther Howard</strong>
-                  <small class="block text-xs text-[#555]">Batch - 5A</small>
-                  <div class="mt-1 text-xs text-[#5bb80f]">
-                    <i class="fa-solid fa-star"></i> 4.8
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Esther Howard"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N2
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
                   </div>
                 </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Esther Howard
+                </h3>
               </article>
 
               <article
-                class="flex items-center gap-3 rounded-xl bg-white p-3 text-black"
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
               >
-                <img
-                  src="../../static/assets/avatars/user1.png"
-                  alt="Arlene McCoy"
-                  class="h-12 w-12 rounded-full object-cover"
-                />
-                <div>
-                  <span class="block text-xs font-bold text-[#3f8f15]"
-                    >JLPT-N1</span
-                  >
-                  <strong class="block text-base">Arlene McCoy</strong>
-                  <small class="block text-xs text-[#555]">Batch - 8A</small>
-                  <div class="mt-1 text-xs text-[#5bb80f]">
-                    <i class="fa-solid fa-star"></i> 4.9
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Arlene McCoy"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N1
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
                   </div>
                 </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Arlene McCoy
+                </h3>
+              </article>
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Arlene McCoy"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N1
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Arlene McCoy
+                </h3>
+              </article>
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Arlene McCoy"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N1
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Arlene McCoy
+                </h3>
               </article>
 
               <article
-                class="flex items-center gap-3 rounded-xl bg-white p-3 text-black"
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
               >
-                <img
-                  src="../../static/assets/avatars/user1.png"
-                  alt="Jane Cooper"
-                  class="h-12 w-12 rounded-full object-cover"
-                />
-                <div>
-                  <span class="block text-xs font-bold text-[#3f8f15]"
-                    >JLPT-N2</span
-                  >
-                  <strong class="block text-base">Jane Cooper</strong>
-                  <small class="block text-xs text-[#555]">Batch - 7A</small>
-                  <div class="mt-1 text-xs text-[#5bb80f]">
-                    <i class="fa-solid fa-star"></i> 4.8
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Jane Cooper"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N2
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
                   </div>
                 </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Jane Cooper
+                </h3>
               </article>
 
               <article
-                class="flex items-center gap-3 rounded-xl bg-white p-3 text-black"
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
               >
-                <img
-                  src="../../static/assets/avatars/user1.png"
-                  alt="Ronal Richards"
-                  class="h-12 w-12 rounded-full object-cover"
-                />
-                <div>
-                  <span class="block text-xs font-bold text-[#3f8f15]"
-                    >JLPT-N2</span
-                  >
-                  <strong class="block text-base">Ronal Richards</strong>
-                  <small class="block text-xs text-[#555]">Batch - 5C</small>
-                  <div class="mt-1 text-xs text-[#5bb80f]">
-                    <i class="fa-solid fa-star"></i> 4.7
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Ronal Richards"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N2
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
                   </div>
                 </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Ronal Richards
+                </h3>
               </article>
 
               <article
-                class="flex items-center gap-3 rounded-xl bg-white p-3 text-black"
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
               >
-                <img
-                  src="../../static/assets/avatars/user1.png"
-                  alt="Jacob Jones"
-                  class="h-12 w-12 rounded-full object-cover"
-                />
-                <div>
-                  <span class="block text-xs font-bold text-[#3f8f15]"
-                    >JLPT-N1</span
-                  >
-                  <strong class="block text-base">Jacob Jones</strong>
-                  <small class="block text-xs text-[#555]">Batch - 9A</small>
-                  <div class="mt-1 text-xs text-[#5bb80f]">
-                    <i class="fa-solid fa-star"></i> 4.8
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Jacob Jones"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N1
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
                   </div>
                 </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Jacob Jones
+                </h3>
+              </article>
+            </div>
+
+            <div class="flex w-max -translate-x-10 gap-5 px-2.5">
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Albert Flores"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N1
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Albert Flores
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Jerome Bell"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N2
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Jerome Bell
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Darrell Steward"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N5
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Darrell Steward
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Ralph Edwards"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N2
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Ralph Edwards
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Kathryn Murphy"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N2
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i></span
+                      ><span class="text-black/20"
+                        ><i class="fa-solid fa-star"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Kathryn Murphy
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Courtney Henry"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N3
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i></span
+                      ><span class="text-black/20"
+                        ><i class="fa-solid fa-star"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Courtney Henry
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Leslie Alexander"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N2
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i></span
+                      ><span class="text-black/20"
+                        ><i class="fa-solid fa-star"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Leslie Alexander
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Devon Lane"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N1
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i></span
+                      ><span class="text-black/20"
+                        ><i class="fa-solid fa-star"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Devon Lane
+                </h3>
+              </article>
+            </div>
+
+            <div class="flex w-max gap-5 px-2.5">
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Wade Warren"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N2
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Wade Warren
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Courtney Henry"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N3
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Courtney Henry
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Bessie Cooper"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N3
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-black/20"><i class="fa-solid fa-star"></i></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Bessie Cooper
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Jacob Jones"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N3
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i></span
+                      ><span class="text-black/20"
+                        ><i class="fa-solid fa-star"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Jacob Jones
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Darrell Steward"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N3
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i></span
+                      ><span class="text-black/20"
+                        ><i class="fa-solid fa-star"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Darrell Steward
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Dianne Russell"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N2
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i></span
+                      ><span class="text-black/20"
+                        ><i class="fa-solid fa-star"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Dianne Russell
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Cody Fisher"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N5
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i></span
+                      ><span class="text-black/20"
+                        ><i class="fa-solid fa-star"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Cody Fisher
+                </h3>
+              </article>
+
+              <article
+                class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+              >
+                <div class="flex gap-5">
+                  <img
+                    src="../../static/assets/avatars/user1.png"
+                    alt="Jenny Wilson"
+                    class="h-[98px] w-[98px] rounded-full object-cover"
+                  />
+                  <div class="pt-1 text-center">
+                    <div class="text-[27px] font-medium leading-[33px]">
+                      JLPT-N3
+                    </div>
+                    <div class="mt-1 text-base font-medium leading-[19px]">
+                      Batch- 03
+                    </div>
+                    <div
+                      class="mt-[9px] text-base font-medium leading-[19px] text-[#616161]"
+                    >
+                      Rating- 5.4
+                    </div>
+                    <div class="text-xl leading-none">
+                      <span class="text-brand-accent"
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i
+                        ><i class="fa-solid fa-star"></i></span
+                      ><span class="text-black/20"
+                        ><i class="fa-solid fa-star"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                  Jenny Wilson
+                </h3>
               </article>
             </div>
           </div>
@@ -920,9 +1545,7 @@ flex-grow: 0;
         <!-- Teachers Section -->
         <section id="teachers" class="py-9">
           <div class="mx-auto w-[min(1180px,calc(100%-32px))]">
-            <h2
-              class="font-inter text-3xl font-bold leading-tight md:text-[2.45rem]"
-            >
+            <h2 class="text-3xl font-bold leading-tight md:text-[2.45rem]">
               Meet Our Expert Japanese Teachers
             </h2>
             <p class="mt-3 max-w-[820px] text-[0.95rem] text-brand-muted">
@@ -1003,7 +1626,7 @@ flex-grow: 0;
             class="mx-auto flex w-[min(1180px,calc(100%-32px))] flex-col items-start justify-between gap-6 py-7 md:flex-row md:items-center"
           >
             <h2
-              class="font-inter text-4xl font-bold leading-none text-brand-accent md:text-[3.4rem]"
+              class="text-4xl font-bold leading-none text-brand-accent md:text-[3.4rem]"
             >
               Start Your<br />Japanese Journey Today
             </h2>
@@ -1027,10 +1650,10 @@ flex-grow: 0;
       <!-- Footer Section -->
       <footer class="bg-[#202020] text-[#ddd]">
         <div
-          class="mx-auto grid w-[min(1180px,calc(100%-32px))] gap-8 py-12 md:grid-cols-[1fr_1fr_1.3fr]"
+          class="mx-auto grid w-full max-w-section gap-8 py-12 md:grid-cols-3"
         >
           <div>
-            <h4 class="mb-4 text-[0.95rem] font-semibold text-white">
+            <h4 class="mb-4 text-[28px] font-semibold text-white">
               Navigation
             </h4>
             <ul class="grid gap-2 text-sm text-[#c9c9c9]">
@@ -1113,7 +1736,7 @@ flex-grow: 0;
           </div>
         </div>
 
-        <div class="border-t border-white/10">
+        <div class="border-t border-white/10 bg-[#4A4949]">
           <div
             class="mx-auto flex w-[min(1180px,calc(100%-32px))] flex-col items-start justify-between gap-3 py-4 text-sm text-[#bdbdbd] md:flex-row md:items-center"
           >
