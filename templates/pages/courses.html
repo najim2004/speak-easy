@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>courses | speak easy japanese</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../static/css/app.css" />
+    <script src="../../static/js/tailwind.config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-brand-bg font-inter text-brand-text">
+    <div class="">
+        <!-- Header Section -->
+        <header class="sticky top-0 z-40 border-b border-white/5 bg-[rgba(0,0,0,1)]">
+            <div class="mx-auto flex max-w-section w-full items-center justify-between gap-5 py-3">
+                <a href="home.html" class="flex items-center gap-3">
+                    <img src="../../static/assets/common/logo.svg" alt="Speak Easy Japanese logo" class="h-10" />
+                    <div>
+                        <span class="block text-sm font-semibold">Speak Easy</span>
+                        <span class="block text-sm font-semibold text-brand-accent">Japanese</span>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-9">
+                    <nav class="hidden items-center gap-5 text-sm text-white lg:flex">
+                        <a href="courses.html" class="transition hover:text-brand-accent space-x-1"><span>Courses</span><i
+                                class="fa-solid fa-angle-down"></i></a>
+                        <a href="#practice" class="transition hover:text-brand-accent">Practice Lab</a>
+                        <a href="#teachers" class="transition hover:text-brand-accent">Meet</a>
+                        <a href="#trusted" class="transition hover:text-brand-accent">FAQ</a>
+                        <a href="#" class="font-bold text-brand-accent">ENG</a>
+                    </nav>
+
+                    <div class="flex flex-wrap items-center gap-6">
+                        <button
+                            class="rounded-[10px] bg-brand-accent px-5 py-2.5 text-sm font-bold text-[#262626] transition hover:bg-brand-strong">
+                            Enroll now
+                        </button>
+                        <button
+                            class="rounded-[10px] border-2 border-brand-accent px-4 py-2.5 text-sm font-bold text-brand-accent hover:text-white transition hover:bg-brand-accent/50">
+                            Login
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="relative py-7 overflow-x-hidden">
+                <div
+                    class="absolute right-[-732px] top-[-785px] z-0 h-[1251px] w-[1358px] bg-[radial-gradient(44%_44%_at_50%_50%,rgba(93,214,44,0.43)_0%,rgba(93,214,44,0)_100%)]">
+                </div>
+                <div class="relative mx-auto w-full max-w-section md:min-h-[495px] flex items-end justify-end">
+                    <div class="absolute inset-0 z-0 w-full">
+                        <img src="../../static/assets/course/courses_hero_bg_img.svg" alt="Hero background"
+                            class="w-full h-full object-contain">
+                    </div>
+                    <div class="relative z-10 max-w-[572px] text-right">
+                        <h1 class="font-changa-one text-[70px] font-normal leading-[74px] text-white">
+                            Explore Our Japanese Courses
+                        </h1>
+
+                        <p
+                            class="text-end mt-[23px] max-w-[547px] font-inter text-[35px] font-semibold leading-[42px] text-[#C1C1C1]">
+                            Choose the right level and start learning Japanese step by step.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- End Hero Section -->
+
+            <!-- Courses Section -->
+            <section id="courses" class="mt-[70px]">
+                <div id="course-filters"
+                    class="mx-auto mt-[77px] mb-[77px] flex w-full max-w-section items-center justify-between gap-[26px]">
+                    <button
+                        class="flex-grow px-5 py-3 items-center justify-between rounded-[15px] bg-brand-accent font-inter text-[22px] font-medium leading-[27px] text-[#135601]">
+                        <span>All Levels</span>
+                        <i class="fa-solid fa-chevron-down w-4 h-auto leading-none text-[#262626]"></i>
+                    </button>
+                    <button
+                        class="flex-grow px-5 py-3 items-center justify-between rounded-[15px] bg-brand-accent font-inter text-2xl font-medium leading-[29px] text-[#135601]">
+                        <span>Play Games</span>
+                        <i class="fa-solid fa-chevron-down w-4 h-auto leading-none text-[#262626]"></i>
+                    </button>
+                    <button
+                        class="flex-grow px-5 py-3 flex items-center justify-between rounded-[15px] bg-brand-accent font-inter text-2xl font-medium leading-[29px] text-[#135601] shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        <span>Short By: Most Popular</span>
+                        <i class="fa-solid fa-chevron-down w-4 h-auto leading-none text-[#0E0E0E]"></i>
+                    </button>
+                    <button class="p-3 rounded-[15px] bg-brand-accent text-[#262626]">
+                        <img src="../../static/assets/icons/grid_icon.svg" alt="Grid icon" class="size-7">
+                    </button>
+                </div>
+                <div class="w-full grid grid-cols-1 gap-[50px] mb-[123px]">
+                    <div class="bg-[#1A1A1A] py-[55px]">
+                        <article
+                            class="mx-auto flex w-full max-w-section flex-col gap-8 rounded-[15px] bg-[rgba(56,239,8,0.2)] border border-white/20 p-6 md:flex-row md:items-center md:gap-[50px] md:p-[40px]">
+                            <img src="../../static/assets/course/course1.svg" alt="Japanese N5 Beginner class"
+                                class="h-auto w-full rounded-[15px] bg-brand-accent object-cover md:h-[382px] md:w-[551px]" />
+
+                            <div class="flex-1">
+                                <h2
+                                    class="font-inter text-4xl font-bold line-clamp-1 leading-tight text-white md:text-[47px] md:leading-[57px]">
+                                    Japanese N5 Beginner
+                                </h2>
+                                <p
+                                    class="mt-[25px] font-inter text-2xl font-medium leading-[30px] text-[#C1C1C1] md:text-[25px]">
+                                    Introductory JLPT level covering basic
+                                    Japanese foundations.
+                                </p>
+
+                                <div
+                                    class="mt-[21px] grid gap-4 font-inter text-2xl font-medium leading-[34px] text-white md:text-[28px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/timer.svg" alt="Hourglass icon"
+                                            class="size-7">
+                                        <span>Start Date: 15 May 2025</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/tree_node_icon.svg"
+                                            alt="Chalkboard user icon" class="size-7">
+                                        <span>24 Live Classes</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/stopwatch.svg" alt="Clock icon"
+                                            class="size-7">
+                                        <span>Duration: 3 Months</span>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="mt-7 flex w-full items-center justify-center rounded-[15px] bg-brand-accent px-8 py-2.5 font-inter text-2xl font-semibold leading-[29px] text-[#262626]">
+                                    View Course
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="bg-[#1A1A1A] py-[55px]">
+                        <article
+                            class="mx-auto flex w-full max-w-section flex-col gap-8 rounded-[15px] bg-[rgba(56,239,8,0.2)] border border-white/20 p-6 md:flex-row md:items-center md:gap-[50px] md:p-[40px]">
+                            <img src="../../static/assets/course/course1.svg" alt="Japanese N5 Beginner class"
+                                class="h-auto w-full rounded-[15px] bg-brand-accent object-cover md:h-[382px] md:w-[551px]" />
+
+                            <div class="flex-1">
+                                <h2
+                                    class="font-inter text-4xl font-bold line-clamp-1 leading-tight text-white md:text-[47px] md:leading-[57px]">
+                                    Japanese N5 Beginner
+                                </h2>
+                                <p
+                                    class="mt-[25px] font-inter text-2xl font-medium leading-[30px] text-[#C1C1C1] md:text-[25px]">
+                                    Introductory JLPT level covering basic
+                                    Japanese foundations.
+                                </p>
+
+                                <div
+                                    class="mt-[21px] grid gap-4 font-inter text-2xl font-medium leading-[34px] text-white md:text-[28px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/timer.svg" alt="Hourglass icon"
+                                            class="size-7">
+                                        <span>Start Date: 15 May 2025</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/tree_node_icon.svg"
+                                            alt="Chalkboard user icon" class="size-7">
+                                        <span>24 Live Classes</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/stopwatch.svg" alt="Clock icon"
+                                            class="size-7">
+                                        <span>Duration: 3 Months</span>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="mt-7 flex w-full items-center justify-center rounded-[15px] bg-brand-accent px-8 py-2.5 font-inter text-2xl font-semibold leading-[29px] text-[#262626]">
+                                    View Course
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="bg-[#1A1A1A] py-[55px]">
+                        <article
+                            class="mx-auto flex w-full max-w-section flex-col gap-8 rounded-[15px] bg-[rgba(56,239,8,0.2)] border border-white/20 p-6 md:flex-row md:items-center md:gap-[50px] md:p-[40px]">
+                            <img src="../../static/assets/course/course1.svg" alt="Japanese N5 Beginner class"
+                                class="h-auto w-full rounded-[15px] bg-brand-accent object-cover md:h-[382px] md:w-[551px]" />
+
+                            <div class="flex-1">
+                                <h2
+                                    class="font-inter text-4xl font-bold line-clamp-1 leading-tight text-white md:text-[47px] md:leading-[57px]">
+                                    Japanese N5 Beginner
+                                </h2>
+                                <p
+                                    class="mt-[25px] font-inter text-2xl font-medium leading-[30px] text-[#C1C1C1] md:text-[25px]">
+                                    Introductory JLPT level covering basic
+                                    Japanese foundations.
+                                </p>
+
+                                <div
+                                    class="mt-[21px] grid gap-4 font-inter text-2xl font-medium leading-[34px] text-white md:text-[28px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/timer.svg" alt="Hourglass icon"
+                                            class="size-7">
+                                        <span>Start Date: 15 May 2025</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/tree_node_icon.svg"
+                                            alt="Chalkboard user icon" class="size-7">
+                                        <span>24 Live Classes</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/stopwatch.svg" alt="Clock icon"
+                                            class="size-7">
+                                        <span>Duration: 3 Months</span>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="mt-7 flex w-full items-center justify-center rounded-[15px] bg-brand-accent px-8 py-2.5 font-inter text-2xl font-semibold leading-[29px] text-[#262626]">
+                                    View Course
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="bg-[#1A1A1A] py-[55px]">
+                        <article
+                            class="mx-auto flex w-full max-w-section flex-col gap-8 rounded-[15px] bg-[rgba(56,239,8,0.2)] border border-white/20 p-6 md:flex-row md:items-center md:gap-[50px] md:p-[40px]">
+                            <img src="../../static/assets/course/course1.svg" alt="Japanese N5 Beginner class"
+                                class="h-auto w-full rounded-[15px] bg-brand-accent object-cover md:h-[382px] md:w-[551px]" />
+
+                            <div class="flex-1">
+                                <h2
+                                    class="font-inter text-4xl font-bold line-clamp-1 leading-tight text-white md:text-[47px] md:leading-[57px]">
+                                    Japanese N5 Beginner
+                                </h2>
+                                <p
+                                    class="mt-[25px] font-inter text-2xl font-medium leading-[30px] text-[#C1C1C1] md:text-[25px]">
+                                    Introductory JLPT level covering basic
+                                    Japanese foundations.
+                                </p>
+
+                                <div
+                                    class="mt-[21px] grid gap-4 font-inter text-2xl font-medium leading-[34px] text-white md:text-[28px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/timer.svg" alt="Hourglass icon"
+                                            class="size-7">
+                                        <span>Start Date: 15 May 2025</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/tree_node_icon.svg"
+                                            alt="Chalkboard user icon" class="size-7">
+                                        <span>24 Live Classes</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/stopwatch.svg" alt="Clock icon"
+                                            class="size-7">
+                                        <span>Duration: 3 Months</span>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="mt-7 flex w-full items-center justify-center rounded-[15px] bg-brand-accent px-8 py-2.5 font-inter text-2xl font-semibold leading-[29px] text-[#262626]">
+                                    View Course
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="bg-[#1A1A1A] py-[55px]">
+                        <article
+                            class="mx-auto flex w-full max-w-section flex-col gap-8 rounded-[15px] bg-[rgba(56,239,8,0.2)] border border-white/20 p-6 md:flex-row md:items-center md:gap-[50px] md:p-[40px]">
+                            <img src="../../static/assets/course/course1.svg" alt="Japanese N5 Beginner class"
+                                class="h-auto w-full rounded-[15px] bg-brand-accent object-cover md:h-[382px] md:w-[551px]" />
+
+                            <div class="flex-1">
+                                <h2
+                                    class="font-inter text-4xl font-bold line-clamp-1 leading-tight text-white md:text-[47px] md:leading-[57px]">
+                                    Japanese N5 Beginner
+                                </h2>
+                                <p
+                                    class="mt-[25px] font-inter text-2xl font-medium leading-[30px] text-[#C1C1C1] md:text-[25px]">
+                                    Introductory JLPT level covering basic
+                                    Japanese foundations.
+                                </p>
+
+                                <div
+                                    class="mt-[21px] grid gap-4 font-inter text-2xl font-medium leading-[34px] text-white md:text-[28px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/timer.svg" alt="Hourglass icon"
+                                            class="size-7">
+                                        <span>Start Date: 15 May 2025</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/tree_node_icon.svg"
+                                            alt="Chalkboard user icon" class="size-7">
+                                        <span>24 Live Classes</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/stopwatch.svg" alt="Clock icon"
+                                            class="size-7">
+                                        <span>Duration: 3 Months</span>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="mt-7 flex w-full items-center justify-center rounded-[15px] bg-brand-accent px-8 py-2.5 font-inter text-2xl font-semibold leading-[29px] text-[#262626]">
+                                    View Course
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="bg-[#1A1A1A] py-[55px]">
+                        <article
+                            class="mx-auto flex w-full max-w-section flex-col gap-8 rounded-[15px] bg-[rgba(56,239,8,0.2)] border border-white/20 p-6 md:flex-row md:items-center md:gap-[50px] md:p-[40px]">
+                            <img src="../../static/assets/course/course1.svg" alt="Japanese N5 Beginner class"
+                                class="h-auto w-full rounded-[15px] bg-brand-accent object-cover md:h-[382px] md:w-[551px]" />
+
+                            <div class="flex-1">
+                                <h2
+                                    class="font-inter text-4xl font-bold line-clamp-1 leading-tight text-white md:text-[47px] md:leading-[57px]">
+                                    Japanese N5 Beginner
+                                </h2>
+                                <p
+                                    class="mt-[25px] font-inter text-2xl font-medium leading-[30px] text-[#C1C1C1] md:text-[25px]">
+                                    Introductory JLPT level covering basic
+                                    Japanese foundations.
+                                </p>
+
+                                <div
+                                    class="mt-[21px] grid gap-4 font-inter text-2xl font-medium leading-[34px] text-white md:text-[28px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/timer.svg" alt="Hourglass icon"
+                                            class="size-7">
+                                        <span>Start Date: 15 May 2025</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/tree_node_icon.svg"
+                                            alt="Chalkboard user icon" class="size-7">
+                                        <span>24 Live Classes</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/stopwatch.svg" alt="Clock icon"
+                                            class="size-7">
+                                        <span>Duration: 3 Months</span>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="mt-7 flex w-full items-center justify-center rounded-[15px] bg-brand-accent px-8 py-2.5 font-inter text-2xl font-semibold leading-[29px] text-[#262626]">
+                                    View Course
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="bg-[#1A1A1A] py-[55px]">
+                        <article
+                            class="mx-auto flex w-full max-w-section flex-col gap-8 rounded-[15px] bg-[rgba(56,239,8,0.2)] border border-white/20 p-6 md:flex-row md:items-center md:gap-[50px] md:p-[40px]">
+                            <img src="../../static/assets/course/course1.svg" alt="Japanese N5 Beginner class"
+                                class="h-auto w-full rounded-[15px] bg-brand-accent object-cover md:h-[382px] md:w-[551px]" />
+
+                            <div class="flex-1">
+                                <h2
+                                    class="font-inter text-4xl font-bold line-clamp-1 leading-tight text-white md:text-[47px] md:leading-[57px]">
+                                    Japanese N5 Beginner
+                                </h2>
+                                <p
+                                    class="mt-[25px] font-inter text-2xl font-medium leading-[30px] text-[#C1C1C1] md:text-[25px]">
+                                    Introductory JLPT level covering basic
+                                    Japanese foundations.
+                                </p>
+
+                                <div
+                                    class="mt-[21px] grid gap-4 font-inter text-2xl font-medium leading-[34px] text-white md:text-[28px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/timer.svg" alt="Hourglass icon"
+                                            class="size-7">
+                                        <span>Start Date: 15 May 2025</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/tree_node_icon.svg"
+                                            alt="Chalkboard user icon" class="size-7">
+                                        <span>24 Live Classes</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/stopwatch.svg" alt="Clock icon"
+                                            class="size-7">
+                                        <span>Duration: 3 Months</span>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="mt-7 flex w-full items-center justify-center rounded-[15px] bg-brand-accent px-8 py-2.5 font-inter text-2xl font-semibold leading-[29px] text-[#262626]">
+                                    View Course
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="bg-[#1A1A1A] py-[55px]">
+                        <article
+                            class="mx-auto flex w-full max-w-section flex-col gap-8 rounded-[15px] bg-[rgba(56,239,8,0.2)] border border-white/20 p-6 md:flex-row md:items-center md:gap-[50px] md:p-[40px]">
+                            <img src="../../static/assets/course/course1.svg" alt="Japanese N5 Beginner class"
+                                class="h-auto w-full rounded-[15px] bg-brand-accent object-cover md:h-[382px] md:w-[551px]" />
+
+                            <div class="flex-1">
+                                <h2
+                                    class="font-inter text-4xl font-bold line-clamp-1 leading-tight text-white md:text-[47px] md:leading-[57px]">
+                                    Japanese N5 Beginner
+                                </h2>
+                                <p
+                                    class="mt-[25px] font-inter text-2xl font-medium leading-[30px] text-[#C1C1C1] md:text-[25px]">
+                                    Introductory JLPT level covering basic
+                                    Japanese foundations.
+                                </p>
+
+                                <div
+                                    class="mt-[21px] grid gap-4 font-inter text-2xl font-medium leading-[34px] text-white md:text-[28px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/timer.svg" alt="Hourglass icon"
+                                            class="size-7">
+                                        <span>Start Date: 15 May 2025</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/tree_node_icon.svg"
+                                            alt="Chalkboard user icon" class="size-7">
+                                        <span>24 Live Classes</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/stopwatch.svg" alt="Clock icon"
+                                            class="size-7">
+                                        <span>Duration: 3 Months</span>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="mt-7 flex w-full items-center justify-center rounded-[15px] bg-brand-accent px-8 py-2.5 font-inter text-2xl font-semibold leading-[29px] text-[#262626]">
+                                    View Course
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="bg-[#1A1A1A] py-[55px]">
+                        <article
+                            class="mx-auto flex w-full max-w-section flex-col gap-8 rounded-[15px] bg-[rgba(56,239,8,0.2)] border border-white/20 p-6 md:flex-row md:items-center md:gap-[50px] md:p-[40px]">
+                            <img src="../../static/assets/course/course1.svg" alt="Japanese N5 Beginner class"
+                                class="h-auto w-full rounded-[15px] bg-brand-accent object-cover md:h-[382px] md:w-[551px]" />
+
+                            <div class="flex-1">
+                                <h2
+                                    class="font-inter text-4xl font-bold line-clamp-1 leading-tight text-white md:text-[47px] md:leading-[57px]">
+                                    Japanese N5 Beginner
+                                </h2>
+                                <p
+                                    class="mt-[25px] font-inter text-2xl font-medium leading-[30px] text-[#C1C1C1] md:text-[25px]">
+                                    Introductory JLPT level covering basic
+                                    Japanese foundations.
+                                </p>
+
+                                <div
+                                    class="mt-[21px] grid gap-4 font-inter text-2xl font-medium leading-[34px] text-white md:text-[28px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/timer.svg" alt="Hourglass icon"
+                                            class="size-7">
+                                        <span>Start Date: 15 May 2025</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/tree_node_icon.svg"
+                                            alt="Chalkboard user icon" class="size-7">
+                                        <span>24 Live Classes</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/stopwatch.svg" alt="Clock icon"
+                                            class="size-7">
+                                        <span>Duration: 3 Months</span>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="mt-7 flex w-full items-center justify-center rounded-[15px] bg-brand-accent px-8 py-2.5 font-inter text-2xl font-semibold leading-[29px] text-[#262626]">
+                                    View Course
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="bg-[#1A1A1A] py-[55px]">
+                        <article
+                            class="mx-auto flex w-full max-w-section flex-col gap-8 rounded-[15px] bg-[rgba(56,239,8,0.2)] border border-white/20 p-6 md:flex-row md:items-center md:gap-[50px] md:p-[40px]">
+                            <img src="../../static/assets/course/course1.svg" alt="Japanese N5 Beginner class"
+                                class="h-auto w-full rounded-[15px] bg-brand-accent object-cover md:h-[382px] md:w-[551px]" />
+
+                            <div class="flex-1">
+                                <h2
+                                    class="font-inter text-4xl font-bold line-clamp-1 leading-tight text-white md:text-[47px] md:leading-[57px]">
+                                    Japanese N5 Beginner
+                                </h2>
+                                <p
+                                    class="mt-[25px] font-inter text-2xl font-medium leading-[30px] text-[#C1C1C1] md:text-[25px]">
+                                    Introductory JLPT level covering basic
+                                    Japanese foundations.
+                                </p>
+
+                                <div
+                                    class="mt-[21px] grid gap-4 font-inter text-2xl font-medium leading-[34px] text-white md:text-[28px]">
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/timer.svg" alt="Hourglass icon"
+                                            class="size-7">
+                                        <span>Start Date: 15 May 2025</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/tree_node_icon.svg"
+                                            alt="Chalkboard user icon" class="size-7">
+                                        <span>24 Live Classes</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <img src="../../static/assets/icons/stopwatch.svg" alt="Clock icon"
+                                            class="size-7">
+                                        <span>Duration: 3 Months</span>
+                                    </div>
+                                </div>
+
+                                <button
+                                    class="mt-7 flex w-full items-center justify-center rounded-[15px] bg-brand-accent px-8 py-2.5 font-inter text-2xl font-semibold leading-[29px] text-[#262626]">
+                                    View Course
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <!-- End Courses Section -->
+
+        </main>
+
+
+
+        <!-- Footer Section -->
+        <footer class="bg-[#1A1A1A] font-['Roboto',sans-serif] text-white">
+            <div
+                class="mx-auto grid min-h-[328px] w-full max-w-section gap-10 py-14 md:grid-cols-3 md:pt-[128px] md:pb-5">
+                <div>
+                    <h4 class="mb-[8px] text-lg font-normal leading-[21px] text-white">
+                        Navigation
+                    </h4>
+                    <ul class="grid text-sm font-normal leading-[30px] text-[#C1C1C1]">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="mb-[4px] text-lg font-normal leading-[21px] text-white">
+                        Collaborate
+                    </h4>
+                    <ul class="grid text-xs font-normal leading-[30px] text-[#C1C1C1]">
+                        <li>Careers Explore</li>
+                        <li>Be come a rider</li>
+                        <li>Your Team</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="mb-[15px] text-lg font-normal leading-[21px] text-[#FDFDFD]">
+                        Follow us on
+                    </h4>
+                    <div class="mb-[11px] flex items-center gap-[11px]">
+                        <a href="#" aria-label="Facebook">
+                            <img src="../../static/assets/icons/logos_facebook.svg" alt="" class="size-[26px]" />
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <img src="../../static/assets/icons/skill-icons_twitter.svg" alt="" class="size-6" />
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <img src="../../static/assets/icons/instagram_icon.svg" alt="" class="size-6" />
+                        </a>
+                    </div>
+
+                    <p class="text-lg font-normal leading-[21px] text-[#FDFDFD]">Payment method</p>
+                    <div class="mt-[14px] flex flex-wrap items-center gap-[26px]">
+                        <img src="../../static/assets/icons/mastercard_icon.svg" alt="Mastercard"
+                            class="h-[26px] w-[34px]" />
+                        <img src="../../static/assets/icons/visacard_icon.svg" alt="Visa card"
+                            class="size-[31px] object-contain" />
+                    </div>
+
+                    <div class="mt-[14px] flex flex-wrap items-center gap-[9px]">
+                        <img src="../../static/assets/icons/playstore_icon.svg" alt="Get it on Play Store"
+                            class="h-[26px] w-[76px]" />
+                        <img src="../../static/assets/icons/apple_store.svg" alt="Download on the App Store"
+                            class="h-7 w-[72px]" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#4A4949]">
+                <div
+                    class="mx-auto flex min-h-[63px] w-full max-w-section flex-col items-start justify-center gap-3 text-sm font-normal leading-4 text-white md:flex-row md:items-center md:justify-between">
+                    <span>© Copyright 2025 mamarhat all right reserved</span>
+                    <span class="leading-[121.27%]">Privacy policy</span>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Section -->
+    </div>
+</body>
+
+</html>
