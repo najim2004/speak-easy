@@ -51,12 +51,17 @@
 
                     <div class="hidden flex-wrap items-center gap-3 sm:gap-6 lg:flex">
                         <button
-                            class="rounded-[10px] bg-brand-accent px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-[#262626] transition hover:bg-brand-strong">
+                            class="site-enroll-button rounded-[10px] bg-brand-accent px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-[#262626] transition hover:bg-brand-strong">
                             Enroll now
                         </button>
                         <button
                             class="rounded-[10px] border-2 border-brand-accent px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold text-brand-accent hover:text-white transition hover:bg-brand-accent/50">
                             Login
+                        </button>
+                        <button type="button" class="site-theme-toggle" aria-label="Switch to dark mode"
+                            data-theme-toggle>
+                            <i class="fa-solid fa-moon" data-theme-dark-icon></i>
+                            <i class="fa-solid fa-sun" data-theme-light-icon></i>
                         </button>
                     </div>
 
@@ -89,7 +94,7 @@
 
                 <div class="mt-5 grid grid-cols-2 gap-3">
                     <button
-                        class="rounded-[10px] bg-brand-accent px-4 py-2.5 text-sm font-bold text-[#262626] transition hover:bg-brand-strong">
+                        class="site-enroll-button rounded-[10px] bg-brand-accent px-4 py-2.5 text-sm font-bold text-[#262626] transition hover:bg-brand-strong">
                         Enroll now
                     </button>
                     <button
@@ -97,6 +102,12 @@
                         Login
                     </button>
                 </div>
+                <button type="button" class="site-theme-toggle mt-4 w-full" aria-label="Switch to dark mode"
+                    data-theme-toggle>
+                    <span class="site-theme-toggle__label">Theme</span>
+                    <i class="fa-solid fa-moon" data-theme-dark-icon></i>
+                    <i class="fa-solid fa-sun" data-theme-light-icon></i>
+                </button>
             </div>
         </header>
 

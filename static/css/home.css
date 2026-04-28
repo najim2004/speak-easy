@@ -114,3 +114,208 @@
     transform: none;
   }
 }
+
+body[data-theme="light"] {
+  background: #fff !important;
+  color: #0d0d0d;
+}
+
+body[data-theme="light"] header {
+  border-color: rgba(0, 0, 0, 0.08) !important;
+  background: #010500 !important;
+}
+
+body[data-theme="light"] main {
+  background:
+    radial-gradient(circle at 82% 7%, rgba(93, 214, 44, 0.2), transparent 16%),
+    radial-gradient(circle at 0% 45%, rgba(93, 214, 44, 0.13), transparent 16%),
+    #fff;
+}
+
+body[data-theme="light"] h2,
+body[data-theme="light"] h3,
+body[data-theme="light"] p,
+body[data-theme="light"] span,
+body[data-theme="light"] small,
+body[data-theme="light"] li {
+  color: inherit;
+}
+
+body[data-theme="light"] section h2 {
+  color: #0d0d0d !important;
+}
+
+body[data-theme="light"] section h2 + p,
+body[data-theme="light"] section h2 + p * {
+  color: #666 !important;
+}
+
+body[data-theme="light"] .font-changa-one {
+  color: #38ef08 !important;
+}
+
+body[data-theme="light"] .font-changa-one + p {
+  color: #4b4b4b !important;
+}
+
+body[data-theme="light"] .hero-glow,
+body[data-theme="light"] .hero-art-glow {
+  opacity: 0.55;
+}
+
+body[data-theme="light"] .hero-enrollment-card,
+body[data-theme="light"] .hero-enrollment-card span,
+body[data-theme="light"] .hero-enrollment-card div {
+  color: #fff !important;
+}
+
+body[data-theme="light"] .hero-enrollment-card button {
+  color: #0d0d0d !important;
+}
+
+body[data-theme="light"] .hero-enroll-button {
+  background: linear-gradient(90deg, #fff 14.69%, #e0e0e0 38.46%, #fff 73.44%) !important;
+}
+
+body[data-theme="light"] .hero-practice-button {
+  background: #fff !important;
+}
+
+body[data-theme="dark"] .hero-enroll-button,
+body[data-theme="dark"] .hero-practice-button {
+  background: linear-gradient(90deg, #5dd62c 0%, #afff8f 35.33%, #5dd62c 100%) !important;
+}
+
+body[data-theme="light"] #courses .bg-\[\#1A1A1A\] {
+  background: #e3e3e3 !important;
+}
+
+body[data-theme="light"] #courses article {
+  border-color: rgba(56, 239, 8, 0.18) !important;
+  background:
+    radial-gradient(circle at 8% 92%, rgba(93, 214, 44, 0.18), transparent 30%),
+    #bdecb0 !important;
+  color: #0d0d0d !important;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.22) !important;
+}
+
+body[data-theme="light"] #courses article h3,
+body[data-theme="light"] #courses article p {
+  color: #0d0d0d !important;
+}
+
+body[data-theme="light"] #courses article button {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+body[data-theme="light"] #live {
+  background: linear-gradient(86deg, #f7fff4 0%, #e2ffd7 100%);
+}
+
+body[data-theme="light"] #live > div > p {
+  color: #666 !important;
+}
+
+body[data-theme="light"] #live .live-class-card {
+  background: rgba(227, 253, 216, 0.55) !important;
+  box-shadow: inset 0 1px 40px rgba(128, 161, 115, 0.55) !important;
+}
+
+body[data-theme="light"] #live h3,
+body[data-theme="light"] #live span {
+  color: #0d0d0d !important;
+}
+
+body[data-theme="light"] #live span {
+  color: #777 !important;
+}
+
+body[data-theme="light"] #live button {
+  background: #2d2d2d !important;
+  color: #6dda41 !important;
+}
+
+body[data-theme="light"] #practice .practice-carousel__slide {
+  background-image: none;
+  background-color: #464646 !important;
+}
+
+body[data-theme="light"] #practice .practice-carousel__slide h3 {
+  color: #fff !important;
+}
+
+body[data-theme="light"] #practice .practice-carousel__slide p {
+  color: #e4e4e4 !important;
+}
+
+body[data-theme="light"] #practice .practice-carousel__control {
+  background: #fff !important;
+  color: #38ef08 !important;
+}
+
+body[data-theme="light"] #features article {
+  background: linear-gradient(129deg, rgba(93, 214, 44, 0.22), rgba(49, 112, 23, 0.12)) !important;
+  color: #0d0d0d !important;
+}
+
+body[data-theme="light"] #features article h3,
+body[data-theme="light"] #features article p {
+  color: #0d0d0d !important;
+}
+
+body[data-theme="light"] #trusted {
+  background: rgba(50, 50, 50, 0.18) !important;
+}
+
+body[data-theme="light"] #trusted article {
+  background: #212121 !important;
+  color: #fff !important;
+}
+
+body[data-theme="light"] #trusted article h3,
+body[data-theme="light"] #trusted article div {
+  color: #fff !important;
+}
+
+body[data-theme="light"] #trusted .text-brand-accent {
+  color: #38ef08 !important;
+}
+
+body[data-theme="light"] #teachers article {
+  background: #595959 !important;
+  color: #fff !important;
+}
+
+body[data-theme="light"] #teachers article h3,
+body[data-theme="light"] #teachers article small,
+body[data-theme="light"] #teachers article p {
+  color: #fff !important;
+}
+
+body[data-theme="light"] #cta h2 {
+  color: #38ef08 !important;
+}
+
+body[data-theme="light"] footer {
+  background: #e5e5e5 !important;
+  color: #0d0d0d !important;
+}
+
+body[data-theme="light"] footer h4,
+body[data-theme="light"] footer li,
+body[data-theme="light"] footer p {
+  color: #0d0d0d !important;
+}
+
+body[data-theme="light"] footer .bg-\[\#4A4949\] {
+  background: #31ab00 !important;
+}
+
+body[data-theme="light"] footer .bg-\[\#4A4949\] span {
+  color: #e4e4e4 !important;
+}
+
+body[data-theme="dark"] {
+  background: #090909 !important;
+}

@@ -1,3 +1,43 @@
+const themeStorageKey = "speakEasyTheme";
+
+const getStoredTheme = () => {
+  try {
+    return localStorage.getItem(themeStorageKey);
+  } catch {
+    return null;
+  }
+};
+
+const storeTheme = (theme) => {
+  try {
+    localStorage.setItem(themeStorageKey, theme);
+  } catch {
+    // Local storage can be unavailable in private or restricted browser modes.
+  }
+};
+
+const applyTheme = (theme) => {
+  const activeTheme = theme === "light" || theme === "dark" ? theme : "dark";
+  document.body.dataset.theme = activeTheme;
+
+  document.querySelectorAll("[data-theme-toggle]").forEach((toggle) => {
+    const isDark = activeTheme === "dark";
+    toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    toggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+  });
+};
+
+const initialTheme = getStoredTheme() || document.body.dataset.theme || "dark";
+applyTheme(initialTheme);
+
+document.querySelectorAll("[data-theme-toggle]").forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    const nextTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
+    applyTheme(nextTheme);
+    storeTheme(nextTheme);
+  });
+});
+
 document.querySelectorAll("[data-site-header]").forEach((header) => {
   const toggle = header.querySelector("[data-nav-toggle]");
   const menu = header.querySelector("[data-mobile-nav]");
