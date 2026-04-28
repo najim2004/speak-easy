@@ -18,21 +18,37 @@ const storeTheme = (theme) => {
 
 const applyTheme = (theme) => {
   const activeTheme = theme === "light" || theme === "dark" ? theme : "dark";
-  document.body.dataset.theme = activeTheme;
+  document.body.classList.toggle("light", activeTheme === "light");
+  document.body.classList.toggle("dark", activeTheme === "dark");
 
   document.querySelectorAll("[data-theme-toggle]").forEach((toggle) => {
     const isDark = activeTheme === "dark";
     toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
     toggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+
+    const darkIcon = toggle.querySelector("[data-theme-dark-icon]");
+    const lightIcon = toggle.querySelector("[data-theme-light-icon]");
+
+    if (darkIcon) {
+      darkIcon.hidden = isDark;
+    }
+
+    if (lightIcon) {
+      lightIcon.hidden = !isDark;
+    }
   });
 };
 
-const initialTheme = getStoredTheme() || document.body.dataset.theme || "dark";
+const initialTheme =
+  getStoredTheme() ||
+  (document.body.classList.contains("light") ? "light" : "") ||
+  (document.body.classList.contains("dark") ? "dark" : "") ||
+  "dark";
 applyTheme(initialTheme);
 
 document.querySelectorAll("[data-theme-toggle]").forEach((toggle) => {
   toggle.addEventListener("click", () => {
-    const nextTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
+    const nextTheme = document.body.classList.contains("dark") ? "light" : "dark";
     applyTheme(nextTheme);
     storeTheme(nextTheme);
   });
@@ -47,14 +63,26 @@ document.querySelectorAll("[data-site-header]").forEach((header) => {
   }
 
   const setMenuOpen = (isOpen) => {
-    menu.classList.toggle("is-open", isOpen);
-    header.classList.toggle("is-nav-open", isOpen);
+    menu.classList.toggle("hidden", !isOpen);
+    const openIcon = toggle.querySelector("[data-nav-open-icon]");
+    const closeIcon = toggle.querySelector("[data-nav-close-icon]");
+
+    if (openIcon) {
+      openIcon.hidden = isOpen;
+    }
+
+    if (closeIcon) {
+      closeIcon.hidden = !isOpen;
+    }
+
     toggle.setAttribute("aria-expanded", String(isOpen));
     toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
   };
 
+  setMenuOpen(false);
+
   toggle.addEventListener("click", () => {
-    setMenuOpen(!menu.classList.contains("is-open"));
+    setMenuOpen(menu.classList.contains("hidden"));
   });
 
   menu.querySelectorAll("a").forEach((link) => {

@@ -41,7 +41,8 @@ document.querySelectorAll("[data-practice-carousel]").forEach((carousel) => {
     Array.from({ length: dotCount }).forEach((_, index) => {
       const dot = document.createElement("button");
       dot.type = "button";
-      dot.className = "practice-carousel__dot";
+      dot.className =
+        "h-[9px] w-[9px] rounded-full border border-brand-accent/65 bg-brand-accent/15 transition-[width,background-color] duration-200";
       dot.setAttribute("aria-label", `Go to practice lab slide ${index + 1}`);
       dot.addEventListener("click", () => scrollToSlide(index));
       dotsWrap.appendChild(dot);
@@ -56,7 +57,10 @@ document.querySelectorAll("[data-practice-carousel]").forEach((carousel) => {
     const dots = Array.from(dotsWrap.children);
 
     dots.forEach((dot, index) => {
-      dot.classList.toggle("is-active", index === activeIndex);
+      const isActive = index === activeIndex;
+      dot.classList.toggle("w-7", isActive);
+      dot.classList.toggle("bg-brand-accent", isActive);
+      dot.classList.toggle("bg-brand-accent/15", !isActive);
     });
 
     prevButton.disabled = track.scrollLeft <= 1;

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8" />
@@ -15,9 +15,10 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-brand-bg font-inter text-brand-text" data-theme="light">
+<body class="light bg-white dark:bg-[#090909] font-inter text-[#0d0d0d] dark:text-white transition-colors duration-200">
     <!-- Header Section -->
-    <header class="sticky top-0 z-40 border-b border-white/5 bg-[rgba(0,0,0,1)]" data-site-header>
+    <header class="sticky top-0 z-40 border-b border-black/10 dark:border-white/10 bg-[#010500] text-white"
+        data-site-header>
         <div class="mx-auto flex max-w-section w-full items-center justify-between gap-3 sm:gap-5 px-4 sm:px-6 py-3">
             <a href="home.html" class="flex items-center gap-3">
                 <img src="../../static/assets/common/logo.svg" alt="Speak Easy Japanese logo" class="h-10" />
@@ -28,18 +29,25 @@
             </a>
 
             <div class="flex items-center gap-9">
-                <nav class="hidden items-center gap-5 text-sm text-t-bre lg:flex">
-                    <div class="site-nav-dropdown">
-                        <a href="#courses" class="site-nav-dropdown__trigger transition hover:text-brand-accent">
+                <nav class="hidden items-center gap-5 text-sm text-white lg:flex">
+                    <div class="group relative">
+                        <a href="#courses" class="inline-flex items-center gap-1 transition hover:text-brand-accent">
                             <span>Courses</span>
-                            <i class="fa-solid fa-angle-down"></i>
+                            <i
+                                class="fa-solid fa-angle-down text-xs transition-transform group-hover:rotate-180 group-focus-within:rotate-180"></i>
                         </a>
-                        <div class="site-nav-dropdown__menu">
-                            <a href="#courses">All Courses</a>
-                            <a href="#courses">JLPT N5 Beginner</a>
-                            <a href="#courses">JLPT N4 Elementary</a>
-                            <a href="#courses">JLPT N3 Intermediate</a>
-                            <a href="#courses">JLPT N2 Advanced</a>
+                        <div
+                            class="pointer-events-none absolute left-0 top-[calc(100%+14px)] z-50 grid min-w-[230px] translate-y-2 gap-1 rounded-xl border border-brand-accent/25 bg-[#050505]/95 p-2.5 opacity-0 shadow-[0_18px_45px_rgba(0,0,0,0.35)] transition duration-200 before:absolute before:-top-4 before:left-0 before:right-0 before:h-4 before:content-[''] group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                            <a class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                                href="#courses">All Courses</a>
+                            <a class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                                href="#courses">JLPT N5 Beginner</a>
+                            <a class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                                href="#courses">JLPT N4 Elementary</a>
+                            <a class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                                href="#courses">JLPT N3 Intermediate</a>
+                            <a class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                                href="#courses">JLPT N2 Advanced</a>
                         </div>
                     </div>
                     <a href="#practice" class="transition hover:text-brand-accent">Practice Lab</a>
@@ -57,32 +65,43 @@
                         class="rounded-[10px] border-2 border-brand-accent px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold text-brand-accent hover:text-white transition hover:bg-brand-accent/50">
                         Login
                     </button>
-                    <button type="button" class="site-theme-toggle" aria-label="Switch to dark mode"
-                        data-theme-toggle>
+                    <button type="button"
+                        class="site-theme-toggle inline-flex min-h-10 items-center justify-center gap-2 rounded-[10px] border border-brand-accent/50 bg-brand-accent/10 px-3 py-[9px] text-brand-accent transition hover:border-brand-accent hover:bg-brand-accent/20 focus-visible:outline-none"
+                        aria-label="Switch to dark mode" data-theme-toggle>
                         <i class="fa-solid fa-moon" data-theme-dark-icon></i>
-                        <i class="fa-solid fa-sun" data-theme-light-icon></i>
+                        <i class="fa-solid fa-sun" data-theme-light-icon hidden></i>
                     </button>
                 </div>
 
                 <button type="button"
                     class="grid h-11 w-11 place-items-center rounded-[10px] border border-brand-accent/50 text-xl text-brand-accent transition hover:bg-brand-accent/15 lg:hidden"
                     aria-label="Open navigation menu" aria-expanded="false" data-nav-toggle>
-                    <i class="fa-solid fa-bars" data-nav-open-icon></i>
-                    <i class="fa-solid fa-xmark" data-nav-close-icon></i>
+                    <i class="fa-solid fa-bars col-start-1 row-start-1 transition" data-nav-open-icon></i>
+                    <i class="fa-solid fa-xmark col-start-1 row-start-1 transition" data-nav-close-icon hidden></i>
                 </button>
             </div>
         </div>
 
-        <div class="site-mobile-nav border-t border-white/10 bg-[#050505] px-4 py-5 lg:hidden" data-mobile-nav>
+        <div class="site-mobile-nav hidden border-t border-black/10 dark:border-white/10 bg-[#010500] px-4 py-5 lg:hidden"
+            data-mobile-nav>
             <nav class="grid gap-4 text-sm text-white">
-                <details class="site-mobile-dropdown">
-                    <summary>Courses</summary>
-                    <div class="site-mobile-dropdown__menu">
-                        <a href="#courses">All Courses</a>
-                        <a href="#courses">JLPT N5 Beginner</a>
-                        <a href="#courses">JLPT N4 Elementary</a>
-                        <a href="#courses">JLPT N3 Intermediate</a>
-                        <a href="#courses">JLPT N2 Advanced</a>
+                <details class="group rounded-[10px]">
+                    <summary
+                        class="flex cursor-pointer list-none items-center justify-between transition marker:content-none [&::-webkit-details-marker]:hidden group-open:text-brand-accent">
+                        <span>Courses</span><i
+                            class="fa-solid fa-angle-down text-xs transition-transform group-open:rotate-180"></i>
+                    </summary>
+                    <div class="mt-3 grid gap-2 border-l border-brand-accent/35 pl-3.5">
+                        <a class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                            href="#courses">All Courses</a>
+                        <a class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                            href="#courses">JLPT N5 Beginner</a>
+                        <a class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                            href="#courses">JLPT N4 Elementary</a>
+                        <a class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                            href="#courses">JLPT N3 Intermediate</a>
+                        <a class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                            href="#courses">JLPT N2 Advanced</a>
                     </div>
                 </details>
                 <a href="#practice" class="transition hover:text-brand-accent">Practice Lab</a>
@@ -101,16 +120,18 @@
                     Login
                 </button>
             </div>
-            <button type="button" class="site-theme-toggle mt-4 w-full" aria-label="Switch to dark mode"
-                data-theme-toggle>
-                <span class="site-theme-toggle__label">Theme</span>
+            <button type="button"
+                class="site-theme-toggle mt-4 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-[10px] border border-brand-accent/50 bg-brand-accent/10 px-3 py-[9px] text-brand-accent transition hover:border-brand-accent hover:bg-brand-accent/20 focus-visible:outline-none"
+                aria-label="Switch to dark mode" data-theme-toggle>
+                <span class="mr-auto font-bold text-white">Theme</span>
                 <i class="fa-solid fa-moon" data-theme-dark-icon></i>
-                <i class="fa-solid fa-sun" data-theme-light-icon></i>
+                <i class="fa-solid fa-sun" data-theme-light-icon hidden></i>
             </button>
         </div>
     </header>
 
-    <main class="overflow-x-hidden relative">
+    <main
+        class="overflow-x-hidden relative [background:radial-gradient(circle_at_82%_7%,rgba(93,214,44,0.2),transparent_16%),radial-gradient(circle_at_0%_45%,rgba(93,214,44,0.13),transparent_16%),#ffffff] dark:[background:#090909]">
         <div class="absolute left-[-465px] top-[20px] w-[1000px] h-[950px] z-0"
             style="background: radial-gradient(50% 50% at 50% 50%,rgba(93, 214, 44, 0.55) 0%,rgba(93, 214, 44, 0) 100%);">
         </div>
@@ -125,7 +146,7 @@
                             Learn Japanese in Bangla Step By Step
                         </h1>
                         <p
-                            class="mt-6 md:max-w-[460px] text-center md:text-left text-2xl sm:text-3xl font-semibold text-white">
+                            class="mt-6 md:max-w-[460px] text-center md:text-left text-2xl sm:text-3xl font-semibold text-[#595959] dark:text-[#c1c1c1]">
                             Live classes, practice tools &amp; real speaking
                             training
                         </p>
@@ -138,7 +159,7 @@
                 </div>
 
                 <div
-                    class="hero-enrollment-card flex flex-col items-center gap-6 rounded-2xl border border-white/5 bg-[#050505] px-5 py-8 sm:px-8 sm:py-10 lg:flex-row lg:items-center lg:justify-between lg:px-11 lg:py-11">
+                    class="hero-enrollment-card flex flex-col items-center gap-6 rounded-2xl border border-black/10 dark:border-white/10 bg-[#010500] px-5 py-8 text-white sm:px-8 sm:py-10 lg:flex-row lg:items-center lg:justify-between lg:px-11 lg:py-11">
                     <div class="flex flex-col sm:flex-row sm:items-center gap-6">
                         <div class="flex items-center gap-3">
                             <img src="../../static/assets/icons/rocket_icon.svg" alt="Rocket icon"
@@ -161,27 +182,11 @@
 
                     <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full md:w-auto">
                         <button
-                            class="site-enroll-button hero-enroll-button rounded-[10px] px-6 py-3 sm:px-7 sm:py-4 text-lg sm:text-2xl font-semibold text-[#262626] text-nowrap w-full sm:w-auto"
-                            style="
-                                    background: linear-gradient(
-                                        90deg,
-                                        #5dd62c 0%,
-                                        #afff8f 35.33%,
-                                        #5dd62c 100%
-                                    );
-                                ">
+                            class="site-enroll-button hero-enroll-button rounded-[10px] px-6 py-3 sm:px-7 sm:py-4 text-lg sm:text-2xl font-semibold text-[#262626] text-nowrap w-full sm:w-auto [background:linear-gradient(90deg,#fff_14.69%,#e0e0e0_38.46%,#fff_73.44%)] dark:[background:linear-gradient(90deg,#5dd62c_0%,#afff8f_35.33%,#5dd62c_100%)]">
                             Enroll Now
                         </button>
                         <button
-                            class="hero-practice-button rounded-[10px] px-6 py-3 sm:px-7 sm:py-4 text-lg sm:text-2xl font-semibold text-[#262626] text-nowrap w-full sm:w-auto"
-                            style="
-                                    background: linear-gradient(
-                                        90deg,
-                                        #5dd62c 0%,
-                                        #afff8f 35.33%,
-                                        #5dd62c 100%
-                                    );
-                                ">
+                            class="hero-practice-button rounded-[10px] px-6 py-3 sm:px-7 sm:py-4 text-lg sm:text-2xl font-semibold text-[#262626] text-nowrap w-full sm:w-auto bg-white dark:[background:linear-gradient(90deg,#5dd62c_0%,#afff8f_35.33%,#5dd62c_100%)]">
                             Free Practice
                         </button>
                     </div>
@@ -196,18 +201,18 @@
                 <h2 class="font-inter text-3xl sm:text-[38px] lg:text-[44px] font-semibold leading-tight">
                     Choose Your Course Levels
                 </h2>
-                <p class="mt-2 w-full max-w-3xl text-sm text-brand-muted">
+                <p class="mt-2 w-full max-w-3xl text-sm text-[#595959] dark:text-[#c1c1c1]">
                     Structured courses designed for every stage of your
                     journey. Start from beginner level and gradually move
                     toward advanced JLPT levels with guided lessons.
                 </p>
             </div>
 
-            <div class="mt-3 bg-[#1A1A1A] py-[38px] px-4">
+            <div class="mt-3 bg-[#e3e3e3] dark:bg-[#1a1a1a] py-[38px] px-4">
                 <div
                     class="max-w-section mx-auto mt-6 grid justify-items-center gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     <article
-                        class="flex min-h-[316px] w-full max-w-[280px] flex-col gap-4 rounded-[15px] border border-white/30 bg-[#101010] bg-[radial-gradient(circle_at_6%_92%,rgba(93,214,44,0.18),transparent_28%),radial-gradient(circle_at_92%_2%,rgba(93,214,44,0.14),transparent_25%)] p-5 text-white shadow-[inset_0_0_18px_rgba(255,255,255,0.03)]">
+                        class="flex min-h-[316px] w-full max-w-[280px] flex-col gap-4 rounded-[15px] border border-black/10 dark:border-white/10 [background:radial-gradient(circle_at_8%_92%,rgba(93,214,44,0.18),transparent_30%),#bdecb0] dark:[background:radial-gradient(circle_at_6%_92%,rgba(93,214,44,0.18),transparent_28%),radial-gradient(circle_at_92%_2%,rgba(93,214,44,0.14),transparent_25%),#101010] p-5 text-[#0d0d0d] dark:text-white shadow-[inset_0_0_18px_rgba(255,255,255,0.03)]">
                         <img src="../../static/assets/home/level_name_n5.png" alt="Japanese N5 course"
                             class="h-[148px] w-full rounded-[15px] object-cover" />
                         <h3 class="m-0 text-2xl font-bold leading-[29px]">
@@ -217,13 +222,13 @@
                             Duration: 3month
                         </p>
                         <button
-                            class="mt-auto flex h-[39px] w-full items-center justify-center rounded-[15px] bg-[#2cf000] text-base font-normal leading-[19px] text-[#262626] transition hover:-translate-y-px hover:bg-brand-strong">
+                            class="mt-auto flex h-[39px] w-full items-center justify-center rounded-[15px] bg-black dark:bg-[#2cf000] text-base font-normal leading-[19px] text-white dark:text-[#262626] transition hover:-translate-y-px hover:bg-brand-strong">
                             View Details
                         </button>
                     </article>
 
                     <article
-                        class="flex min-h-[316px] w-full max-w-[280px] flex-col gap-4 rounded-[15px] border border-white/30 bg-[#101010] bg-[radial-gradient(circle_at_6%_92%,rgba(93,214,44,0.18),transparent_28%),radial-gradient(circle_at_92%_2%,rgba(93,214,44,0.14),transparent_25%)] p-5 text-white shadow-[inset_0_0_18px_rgba(255,255,255,0.03)]">
+                        class="flex min-h-[316px] w-full max-w-[280px] flex-col gap-4 rounded-[15px] border border-black/10 dark:border-white/10 [background:radial-gradient(circle_at_8%_92%,rgba(93,214,44,0.18),transparent_30%),#bdecb0] dark:[background:radial-gradient(circle_at_6%_92%,rgba(93,214,44,0.18),transparent_28%),radial-gradient(circle_at_92%_2%,rgba(93,214,44,0.14),transparent_25%),#101010] p-5 text-[#0d0d0d] dark:text-white shadow-[inset_0_0_18px_rgba(255,255,255,0.03)]">
                         <img src="../../static/assets/home/level_name_n4.jpg" alt="Japanese N4 course"
                             class="h-[148px] w-full rounded-[15px] object-cover" />
                         <h3 class="m-0 text-2xl font-bold leading-[29px]">
@@ -233,13 +238,13 @@
                             Duration: 4month
                         </p>
                         <button
-                            class="mt-auto flex h-[39px] w-full items-center justify-center rounded-[15px] bg-[#2cf000] text-base font-normal leading-[19px] text-[#262626] transition hover:-translate-y-px hover:bg-brand-strong">
+                            class="mt-auto flex h-[39px] w-full items-center justify-center rounded-[15px] bg-black dark:bg-[#2cf000] text-base font-normal leading-[19px] text-white dark:text-[#262626] transition hover:-translate-y-px hover:bg-brand-strong">
                             View Details
                         </button>
                     </article>
 
                     <article
-                        class="flex min-h-[316px] w-full max-w-[280px] flex-col gap-4 rounded-[15px] border border-white/30 bg-[#101010] bg-[radial-gradient(circle_at_6%_92%,rgba(93,214,44,0.18),transparent_28%),radial-gradient(circle_at_92%_2%,rgba(93,214,44,0.14),transparent_25%)] p-5 text-white shadow-[inset_0_0_18px_rgba(255,255,255,0.03)]">
+                        class="flex min-h-[316px] w-full max-w-[280px] flex-col gap-4 rounded-[15px] border border-black/10 dark:border-white/10 [background:radial-gradient(circle_at_8%_92%,rgba(93,214,44,0.18),transparent_30%),#bdecb0] dark:[background:radial-gradient(circle_at_6%_92%,rgba(93,214,44,0.18),transparent_28%),radial-gradient(circle_at_92%_2%,rgba(93,214,44,0.14),transparent_25%),#101010] p-5 text-[#0d0d0d] dark:text-white shadow-[inset_0_0_18px_rgba(255,255,255,0.03)]">
                         <img src="../../static/assets/home/level_name_n3.jpg" alt="Japanese N3 course"
                             class="h-[148px] w-full rounded-[15px] object-cover" />
                         <h3 class="m-0 text-2xl font-bold leading-[29px]">
@@ -249,13 +254,13 @@
                             Duration: 6month
                         </p>
                         <button
-                            class="mt-auto flex h-[39px] w-full items-center justify-center rounded-[15px] bg-[#2cf000] text-base font-normal leading-[19px] text-[#262626] transition hover:-translate-y-px hover:bg-brand-strong">
+                            class="mt-auto flex h-[39px] w-full items-center justify-center rounded-[15px] bg-black dark:bg-[#2cf000] text-base font-normal leading-[19px] text-white dark:text-[#262626] transition hover:-translate-y-px hover:bg-brand-strong">
                             View Details
                         </button>
                     </article>
 
                     <article
-                        class="flex min-h-[316px] w-full max-w-[280px] flex-col gap-4 rounded-[15px] border border-white/30 bg-[#101010] bg-[radial-gradient(circle_at_6%_92%,rgba(93,214,44,0.18),transparent_28%),radial-gradient(circle_at_92%_2%,rgba(93,214,44,0.14),transparent_25%)] p-5 text-white shadow-[inset_0_0_18px_rgba(255,255,255,0.03)]">
+                        class="flex min-h-[316px] w-full max-w-[280px] flex-col gap-4 rounded-[15px] border border-black/10 dark:border-white/10 [background:radial-gradient(circle_at_8%_92%,rgba(93,214,44,0.18),transparent_30%),#bdecb0] dark:[background:radial-gradient(circle_at_6%_92%,rgba(93,214,44,0.18),transparent_28%),radial-gradient(circle_at_92%_2%,rgba(93,214,44,0.14),transparent_25%),#101010] p-5 text-[#0d0d0d] dark:text-white shadow-[inset_0_0_18px_rgba(255,255,255,0.03)]">
                         <img src="../../static/assets/home/level_name_n2.jpg" alt="Japanese N2 course"
                             class="h-[148px] w-full rounded-[15px] object-cover" />
                         <h3 class="m-0 text-2xl font-bold leading-[29px]">
@@ -265,7 +270,7 @@
                             Duration: 8month
                         </p>
                         <button
-                            class="mt-auto flex h-[39px] w-full items-center justify-center rounded-[15px] bg-[#2cf000] text-base font-normal leading-[19px] text-[#262626] transition hover:-translate-y-px hover:bg-brand-strong">
+                            class="mt-auto flex h-[39px] w-full items-center justify-center rounded-[15px] bg-black dark:bg-[#2cf000] text-base font-normal leading-[19px] text-white dark:text-[#262626] transition hover:-translate-y-px hover:bg-brand-strong">
                             View Details
                         </button>
                     </article>
@@ -275,46 +280,48 @@
         <!-- End Course Levels Section -->
 
         <!-- Live Classes Section -->
-        <section id="live" class="live-section relative pt-16 pb-[50px] px-4 sm:px-6">
+        <section id="live"
+            class="live-section relative px-4 pt-16 pb-[50px] sm:px-6 [background:linear-gradient(86deg,#f7fff4_0%,#e2ffd7_100%)] dark:[background:#090909]">
             <!-- <div class="absolute left-0 top-0 z-0 w-full h-full">
                     <img src="../../static/assets/home/demo_class_bg.svg" alt="Live classes background"
                         class="w-full object-contain">
                 </div> -->
             <div class="mx-auto max-w-section w-full">
                 <h2
-                    class="font-inter text-3xl font-semibold leading-tight text-white md:text-[38px] md:leading-[46px] lg:text-[44px] lg:leading-[53px]">
+                    class="font-inter text-3xl font-semibold leading-tight text-[#0d0d0d] dark:text-white md:text-[38px] md:leading-[46px] lg:text-[44px] lg:leading-[53px]">
                     Join Our Interactive Live Classes
                 </h2>
-                <p class="mt-[10px] font-inter text-base font-semibold leading-[19px] text-[#C1C1C1] w-full">
+                <p
+                    class="mt-[10px] font-inter text-base font-semibold leading-[19px] text-[#595959] dark:text-[#c1c1c1] w-full">
                     Learn directly from experienced Japanese teachers, ask
                     questions, practice speaking, and interact with other
                     learners in real-time classes.
                 </p>
 
                 <div
-                    class="live-class-card mt-[50px] flex flex-col lg:flex-row justify-between lg:items-center w-full max-w-section gap-5 overflow-hidden rounded-[15px] bg-white/1 p-5 md:p-11 shadow-[inset_0_23px_56px_-36px_#000000,inset_0_7px_11px_-4px_#1B5304,inset_0_-68px_68px_-64px_#489529,inset_0_98px_100px_-48px_rgba(18,18,19,0.3),inset_0_4px_18px_#184207,inset_0_1px_40px_#44BD12] backdrop-blur-[50px]">
+                    class="live-class-card mt-[50px] flex flex-col lg:flex-row justify-between lg:items-center w-full max-w-section gap-5 overflow-hidden rounded-[15px] p-5 md:p-11 backdrop-blur-[50px] [background:rgba(227,253,216,0.55)] dark:[background:rgba(255,255,255,0.01)] [box-shadow:inset_0_1px_40px_rgba(128,161,115,0.55)] dark:[box-shadow:inset_0_23px_56px_-36px_#000,inset_0_7px_11px_-4px_#1b5304,inset_0_-68px_68px_-64px_#489529,inset_0_98px_100px_-48px_rgba(18,18,19,0.3),inset_0_4px_18px_#184207,inset_0_1px_40px_#44bd12]">
                     <div>
                         <h3
-                            class="mb-8 text-2xl sm:text-3xl lg:text-[40px] font-semibold leading-tight lg:leading-[48px] text-white">
+                            class="mb-8 text-2xl sm:text-3xl lg:text-[40px] font-semibold leading-tight lg:leading-[48px] text-[#0d0d0d] dark:text-white">
                             N5 - Online Batch 26
                         </h3>
                         <div class="space-y-10">
                             <div class="flex items-center gap-2">
                                 <img class="size-[26px] object-contain" src="../../static/assets/icons/bookmark.svg" />
                                 <span
-                                    class="text-lg sm:text-xl lg:text-[26px] font-semibold leading-[31px] text-[#C1C1C1]">Live
+                                    class="text-lg sm:text-xl lg:text-[26px] font-semibold leading-[31px] text-[#595959] dark:text-[#c1c1c1]">Live
                                     classes 3 days per week</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <img class="size-[26px] object-contain" src="../../static/assets/icons/clock.svg" />
                                 <span
-                                    class="text-lg sm:text-xl lg:text-[26px] font-semibold leading-[31px] text-[#C1C1C1]">24/7
+                                    class="text-lg sm:text-xl lg:text-[26px] font-semibold leading-[31px] text-[#595959] dark:text-[#c1c1c1]">24/7
                                     AI Doubt Solver</span>
                             </div>
                             <div class="flex items-start gap-2">
                                 <img class="size-[26px] object-contain" src="../../static/assets/icons/headphone.svg" />
                                 <span
-                                    class="font-inter text-lg sm:text-xl lg:text-[26px] font-semibold leading-[31px] text-[#C1C1C1]">Full
+                                    class="font-inter text-lg sm:text-xl lg:text-[26px] font-semibold leading-[31px] text-[#595959] dark:text-[#c1c1c1]">Full
                                     revision and special support
                                     before the exam</span>
                             </div>
@@ -333,7 +340,8 @@
                 </div>
 
                 <div class="mt-[67px] grid justify-items-center gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                    <article class="w-full rounded-[15px] bg-[#D9D9D9] flex flex-col">
+                    <article
+                        class="w-full rounded-[15px] bg-[#e3e3e3] dark:bg-[#1b1b1b] text-[#0d0d0d] dark:text-white flex flex-col">
                         <div class="relative w-full h-[200px]">
                             <img src="../../static/assets/home/n5_live.jpg" alt="N5 class preview day 3"
                                 class="h-full w-full rounded-t-[15px] object-cover" />
@@ -343,11 +351,12 @@
                                     class="fa-solid fa-play text-[97px] leading-none text-black [-webkit-text-stroke:2px_#A9A9A9]"></i>
                             </span>
                         </div>
-                        <h3 class="px-5 py-4 text-center text-[28px] font-semibold leading-[34px] text-black">
+                        <h3 class="px-5 py-4 text-center text-[28px] font-semibold leading-[34px]">
                             N5 Day-3| Batch o7| Alen
                         </h3>
                     </article>
-                    <article class="w-full rounded-[15px] bg-[#D9D9D9] flex flex-col">
+                    <article
+                        class="w-full rounded-[15px] bg-[#e3e3e3] dark:bg-[#1b1b1b] text-[#0d0d0d] dark:text-white flex flex-col">
                         <div class="relative w-full h-[200px]">
                             <img src="../../static/assets/home/n5_live.jpg" alt="N5 class preview day 3"
                                 class="h-full w-full rounded-t-[15px] object-cover" />
@@ -357,11 +366,12 @@
                                     class="fa-solid fa-play text-[97px] leading-none text-black [-webkit-text-stroke:2px_#A9A9A9]"></i>
                             </span>
                         </div>
-                        <h3 class="px-5 py-4 text-center text-[28px] font-semibold leading-[34px] text-black">
+                        <h3 class="px-5 py-4 text-center text-[28px] font-semibold leading-[34px]">
                             N5 Day-4| Batch o7| Alen
                         </h3>
                     </article>
-                    <article class="w-full rounded-[15px] bg-[#D9D9D9] flex flex-col">
+                    <article
+                        class="w-full rounded-[15px] bg-[#e3e3e3] dark:bg-[#1b1b1b] text-[#0d0d0d] dark:text-white flex flex-col">
                         <div class="relative w-full h-[200px]">
                             <img src="../../static/assets/home/n5_live.jpg" alt="N5 class preview day 3"
                                 class="h-full w-full rounded-t-[15px] object-cover" />
@@ -371,7 +381,7 @@
                                     class="fa-solid fa-play text-[97px] leading-none text-black [-webkit-text-stroke:2px_#A9A9A9]"></i>
                             </span>
                         </div>
-                        <h3 class="px-5 py-4 text-center text-[28px] font-semibold leading-[34px] text-black">
+                        <h3 class="px-5 py-4 text-center text-[28px] font-semibold leading-[34px]">
                             N5 Day-5| Batch o7| Alen
                         </h3>
                     </article>
@@ -387,20 +397,21 @@
             </div>
             <div class="relative z-10 mx-auto max-w-section w-full">
                 <h2
-                    class="text-3xl sm:text-[38px] lg:text-[44px] font-semibold leading-tight sm:leading-[46px] lg:leading-[53px] text-white">
+                    class="text-3xl sm:text-[38px] lg:text-[44px] font-semibold leading-tight sm:leading-[46px] lg:leading-[53px] text-[#0d0d0d] dark:text-white">
                     Practice Lab Preview
                 </h2>
-                <p class="mt-[10px] w-full max-w-[818px] text-base font-semibold leading-[19px] text-[#C1C1C1]">
+                <p
+                    class="mt-[10px] w-full max-w-[818px] text-base font-semibold leading-[19px] text-[#595959] dark:text-[#c1c1c1]">
                     Sharpen your Japanese skills with interactive tools.
                     Practice grammar, vocabulary, listening and speaking.
                 </p>
 
                 <div class="practice-carousel mt-11" data-practice-carousel>
                     <div class="relative">
-                        <div class="practice-carousel__track flex gap-5 overflow-x-auto scroll-smooth pb-4"
+                        <div class="practice-carousel__track flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] sm:gap-5 [&::-webkit-scrollbar]:hidden"
                             data-practice-track>
                             <article
-                                class="practice-carousel__slide relative h-[278px] shrink-0 overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
+                                class="practice-carousel__slide relative h-[278px] w-[calc(100vw_-_32px)] shrink-0 snap-start overflow-hidden rounded-[15px] text-center sm:w-[calc((100%_-_20px)/2)] lg:w-[calc((100%_-_60px)/4)] bg-[#464646]">
                                 <div
                                     class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
                                     <img src="../../static/assets/icons/logos_grammarly-icon.svg" alt="Grammar sheets"
@@ -411,13 +422,13 @@
                                     Grammar sheets
                                 </h3>
                                 <p
-                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
+                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#e4e4e4] dark:text-[#c1c1c1]">
                                     Practice JLPT Grammar
                                 </p>
                             </article>
 
                             <article
-                                class="practice-carousel__slide relative h-[278px] shrink-0 overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
+                                class="practice-carousel__slide relative h-[278px] w-[calc(100vw_-_32px)] shrink-0 snap-start overflow-hidden rounded-[15px] text-center sm:w-[calc((100%_-_20px)/2)] lg:w-[calc((100%_-_60px)/4)] bg-[#464646]">
                                 <div
                                     class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
                                     <img src="../../static/assets/icons/material-symbols_quiz-rounded.svg" alt="Quiz"
@@ -428,13 +439,13 @@
                                     Quiz
                                 </h3>
                                 <p
-                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
+                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#e4e4e4] dark:text-[#c1c1c1]">
                                     Practice JLPT Quiz
                                 </p>
                             </article>
 
                             <article
-                                class="practice-carousel__slide relative h-[278px] shrink-0 overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
+                                class="practice-carousel__slide relative h-[278px] w-[calc(100vw_-_32px)] shrink-0 snap-start overflow-hidden rounded-[15px] text-center sm:w-[calc((100%_-_20px)/2)] lg:w-[calc((100%_-_60px)/4)] bg-[#464646]">
                                 <div
                                     class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
                                     <img src="../../static/assets/icons/arcticons_flashcards.svg" alt="Flashcards"
@@ -445,13 +456,13 @@
                                     Flashcards
                                 </h3>
                                 <p
-                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
+                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#e4e4e4] dark:text-[#c1c1c1]">
                                     Practice JLPT Flashcards
                                 </p>
                             </article>
 
                             <article
-                                class="practice-carousel__slide relative h-[278px] shrink-0 overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
+                                class="practice-carousel__slide relative h-[278px] w-[calc(100vw_-_32px)] shrink-0 snap-start overflow-hidden rounded-[15px] text-center sm:w-[calc((100%_-_20px)/2)] lg:w-[calc((100%_-_60px)/4)] bg-[#464646]">
                                 <div
                                     class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
                                     <img src="../../static/assets/icons/listening_icon.svg" alt="Listening"
@@ -462,13 +473,13 @@
                                     Listening
                                 </h3>
                                 <p
-                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
+                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#e4e4e4] dark:text-[#c1c1c1]">
                                     Practice JLPT Audio
                                 </p>
                             </article>
 
                             <article
-                                class="practice-carousel__slide relative h-[278px] shrink-0 overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
+                                class="practice-carousel__slide relative h-[278px] w-[calc(100vw_-_32px)] shrink-0 snap-start overflow-hidden rounded-[15px] text-center sm:w-[calc((100%_-_20px)/2)] lg:w-[calc((100%_-_60px)/4)] bg-[#464646]">
                                 <div
                                     class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
                                     <img src="../../static/assets/icons/headphone.svg" alt="Speaking practice"
@@ -479,13 +490,13 @@
                                     Speaking
                                 </h3>
                                 <p
-                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
+                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#e4e4e4] dark:text-[#c1c1c1]">
                                     Practice Conversation
                                 </p>
                             </article>
 
                             <article
-                                class="practice-carousel__slide relative h-[278px] shrink-0 overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
+                                class="practice-carousel__slide relative h-[278px] w-[calc(100vw_-_32px)] shrink-0 snap-start overflow-hidden rounded-[15px] text-center sm:w-[calc((100%_-_20px)/2)] lg:w-[calc((100%_-_60px)/4)] bg-[#464646]">
                                 <div
                                     class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
                                     <img src="../../static/assets/icons/stopwatch.svg" alt="Timed tests"
@@ -496,19 +507,19 @@
                                     Timed Tests
                                 </h3>
                                 <p
-                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
+                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#e4e4e4] dark:text-[#c1c1c1]">
                                     Practice Exam Speed
                                 </p>
                             </article>
                         </div>
 
                         <button type="button"
-                            class="practice-carousel__control practice-carousel__control--prev absolute left-0 top-1/2 z-10 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-brand-accent/35 bg-[#101010]/90 text-brand-accent shadow-glow transition hover:bg-brand-accent hover:text-[#262626] md:grid"
+                            class="practice-carousel__control practice-carousel__control--prev absolute left-0 top-1/2 z-10 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-brand-accent/35 bg-[#101010]/90 text-brand-accent shadow-glow transition hover:bg-brand-accent hover:text-[#262626] disabled:cursor-not-allowed disabled:opacity-40 md:grid"
                             aria-label="Previous practice lab item" data-practice-prev>
                             <i class="fa-solid fa-chevron-left"></i>
                         </button>
                         <button type="button"
-                            class="practice-carousel__control practice-carousel__control--next absolute right-0 top-1/2 z-10 hidden h-11 w-11 translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-brand-accent/35 bg-[#101010]/90 text-brand-accent shadow-glow transition hover:bg-brand-accent hover:text-[#262626] md:grid"
+                            class="practice-carousel__control practice-carousel__control--next absolute right-0 top-1/2 z-10 hidden h-11 w-11 translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-brand-accent/35 bg-[#101010]/90 text-brand-accent shadow-glow transition hover:bg-brand-accent hover:text-[#262626] disabled:cursor-not-allowed disabled:opacity-40 md:grid"
                             aria-label="Next practice lab item" data-practice-next>
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
@@ -525,11 +536,11 @@
         <section id="features" class="pt-[70px] sm:pt-[104px] px-4 sm:px-6">
             <div class="mx-auto w-full max-w-section">
                 <h2
-                    class="w-full max-w-[351px] font-inter text-3xl sm:text-[38px] lg:text-[44px] font-semibold leading-tight sm:leading-[46px] lg:leading-[53px] text-white">
+                    class="w-full max-w-[351px] font-inter text-3xl sm:text-[38px] lg:text-[44px] font-semibold leading-tight sm:leading-[46px] lg:leading-[53px] text-[#0d0d0d] dark:text-white">
                     Course Features
                 </h2>
                 <p
-                    class="mt-[10px] w-full max-w-[944px] font-inter text-base font-semibold leading-[19px] text-[#C1C1C1]">
+                    class="mt-[10px] w-full max-w-[944px] font-inter text-base font-semibold leading-[19px] text-[#595959] dark:text-[#c1c1c1]">
                     Combine live classes, practice tools, and AI-powered
                     feedback. Designed to make learning Japanese simple and
                     effective.
@@ -537,15 +548,15 @@
 
                 <div class="mt-[50px] grid justify-items-center gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                     <article
-                        class="w-full rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        class="w-full rounded-[15px] [background:linear-gradient(129deg,rgba(93,214,44,0.22),rgba(49,112,23,0.12))] dark:[background:linear-gradient(129deg,rgba(93,214,44,0.2),rgba(49,112,23,0.2))] px-6 py-10 text-[#0d0d0d] dark:text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div class="flex items-center gap-[15px]">
                             <img src="../../static/assets/icons/Online learning.svg" alt="Live classes"
                                 class="h-[60px] w-[60px] shrink-0 object-contain" />
-                            <h3 class="text-2xl lg:text-[32px] font-semibold leading-[39px] text-white">
+                            <h3 class="text-2xl lg:text-[32px] font-semibold leading-[39px]">
                                 Live Classes
                             </h3>
                         </div>
-                        <p class="mt-7 flex-1 text-base leading-[19px] text-white">
+                        <p class="mt-7 flex-1 text-base leading-[19px]">
                             Our live classes are conducted by experienced
                             Japanese language teachers who guide students
                             step by step. In these sessions, you can
@@ -559,15 +570,15 @@
                     </article>
 
                     <article
-                        class="w-full rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        class="w-full rounded-[15px] [background:linear-gradient(129deg,rgba(93,214,44,0.22),rgba(49,112,23,0.12))] dark:[background:linear-gradient(129deg,rgba(93,214,44,0.2),rgba(49,112,23,0.2))] px-6 py-10 text-[#0d0d0d] dark:text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div class="flex items-center gap-[15px]">
                             <img src="../../static/assets/icons/Human brain.svg" alt="Practice lab"
                                 class="h-[60px] w-[60px] shrink-0 object-contain" />
-                            <h3 class="text-2xl lg:text-[32px] font-semibold leading-[39px] text-white">
+                            <h3 class="text-2xl lg:text-[32px] font-semibold leading-[39px]">
                                 Practice Lab
                             </h3>
                         </div>
-                        <p class="mt-7 text-base leading-[19px] text-white">
+                        <p class="mt-7 text-base leading-[19px]">
                             The Practice Lab is an interactive learning
                             space where you can strengthen your Japanese
                             skills through different tools. It includes
@@ -581,15 +592,15 @@
                     </article>
 
                     <article
-                        class="w-full rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        class="w-full rounded-[15px] [background:linear-gradient(129deg,rgba(93,214,44,0.22),rgba(49,112,23,0.12))] dark:[background:linear-gradient(129deg,rgba(93,214,44,0.2),rgba(49,112,23,0.2))] px-6 py-10 text-[#0d0d0d] dark:text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div class="flex items-center gap-[15px]">
                             <img src="../../static/assets/icons/Learning.svg" alt="AI homework"
                                 class="h-[60px] w-[60px] shrink-0 object-contain" />
-                            <h3 class="text-2xl lg:text-[32px] font-semibold leading-[39px] text-white">
+                            <h3 class="text-2xl lg:text-[32px] font-semibold leading-[39px]">
                                 AI Homework
                             </h3>
                         </div>
-                        <p class="mt-7 text-base leading-[19px] text-white">
+                        <p class="mt-7 text-base leading-[19px]">
                             With AI-powered homework checking, you can
                             submit your writing or assignments and receive
                             instant feedback. The system analyzes your
@@ -602,15 +613,15 @@
                     </article>
 
                     <article
-                        class="w-full rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        class="w-full rounded-[15px] [background:linear-gradient(129deg,rgba(93,214,44,0.22),rgba(49,112,23,0.12))] dark:[background:linear-gradient(129deg,rgba(93,214,44,0.2),rgba(49,112,23,0.2))] px-6 py-10 text-[#0d0d0d] dark:text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div class="flex items-center gap-[15px]">
                             <img src="../../static/assets/icons/Clipboard.svg" alt="Progress tracking"
                                 class="h-[60px] w-[60px] shrink-0 object-contain" />
-                            <h3 class="text-2xl lg:text-[32px] font-semibold leading-[39px] text-white">
+                            <h3 class="text-2xl lg:text-[32px] font-semibold leading-[39px]">
                                 Progress Tracking
                             </h3>
                         </div>
-                        <p class="mt-7 text-base leading-[19px] text-white">
+                        <p class="mt-7 text-base leading-[19px]">
                             Our progress tracking system allows you to
                             monitor your learning journey easily. You can
                             see how many lessons you have completed, track
@@ -622,15 +633,15 @@
                     </article>
 
                     <article
-                        class="w-full rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        class="w-full rounded-[15px] [background:linear-gradient(129deg,rgba(93,214,44,0.22),rgba(49,112,23,0.12))] dark:[background:linear-gradient(129deg,rgba(93,214,44,0.2),rgba(49,112,23,0.2))] px-6 py-10 text-[#0d0d0d] dark:text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div class="flex items-center gap-[15px]">
                             <img src="../../static/assets/icons/Help.svg" alt="Mentor support"
                                 class="h-[60px] w-[60px] shrink-0 object-contain" />
-                            <h3 class="text-2xl lg:text-[32px] font-semibold leading-[39px] text-white">
+                            <h3 class="text-2xl lg:text-[32px] font-semibold leading-[39px]">
                                 Mentor Support
                             </h3>
                         </div>
-                        <p class="mt-7 text-base leading-[19px] text-white">
+                        <p class="mt-7 text-base leading-[19px]">
                             Whenever you face difficulties in your learning
                             journey, mentors are available to guide you.
                             They help answer your questions, clarify
@@ -642,15 +653,15 @@
                     </article>
 
                     <article
-                        class="w-full rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        class="w-full rounded-[15px] [background:linear-gradient(129deg,rgba(93,214,44,0.22),rgba(49,112,23,0.12))] dark:[background:linear-gradient(129deg,rgba(93,214,44,0.2),rgba(49,112,23,0.2))] px-6 py-10 text-[#0d0d0d] dark:text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div class="flex items-center gap-[15px]">
                             <img src="../../static/assets/icons/Career choice.svg" alt="Career guide"
                                 class="h-[60px] w-[60px] shrink-0 object-contain" />
-                            <h3 class="text-2xl lg:text-[32px] font-semibold leading-[39px] text-white">
+                            <h3 class="text-2xl lg:text-[32px] font-semibold leading-[39px]">
                                 Career Guide
                             </h3>
                         </div>
-                        <p class="mt-7 text-base leading-[19px] text-white">
+                        <p class="mt-7 text-base leading-[19px]">
                             Learning Japanese can open many opportunities
                             for jobs and higher studies. Our career guidance
                             feature helps you understand different career
@@ -666,23 +677,25 @@
         <!-- End Course Features Section -->
 
         <!-- Trusted Learners Section -->
-        <section id="trusted" class="overflow-hidden bg-[rgba(73,255,0,0.2)] py-[52px] mt-[70px] sm:mt-[100px]">
+        <section id="trusted"
+            class="overflow-hidden bg-[rgba(50,50,50,0.18)] dark:bg-[rgba(73,255,0,0.2)] py-[52px] mt-[70px] sm:mt-[100px]">
             <div class="mx-auto max-w-section px-4 sm:px-6">
                 <h2
-                    class="text-3xl sm:text-[38px] lg:text-[44px] font-semibold leading-tight sm:leading-[46px] lg:leading-[53px] text-white">
+                    class="text-3xl sm:text-[38px] lg:text-[44px] font-semibold leading-tight sm:leading-[46px] lg:leading-[53px] text-[#0d0d0d] dark:text-white">
                     Trusted by Hundreds of Japanese Learners
                 </h2>
                 <p
-                    class="mt-[9px] max-w-[696px] text-left sm:text-center text-base font-semibold leading-[19px] text-[#C1C1C1]">
+                    class="mt-[9px] max-w-[696px] text-left sm:text-center text-base font-semibold leading-[19px] text-[#595959] dark:text-[#c1c1c1]">
                     See how students are successfully learning Japanese with
                     our courses and practice tools.
                 </p>
             </div>
 
             <div class="mt-14 space-y-5">
-                <div class="trusted-marquee__track flex w-max gap-5 px-2.5" data-trusted-marquee>
+                <div class="trusted-marquee__track flex w-max gap-5 px-2.5 [animation:trusted-marquee-ltr_36s_linear_infinite] [will-change:transform] hover:[animation-play-state:paused] motion-reduce:animate-none motion-reduce:transform-none"
+                    data-trusted-marquee>
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Esther Howard"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -703,13 +716,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Esther Howard
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Arlene McCoy"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -730,12 +743,12 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Arlene McCoy
                         </h3>
                     </article>
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Arlene McCoy"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -756,12 +769,12 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Arlene McCoy
                         </h3>
                     </article>
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Arlene McCoy"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -782,13 +795,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Arlene McCoy
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Jane Cooper"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -809,13 +822,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Jane Cooper
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Ronal Richards"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -836,13 +849,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Ronal Richards
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Jacob Jones"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -863,16 +876,16 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Jacob Jones
                         </h3>
                     </article>
                 </div>
 
-                <div class="trusted-marquee__track trusted-marquee__track--middle flex w-max gap-5 px-2.5"
+                <div class="trusted-marquee__track flex w-max gap-5 px-2.5 [animation:trusted-marquee-rtl_36s_linear_infinite] [will-change:transform] hover:[animation-play-state:paused] motion-reduce:animate-none motion-reduce:transform-none"
                     data-trusted-marquee>
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Albert Flores"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -893,13 +906,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Albert Flores
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Jerome Bell"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -920,13 +933,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Jerome Bell
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Darrell Steward"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -947,13 +960,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Darrell Steward
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Ralph Edwards"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -974,13 +987,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Ralph Edwards
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Kathryn Murphy"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1001,13 +1014,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Kathryn Murphy
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Courtney Henry"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1028,13 +1041,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Courtney Henry
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Leslie Alexander"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1055,13 +1068,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Leslie Alexander
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Devon Lane"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1082,16 +1095,16 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Devon Lane
                         </h3>
                     </article>
                 </div>
 
-                <div class="trusted-marquee__track trusted-marquee__track--bottom flex w-max gap-5 px-2.5"
+                <div class="trusted-marquee__track flex w-max gap-5 px-2.5 [animation:trusted-marquee-ltr_36s_linear_infinite] [will-change:transform] hover:[animation-play-state:paused] motion-reduce:animate-none motion-reduce:transform-none"
                     data-trusted-marquee>
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Wade Warren"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1112,13 +1125,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Wade Warren
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Courtney Henry"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1139,13 +1152,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Courtney Henry
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Bessie Cooper"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1166,13 +1179,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Bessie Cooper
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Jacob Jones"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1193,13 +1206,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Jacob Jones
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Darrell Steward"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1220,13 +1233,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Darrell Steward
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Dianne Russell"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1247,13 +1260,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Dianne Russell
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Cody Fisher"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1274,13 +1287,13 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Cody Fisher
                         </h3>
                     </article>
 
                     <article
-                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#212121] dark:bg-[#ebebeb] p-[14px] text-white dark:text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Jenny Wilson"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1301,7 +1314,7 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class="mt-2 text-[32px] font-semibold leading-[39px]">
+                        <h3 class="mt-2 truncate text-[clamp(1.45rem,1.1rem+0.45vw,2rem)] font-semibold leading-[1.2]">
                             Jenny Wilson
                         </h3>
                     </article>
@@ -1314,10 +1327,11 @@
         <section id="teachers" class="mt-[70px] sm:mt-[100px] px-4 sm:px-6">
             <div class="mx-auto w-full max-w-section">
                 <h2
-                    class="font-inter text-3xl font-semibold leading-tight text-white md:text-[38px] md:leading-[46px] lg:text-[44px] lg:leading-[53px]">
+                    class="font-inter text-3xl font-semibold leading-tight text-[#0d0d0d] dark:text-white md:text-[38px] md:leading-[46px] lg:text-[44px] lg:leading-[53px]">
                     Meet Our Expert Japanese Teachers
                 </h2>
-                <p class="mt-[5px] font-inter text-base font-semibold leading-[19px] text-[#C1C1C1]">
+                <p
+                    class="mt-[5px] font-inter text-base font-semibold leading-[19px] text-[#595959] dark:text-[#c1c1c1]">
                     Learn from experienced instructors who guide you step by
                     step. Our teachers focus on real conversation, clear
                     explanations, and helping you build confidence in
@@ -1326,7 +1340,7 @@
 
                 <div class="mt-[46px] grid justify-items-center gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                     <article
-                        class="min-h-[231px] w-full max-w-96 rounded-[15px] bg-[rgba(217,217,217,0.2)] p-5 text-white">
+                        class="min-h-[231px] w-full max-w-96 rounded-[15px] bg-[#595959] dark:bg-[rgba(217,217,217,0.2)] p-5 text-white">
                         <div class="flex items-start gap-[11px]">
                             <img src="../../static/assets/avatars/user1.png" alt="Devon Lane"
                                 class="size-[86px] shrink-0 rounded-full object-cover" />
@@ -1335,10 +1349,10 @@
                                     Devon Lane
                                 </h3>
                                 <small
-                                    class="mt-px block break-words font-inter text-lg font-normal leading-[22px] text-white">bill.sanders@example.com</small>
+                                    class="mt-px block break-words font-inter text-lg font-normal leading-[22px]">bill.sanders@example.com</small>
                             </div>
                         </div>
-                        <p class="pt-[18px] font-inter text-lg lg:text-[22px] font-normal leading-[27px] text-white">
+                        <p class="pt-[18px] font-inter text-lg lg:text-[22px] font-normal leading-[27px]">
                             Focuses on clear explanations, beginner-friendly
                             lessons and practical conversation habits for
                             everyday Japanese.
@@ -1346,7 +1360,7 @@
                     </article>
 
                     <article
-                        class="min-h-[231px] w-full max-w-96 rounded-[15px] bg-[rgba(217,217,217,0.2)] p-5 text-white">
+                        class="min-h-[231px] w-full max-w-96 rounded-[15px] bg-[#595959] dark:bg-[rgba(217,217,217,0.2)] p-5 text-white">
                         <div class="flex items-start gap-[11px]">
                             <img src="../../static/assets/avatars/user1.png" alt="Jacob Jones"
                                 class="size-[86px] shrink-0 rounded-full object-cover" />
@@ -1355,10 +1369,10 @@
                                     Jacob Jones
                                 </h3>
                                 <small
-                                    class="mt-px block break-words font-inter text-lg font-normal leading-[22px] text-white">jessica.hanson@example.com</small>
+                                    class="mt-px block break-words font-inter text-lg font-normal leading-[22px]">jessica.hanson@example.com</small>
                             </div>
                         </div>
-                        <p class="pt-[18px] font-inter text-lg lg:text-[22px] font-normal leading-[27px] text-white">
+                        <p class="pt-[18px] font-inter text-lg lg:text-[22px] font-normal leading-[27px]">
                             Specializes in exam strategy, grammar breakdowns
                             and helping students move smoothly from N5 to
                             N3.
@@ -1366,7 +1380,7 @@
                     </article>
 
                     <article
-                        class="min-h-[231px] w-full max-w-96 rounded-[15px] bg-[rgba(217,217,217,0.2)] p-5 text-white">
+                        class="min-h-[231px] w-full max-w-96 rounded-[15px] bg-[#595959] dark:bg-[rgba(217,217,217,0.2)] p-5 text-white">
                         <div class="flex items-start gap-[11px]">
                             <img src="../../static/assets/avatars/user1.png" alt="Jenny Wilson"
                                 class="size-[86px] shrink-0 rounded-full object-cover" />
@@ -1375,10 +1389,10 @@
                                     Jenny Wilson
                                 </h3>
                                 <small
-                                    class="mt-px block break-words font-inter text-lg font-normal leading-[22px] text-white">nathan.roberts@example.com</small>
+                                    class="mt-px block break-words font-inter text-lg font-normal leading-[22px]">nathan.roberts@example.com</small>
                             </div>
                         </div>
-                        <p class="pt-[18px] font-inter text-lg lg:text-[22px] font-normal leading-[27px] text-white">
+                        <p class="pt-[18px] font-inter text-lg lg:text-[22px] font-normal leading-[27px]">
                             Helps learners improve pronunciation, listening
                             confidence and natural sentence building through
                             guided speaking sessions.
@@ -1399,7 +1413,7 @@
                 </h2>
                 <div class="flex flex-wrap gap-8 justify-center lg:justify-start">
                     <button
-                        class="site-enroll-button flex h-[59px] w-[184px] items-center justify-center gap-2.5 rounded-[10px] bg-[linear-gradient(90deg,#5DD62C_0%,#AFFF8F_35.33%,#5DD62C_100%)] px-[30px] py-[15px] font-inter text-2xl font-semibold leading-[29px] text-[#262626] transition hover:brightness-110">
+                        class="site-enroll-button flex h-[59px] w-[184px] items-center justify-center gap-2.5 rounded-[10px] [background:linear-gradient(90deg,#5dd62c_0%,#afff8f_35.33%,#5dd62c_100%)] px-[30px] py-[15px] font-inter text-2xl font-semibold leading-[29px] text-[#262626] transition hover:brightness-110">
                         Enroll Now
                     </button>
                     <button
@@ -1413,14 +1427,14 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="bg-[#1A1A1A] font-['Roboto',sans-serif] text-white">
+    <footer class="bg-[#e5e5e5] dark:bg-[#1a1a1a] font-['Roboto',sans-serif] text-[#0d0d0d] dark:text-white">
         <div
             class="mx-auto grid min-h-[328px] w-full max-w-section gap-10 px-4 sm:px-6 py-14 md:grid-cols-3 md:pt-[128px] md:pb-5">
             <div>
-                <h4 class="mb-[8px] text-lg font-normal leading-[21px] text-white">
+                <h4 class="mb-[8px] text-lg font-normal leading-[21px]">
                     Navigation
                 </h4>
-                <ul class="grid text-sm font-normal leading-[30px] text-[#C1C1C1]">
+                <ul class="grid text-sm font-normal leading-[30px] text-[#0d0d0d] dark:text-[#c1c1c1]">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
@@ -1428,10 +1442,10 @@
             </div>
 
             <div>
-                <h4 class="mb-[4px] text-lg font-normal leading-[21px] text-white">
+                <h4 class="mb-[4px] text-lg font-normal leading-[21px]">
                     Collaborate
                 </h4>
-                <ul class="grid text-xs font-normal leading-[30px] text-[#C1C1C1]">
+                <ul class="grid text-xs font-normal leading-[30px] text-[#0d0d0d] dark:text-[#c1c1c1]">
                     <li>Careers Explore</li>
                     <li>Be come a rider</li>
                     <li>Your Team</li>
@@ -1439,7 +1453,7 @@
             </div>
 
             <div>
-                <h4 class="mb-[15px] text-lg font-normal leading-[21px] text-[#FDFDFD]">
+                <h4 class="mb-[15px] text-lg font-normal leading-[21px]">
                     Follow us on
                 </h4>
                 <div class="mb-[11px] flex items-center gap-[11px]">
@@ -1454,7 +1468,7 @@
                     </a>
                 </div>
 
-                <p class="text-lg font-normal leading-[21px] text-[#FDFDFD]">
+                <p class="text-lg font-normal leading-[21px]">
                     Payment method
                 </p>
                 <div class="mt-[14px] flex flex-wrap items-center gap-[26px]">
@@ -1473,9 +1487,9 @@
             </div>
         </div>
 
-        <div class="bg-[#4A4949]">
+        <div class="bg-[#31ab00] dark:bg-[#4a4949]">
             <div
-                class="mx-auto flex min-h-[63px] w-full max-w-section px-4 sm:px-6 flex-col items-start justify-center gap-3 text-sm font-normal leading-4 text-white md:flex-row md:items-center md:justify-between">
+                class="mx-auto flex min-h-[63px] w-full max-w-section px-4 sm:px-6 flex-col items-start justify-center gap-3 text-sm font-normal leading-4 text-[#e4e4e4] dark:text-white md:flex-row md:items-center md:justify-between">
                 <span>© Copyright 2025 mamarhat all right reserved</span>
                 <span class="leading-[121.27%]">Privacy policy</span>
             </div>
