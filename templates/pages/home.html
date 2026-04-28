@@ -12,20 +12,6 @@
     <link rel="stylesheet" href="../../static/css/app.css" />
     <script src="../../static/js/tailwind.config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-        @media (max-width: 1199px) {
-            #trusted .w-max {
-                width: 100%;
-            }
-        }
-
-        @media (min-width: 768px) and (max-width: 1199px) {
-            #trusted article h3 {
-                font-size: 28px;
-                line-height: 34px;
-            }
-        }
-    </style>
 </head>
 
 <body class="bg-brand-bg font-inter text-brand-text">
@@ -64,16 +50,12 @@
         </div>
     </header>
 
-    <main>
+    <main class="overflow-x-hidden relative">
+        <div class="absolute left-[-465px] top-[20px] w-[1000px] h-[950px] z-0"
+            style="background: radial-gradient(50% 50% at 50% 50%,rgba(93, 214, 44, 0.55) 0%,rgba(93, 214, 44, 0) 100%);">
+        </div>
         <!-- Hero Section -->
         <section class="relative px-4 sm:px-6 overflow-x-hidden md:overflow-visible">
-            <div class="absolute left-[-465px] top-[20px] w-[1000px] h-[950px] z-0" style="
-                        background: radial-gradient(
-                            50% 50% at 50% 50%,
-                            rgba(93, 214, 44, 0.55) 0%,
-                            rgba(93, 214, 44, 0) 100%
-                        );
-                    "></div>
 
             <div class="mx-auto w-full max-w-section relative z-10">
                 <div class="flex items-center gap-5 md:gap-0 flex-col md:flex-row h-full w-full">
@@ -83,13 +65,13 @@
                             Learn Japanese in Bangla Step By Step
                         </h1>
                         <p
-                            class="mt-6 max-w-[460px] text-center md:text-left text-2xl sm:text-3xl font-semibold text-white">
+                            class="mt-6 md:max-w-[460px] text-center md:text-left text-2xl sm:text-3xl font-semibold text-white">
                             Live classes, practice tools &amp; real speaking
                             training
                         </p>
                     </div>
 
-                    <div class="max-w-[550px] w-full h-full">
+                    <div class="-mt-10 md:mt-0 max-w-[550px] w-full h-full">
                         <img src="../../static/assets/home/Frame.svg" alt="Japanese class illustration"
                             class="xl:min-w-[600px] aspect-square xl:-ml-12" />
                     </div>
@@ -150,7 +132,7 @@
 
         <!-- Course Levels Section -->
         <section id="courses" class="mt-[70px] sm:mt-[100px]">
-            <div class="max-w-section mx-auto">
+            <div class="max-w-section mx-auto px-4">
                 <h2 class="font-inter text-3xl sm:text-[38px] lg:text-[44px] font-semibold leading-tight">
                     Choose Your Course Levels
                 </h2>
@@ -161,7 +143,7 @@
                 </p>
             </div>
 
-            <div class="mt-3 bg-[#1A1A1A] py-[38px]">
+            <div class="mt-3 bg-[#1A1A1A] py-[38px] px-4">
                 <div
                     class="max-w-section mx-auto mt-6 grid justify-items-center gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     <article
@@ -278,65 +260,60 @@
                             </div>
                         </div>
                         <button
-                            class="mt-[38px] flex h-[59px] w-full max-w-[459px] items-center justify-center gap-2.5 rounded-[10px] bg-black px-6 sm:px-[80px] lg:px-[130px] py-[15px] text-lg sm:text-xl lg:text-2xl font-semibold leading-[29px] text-brand-accent shadow-[inset_7px_8px_8px_rgba(184,184,184,0.25)]">
+                            class="mt-[38px] flex h-[59px] w-full mx-auto max-w-[459px] items-center justify-center gap-2.5 rounded-[10px] bg-black px-6 sm:px-[80px] lg:px-[130px] py-[15px] text-lg sm:text-xl lg:text-2xl font-semibold leading-[29px] text-brand-accent shadow-[inset_7px_8px_8px_rgba(184,184,184,0.25)]">
                             Join Demo Class
                         </button>
                     </div>
 
                     <div
-                        class="max-h-[384px] max-w-[584px] w-full overflow-hidden rounded-[15px] border border-white/5">
+                        class="max-h-[384px] mx-auto max-w-[584px] w-full overflow-hidden rounded-[15px] border border-white/5">
                         <img src="../../static/assets/home/japanesse_class.svg" alt="Japanese live class"
                             class="h-full w-full object-cover" />
                     </div>
                 </div>
 
-                <div class="mt-[67px] grid justify-items-center gap-5 md:grid-cols-3">
-                    <article
-                        class="relative h-[266px] w-full max-w-[384px] overflow-hidden rounded-[15px] bg-[#D9D9D9]">
-                        <div class="absolute left-0 top-0 h-[198px] w-full">
+                <div class="mt-[67px] grid justify-items-center gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                    <article class="w-full rounded-[15px] bg-[#D9D9D9] flex flex-col">
+                        <div class="relative w-full h-[200px]">
                             <img src="../../static/assets/home/n5_live.jpg" alt="N5 class preview day 3"
                                 class="h-full w-full rounded-t-[15px] object-cover" />
                             <div class="absolute inset-0 rounded-t-[15px] bg-gray-500/55"></div>
-                            <span class="absolute left-[144px] top-[51px] grid h-[97px] w-[97px] place-items-center">
+                            <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                 <i
                                     class="fa-solid fa-play text-[97px] leading-none text-black [-webkit-text-stroke:2px_#A9A9A9]"></i>
                             </span>
                         </div>
-                        <strong
-                            class="absolute left-5 top-[213px] h-[34px] w-[calc(100%-40px)] font-inter text-xl sm:text-2xl lg:text-[28px] font-semibold leading-[34px] text-black">N5
-                            Day-3| Batch o7| Alen</strong>
+                        <h3 class="px-5 py-4 text-center text-[28px] font-semibold leading-[34px] text-black">
+                            N5 Day-3| Batch o7| Alen
+                        </h3>
                     </article>
-
-                    <article
-                        class="relative h-[266px] w-full max-w-[384px] overflow-hidden rounded-[15px] bg-[#D9D9D9]">
-                        <div class="absolute left-0 top-0 h-[198px] w-full">
-                            <img src="../../static/assets/home/n5_live.jpg" alt="N5 class preview day 4"
+                    <article class="w-full rounded-[15px] bg-[#D9D9D9] flex flex-col">
+                        <div class="relative w-full h-[200px]">
+                            <img src="../../static/assets/home/n5_live.jpg" alt="N5 class preview day 3"
                                 class="h-full w-full rounded-t-[15px] object-cover" />
                             <div class="absolute inset-0 rounded-t-[15px] bg-gray-500/55"></div>
-                            <span class="absolute left-[144px] top-[51px] grid h-[97px] w-[97px] place-items-center">
+                            <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                 <i
                                     class="fa-solid fa-play text-[97px] leading-none text-black [-webkit-text-stroke:2px_#A9A9A9]"></i>
                             </span>
                         </div>
-                        <strong
-                            class="absolute left-5 top-[213px] h-[34px] w-[calc(100%-40px)] font-inter text-xl sm:text-2xl lg:text-[28px] font-semibold leading-[34px] text-black">N5
-                            Day-4| Batch o7| Alen</strong>
+                        <h3 class="px-5 py-4 text-center text-[28px] font-semibold leading-[34px] text-black">
+                            N5 Day-4| Batch o7| Alen
+                        </h3>
                     </article>
-
-                    <article
-                        class="relative h-[266px] w-full max-w-[384px] overflow-hidden rounded-[15px] bg-[#D9D9D9]">
-                        <div class="absolute left-0 top-0 h-[198px] w-full">
-                            <img src="../../static/assets/home/n5_live.jpg" alt="N5 class preview day 5"
+                    <article class="w-full rounded-[15px] bg-[#D9D9D9] flex flex-col">
+                        <div class="relative w-full h-[200px]">
+                            <img src="../../static/assets/home/n5_live.jpg" alt="N5 class preview day 3"
                                 class="h-full w-full rounded-t-[15px] object-cover" />
                             <div class="absolute inset-0 rounded-t-[15px] bg-gray-500/55"></div>
-                            <span class="absolute left-[144px] top-[51px] grid h-[97px] w-[97px] place-items-center">
+                            <span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                 <i
                                     class="fa-solid fa-play text-[97px] leading-none text-black [-webkit-text-stroke:2px_#A9A9A9]"></i>
                             </span>
                         </div>
-                        <strong
-                            class="absolute left-5 top-[213px] h-[34px] w-[calc(100%-40px)] font-inter text-xl sm:text-2xl lg:text-[28px] font-semibold leading-[34px] text-black">N5
-                            Day-5| Batch o7| Alen</strong>
+                        <h3 class="px-5 py-4 text-center text-[28px] font-semibold leading-[34px] text-black">
+                            N5 Day-5| Batch o7| Alen
+                        </h3>
                     </article>
                 </div>
             </div>
@@ -448,9 +425,9 @@
                     effective.
                 </p>
 
-                <div class="mt-[50px] grid justify-items-center gap-6 lg:grid-cols-3">
+                <div class="mt-[50px] grid justify-items-center gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                     <article
-                        class="h-[353px] w-full max-w-[383px] rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        class="w-full rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div class="flex items-center gap-[15px]">
                             <img src="../../static/assets/icons/Online learning.svg" alt="Live classes"
                                 class="h-[60px] w-[60px] shrink-0 object-contain" />
@@ -458,7 +435,7 @@
                                 Live Classes
                             </h3>
                         </div>
-                        <p class="mt-7 text-base leading-[19px] text-white">
+                        <p class="mt-7 flex-1 text-base leading-[19px] text-white">
                             Our live classes are conducted by experienced
                             Japanese language teachers who guide students
                             step by step. In these sessions, you can
@@ -472,7 +449,7 @@
                     </article>
 
                     <article
-                        class="h-[353px] w-full max-w-[383px] rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        class="w-full rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div class="flex items-center gap-[15px]">
                             <img src="../../static/assets/icons/Human brain.svg" alt="Practice lab"
                                 class="h-[60px] w-[60px] shrink-0 object-contain" />
@@ -494,7 +471,7 @@
                     </article>
 
                     <article
-                        class="h-[353px] w-full max-w-[383px] rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        class="w-full rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div class="flex items-center gap-[15px]">
                             <img src="../../static/assets/icons/Learning.svg" alt="AI homework"
                                 class="h-[60px] w-[60px] shrink-0 object-contain" />
@@ -515,7 +492,7 @@
                     </article>
 
                     <article
-                        class="h-[353px] w-full max-w-[383px] rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        class="w-full rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div class="flex items-center gap-[15px]">
                             <img src="../../static/assets/icons/Clipboard.svg" alt="Progress tracking"
                                 class="h-[60px] w-[60px] shrink-0 object-contain" />
@@ -535,7 +512,7 @@
                     </article>
 
                     <article
-                        class="h-[353px] w-full max-w-[383px] rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        class="w-full rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div class="flex items-center gap-[15px]">
                             <img src="../../static/assets/icons/Help.svg" alt="Mentor support"
                                 class="h-[60px] w-[60px] shrink-0 object-contain" />
@@ -555,7 +532,7 @@
                     </article>
 
                     <article
-                        class="h-[353px] w-full max-w-[383px] rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
+                        class="w-full rounded-[15px] bg-[linear-gradient(129.01deg,rgba(93,214,44,0.2)_0%,rgba(49,112,23,0.2)_63.28%)] px-6 py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)]">
                         <div class="flex items-center gap-[15px]">
                             <img src="../../static/assets/icons/Career choice.svg" alt="Career guide"
                                 class="h-[60px] w-[60px] shrink-0 object-contain" />
@@ -1235,7 +1212,7 @@
                     Japanese.
                 </p>
 
-                <div class="mt-[46px] grid justify-items-center gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+                <div class="mt-[46px] grid justify-items-center gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
                     <article
                         class="min-h-[231px] w-full max-w-96 rounded-[15px] bg-[rgba(217,217,217,0.2)] p-5 text-white">
                         <div class="flex items-start gap-[11px]">
@@ -1303,12 +1280,12 @@
         <!-- Call To Action Section -->
         <section class="mt-[100px] sm:mt-[154px] mb-[70px] sm:mb-[108px] px-4 sm:px-6">
             <div
-                class="mx-auto flex w-[min(1202px,calc(100%-32px))] flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+                class="mx-auto flex w-full max-w-section flex-col items-center justify-between gap-6 md:flex-row md:items-center">
                 <h2
                     class="text-center md:text-left font-inter text-4xl font-semibold leading-tight text-brand-accent md:text-[40px] md:leading-[48px] lg:text-[46px] lg:leading-[56px]">
                     Start Your<br />Japanese Journey Today
                 </h2>
-                <div class="flex flex-wrap gap-8 justify-center md:justify-start">
+                <div class="flex flex-wrap gap-8 justify-center lg:justify-start">
                     <button
                         class="flex h-[59px] w-[184px] items-center justify-center gap-2.5 rounded-[10px] bg-[linear-gradient(90deg,#5DD62C_0%,#AFFF8F_35.33%,#5DD62C_100%)] px-[30px] py-[15px] font-inter text-2xl font-semibold leading-[29px] text-[#262626] transition hover:brightness-110">
                         Enroll Now
