@@ -1,0 +1,81 @@
+document.querySelectorAll("[data-practice-carousel]").forEach((carousel) => {
+  const track = carousel.querySelector("[data-practice-track]");
+  const slides = Array.from(track.children);
+  const prevButton = carousel.querySelector("[data-practice-prev]");
+  const nextButton = carousel.querySelector("[data-practice-next]");
+  const dotsWrap = carousel.querySelector("[data-practice-dots]");
+
+  const getSlideStep = () => {
+    const firstSlide = slides[0];
+    const gap = Number.parseFloat(getComputedStyle(track).columnGap) || 0;
+    return firstSlide.getBoundingClientRect().width + gap;
+  };
+
+  const getActiveIndex = () => {
+    const step = getSlideStep();
+    return step ? Math.round(track.scrollLeft / step) : 0;
+  };
+
+  const getMaxIndex = () => {
+    const step = getSlideStep();
+    const maxScrollLeft = track.scrollWidth - track.clientWidth;
+    return step ? Math.max(Math.ceil(maxScrollLeft / step), 0) : 0;
+  };
+
+  const scrollToSlide = (index) => {
+    track.scrollTo({
+      left: getSlideStep() * Math.min(Math.max(index, 0), getMaxIndex()),
+      behavior: "smooth",
+    });
+  };
+
+  const renderDots = () => {
+    const dotCount = getMaxIndex() + 1;
+
+    if (dotsWrap.children.length === dotCount) {
+      return;
+    }
+
+    dotsWrap.replaceChildren();
+
+    Array.from({ length: dotCount }).forEach((_, index) => {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "practice-carousel__dot";
+      dot.setAttribute("aria-label", `Go to practice lab slide ${index + 1}`);
+      dot.addEventListener("click", () => scrollToSlide(index));
+      dotsWrap.appendChild(dot);
+    });
+  };
+
+  const updateControls = () => {
+    renderDots();
+
+    const activeIndex = Math.min(getActiveIndex(), getMaxIndex());
+    const maxScrollLeft = track.scrollWidth - track.clientWidth - 1;
+    const dots = Array.from(dotsWrap.children);
+
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("is-active", index === activeIndex);
+    });
+
+    prevButton.disabled = track.scrollLeft <= 1;
+    nextButton.disabled = track.scrollLeft >= maxScrollLeft;
+  };
+
+  prevButton.addEventListener("click", () => scrollToSlide(Math.max(getActiveIndex() - 1, 0)));
+  nextButton.addEventListener("click", () => scrollToSlide(Math.min(getActiveIndex() + 1, slides.length - 1)));
+  track.addEventListener("scroll", updateControls, { passive: true });
+  window.addEventListener("resize", updateControls);
+  updateControls();
+});
+
+document.querySelectorAll("[data-trusted-marquee]").forEach((track) => {
+  const cards = Array.from(track.children);
+
+  cards.forEach((card) => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    track.appendChild(clone);
+  });
+});

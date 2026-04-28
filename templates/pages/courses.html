@@ -17,8 +17,9 @@
 <body class="bg-brand-bg font-inter text-brand-text">
     <div class="">
         <!-- Header Section -->
-        <header class="sticky top-0 z-40 border-b border-white/5 bg-[rgba(0,0,0,1)]">
-            <div class="mx-auto flex max-w-section w-full items-center justify-between gap-5 py-3">
+        <header class="sticky top-0 z-40 border-b border-white/5 bg-[rgba(0,0,0,1)]" data-site-header>
+            <div
+                class="mx-auto flex max-w-section w-full items-center justify-between gap-3 sm:gap-5 px-4 sm:px-6 py-3">
                 <a href="home.html" class="flex items-center gap-3">
                     <img src="../../static/assets/common/logo.svg" alt="Speak Easy Japanese logo" class="h-10" />
                     <div>
@@ -29,25 +30,72 @@
 
                 <div class="flex items-center gap-9">
                     <nav class="hidden items-center gap-5 text-sm text-white lg:flex">
-                        <a href="courses.html"
-                            class="transition hover:text-brand-accent space-x-1"><span>Courses</span><i
-                                class="fa-solid fa-angle-down"></i></a>
+                        <div class="site-nav-dropdown">
+                            <a href="courses.html" class="site-nav-dropdown__trigger transition hover:text-brand-accent">
+                                <span>Courses</span>
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <div class="site-nav-dropdown__menu">
+                                <a href="courses.html">All Courses</a>
+                                <a href="courses.html">JLPT N5 Beginner</a>
+                                <a href="courses.html">JLPT N4 Elementary</a>
+                                <a href="courses.html">JLPT N3 Intermediate</a>
+                                <a href="courses.html">JLPT N2 Advanced</a>
+                            </div>
+                        </div>
                         <a href="#practice" class="transition hover:text-brand-accent">Practice Lab</a>
                         <a href="#teachers" class="transition hover:text-brand-accent">Meet</a>
                         <a href="#trusted" class="transition hover:text-brand-accent">FAQ</a>
                         <a href="#" class="font-bold text-brand-accent">ENG</a>
                     </nav>
 
-                    <div class="flex flex-wrap items-center gap-6">
+                    <div class="hidden flex-wrap items-center gap-3 sm:gap-6 lg:flex">
                         <button
-                            class="rounded-[10px] bg-brand-accent px-5 py-2.5 text-sm font-bold text-[#262626] transition hover:bg-brand-strong">
+                            class="rounded-[10px] bg-brand-accent px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-[#262626] transition hover:bg-brand-strong">
                             Enroll now
                         </button>
                         <button
-                            class="rounded-[10px] border-2 border-brand-accent px-4 py-2.5 text-sm font-bold text-brand-accent hover:text-white transition hover:bg-brand-accent/50">
+                            class="rounded-[10px] border-2 border-brand-accent px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold text-brand-accent hover:text-white transition hover:bg-brand-accent/50">
                             Login
                         </button>
                     </div>
+
+                    <button type="button"
+                        class="grid h-11 w-11 place-items-center rounded-[10px] border border-brand-accent/50 text-xl text-brand-accent transition hover:bg-brand-accent/15 lg:hidden"
+                        aria-label="Open navigation menu" aria-expanded="false" data-nav-toggle>
+                        <i class="fa-solid fa-bars" data-nav-open-icon></i>
+                        <i class="fa-solid fa-xmark" data-nav-close-icon></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="site-mobile-nav border-t border-white/10 bg-[#050505] px-4 py-5 lg:hidden" data-mobile-nav>
+                <nav class="grid gap-4 text-sm text-white">
+                    <details class="site-mobile-dropdown">
+                        <summary>Courses</summary>
+                        <div class="site-mobile-dropdown__menu">
+                            <a href="courses.html">All Courses</a>
+                            <a href="courses.html">JLPT N5 Beginner</a>
+                            <a href="courses.html">JLPT N4 Elementary</a>
+                            <a href="courses.html">JLPT N3 Intermediate</a>
+                            <a href="courses.html">JLPT N2 Advanced</a>
+                        </div>
+                    </details>
+                    <a href="#practice" class="transition hover:text-brand-accent">Practice Lab</a>
+                    <a href="#teachers" class="transition hover:text-brand-accent">Meet</a>
+                    <a href="#trusted" class="transition hover:text-brand-accent">FAQ</a>
+                    <a href="#" class="font-bold text-brand-accent">ENG</a>
+                </nav>
+
+                <div class="mt-5 grid grid-cols-2 gap-3">
+                    <button
+                        class="rounded-[10px] bg-brand-accent px-4 py-2.5 text-sm font-bold text-[#262626] transition hover:bg-brand-strong">
+                        Enroll now
+                    </button>
+                    <button
+                        class="rounded-[10px] border-2 border-brand-accent px-4 py-2.5 text-sm font-bold text-brand-accent transition hover:bg-brand-accent/50 hover:text-white">
+                        Login
+                    </button>
                 </div>
             </div>
         </header>
@@ -608,6 +656,7 @@
         </footer>
         <!-- End Footer Section -->
     </div>
+    <script src="../../static/js/app.js"></script>
 </body>
 
 </html>

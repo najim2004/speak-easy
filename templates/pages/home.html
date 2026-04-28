@@ -10,13 +10,14 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../static/css/app.css" />
+    <link rel="stylesheet" href="../../static/css/home.css" />
     <script src="../../static/js/tailwind.config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="bg-brand-bg font-inter text-brand-text">
     <!-- Header Section -->
-    <header class="sticky top-0 z-40 border-b border-white/5 bg-[rgba(0,0,0,1)]">
+    <header class="sticky top-0 z-40 border-b border-white/5 bg-[rgba(0,0,0,1)]" data-site-header>
         <div class="mx-auto flex max-w-section w-full items-center justify-between gap-3 sm:gap-5 px-4 sm:px-6 py-3">
             <a href="home.html" class="flex items-center gap-3">
                 <img src="../../static/assets/common/logo.svg" alt="Speak Easy Japanese logo" class="h-10" />
@@ -28,15 +29,26 @@
 
             <div class="flex items-center gap-9">
                 <nav class="hidden items-center gap-5 text-sm text-t-bre lg:flex">
-                    <a href="#courses" class="transition hover:text-brand-accent space-x-1"><span>Courses</span><i
-                            class="fa-solid fa-angle-down"></i></a>
+                    <div class="site-nav-dropdown">
+                        <a href="#courses" class="site-nav-dropdown__trigger transition hover:text-brand-accent">
+                            <span>Courses</span>
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                        <div class="site-nav-dropdown__menu">
+                            <a href="#courses">All Courses</a>
+                            <a href="#courses">JLPT N5 Beginner</a>
+                            <a href="#courses">JLPT N4 Elementary</a>
+                            <a href="#courses">JLPT N3 Intermediate</a>
+                            <a href="#courses">JLPT N2 Advanced</a>
+                        </div>
+                    </div>
                     <a href="#practice" class="transition hover:text-brand-accent">Practice Lab</a>
                     <a href="#teachers" class="transition hover:text-brand-accent">Meet</a>
                     <a href="#trusted" class="transition hover:text-brand-accent">FAQ</a>
                     <a href="#" class="font-bold text-brand-accent">ENG</a>
                 </nav>
 
-                <div class="flex flex-wrap items-center gap-3 sm:gap-6">
+                <div class="hidden flex-wrap items-center gap-3 sm:gap-6 lg:flex">
                     <button
                         class="rounded-[10px] bg-brand-accent px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-[#262626] transition hover:bg-brand-strong">
                         Enroll now
@@ -46,6 +58,43 @@
                         Login
                     </button>
                 </div>
+
+                <button type="button"
+                    class="grid h-11 w-11 place-items-center rounded-[10px] border border-brand-accent/50 text-xl text-brand-accent transition hover:bg-brand-accent/15 lg:hidden"
+                    aria-label="Open navigation menu" aria-expanded="false" data-nav-toggle>
+                    <i class="fa-solid fa-bars" data-nav-open-icon></i>
+                    <i class="fa-solid fa-xmark" data-nav-close-icon></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="site-mobile-nav border-t border-white/10 bg-[#050505] px-4 py-5 lg:hidden" data-mobile-nav>
+            <nav class="grid gap-4 text-sm text-white">
+                <details class="site-mobile-dropdown">
+                    <summary>Courses</summary>
+                    <div class="site-mobile-dropdown__menu">
+                        <a href="#courses">All Courses</a>
+                        <a href="#courses">JLPT N5 Beginner</a>
+                        <a href="#courses">JLPT N4 Elementary</a>
+                        <a href="#courses">JLPT N3 Intermediate</a>
+                        <a href="#courses">JLPT N2 Advanced</a>
+                    </div>
+                </details>
+                <a href="#practice" class="transition hover:text-brand-accent">Practice Lab</a>
+                <a href="#teachers" class="transition hover:text-brand-accent">Meet</a>
+                <a href="#trusted" class="transition hover:text-brand-accent">FAQ</a>
+                <a href="#" class="font-bold text-brand-accent">ENG</a>
+            </nav>
+
+            <div class="mt-5 grid grid-cols-2 gap-3">
+                <button
+                    class="rounded-[10px] bg-brand-accent px-4 py-2.5 text-sm font-bold text-[#262626] transition hover:bg-brand-strong">
+                    Enroll now
+                </button>
+                <button
+                    class="rounded-[10px] border-2 border-brand-accent px-4 py-2.5 text-sm font-bold text-brand-accent transition hover:bg-brand-accent/50 hover:text-white">
+                    Login
+                </button>
             </div>
         </div>
     </header>
@@ -335,77 +384,127 @@
                     Practice grammar, vocabulary, listening and speaking.
                 </p>
 
-                <div class="mt-11 flex flex-col gap-4 lg:flex-row lg:items-stretch">
-                    <div class="grid flex-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
-                        <article class="relative h-[278px] overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
-                            <div
-                                class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
-                                <img src="../../static/assets/icons/logos_grammarly-icon.svg" alt="Grammar sheets"
-                                    class="h-[122px] w-[122px] object-contain" />
-                            </div>
-                            <h3
-                                class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white">
-                                Grammar sheets
-                            </h3>
-                            <p
-                                class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
-                                Practice JLPT Grammar
-                            </p>
-                        </article>
+                <div class="practice-carousel mt-11" data-practice-carousel>
+                    <div class="relative">
+                        <div class="practice-carousel__track flex gap-5 overflow-x-auto scroll-smooth pb-4"
+                            data-practice-track>
+                            <article
+                                class="practice-carousel__slide relative h-[278px] shrink-0 overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
+                                <div
+                                    class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
+                                    <img src="../../static/assets/icons/logos_grammarly-icon.svg" alt="Grammar sheets"
+                                        class="h-[122px] w-[122px] object-contain" />
+                                </div>
+                                <h3
+                                    class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white">
+                                    Grammar sheets
+                                </h3>
+                                <p
+                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
+                                    Practice JLPT Grammar
+                                </p>
+                            </article>
 
-                        <article class="relative h-[278px] overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
-                            <div
-                                class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
-                                <img src="../../static/assets/icons/material-symbols_quiz-rounded.svg" alt="Quiz"
-                                    class="h-[122px] w-[122px] object-contain" />
-                            </div>
-                            <h3
-                                class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white">
-                                Quiz
-                            </h3>
-                            <p
-                                class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
-                                Practice JLPT Quiz
-                            </p>
-                        </article>
+                            <article
+                                class="practice-carousel__slide relative h-[278px] shrink-0 overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
+                                <div
+                                    class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
+                                    <img src="../../static/assets/icons/material-symbols_quiz-rounded.svg" alt="Quiz"
+                                        class="h-[122px] w-[122px] object-contain" />
+                                </div>
+                                <h3
+                                    class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white">
+                                    Quiz
+                                </h3>
+                                <p
+                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
+                                    Practice JLPT Quiz
+                                </p>
+                            </article>
 
-                        <article class="relative h-[278px] overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
-                            <div
-                                class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
-                                <img src="../../static/assets/icons/arcticons_flashcards.svg" alt="Flashcards"
-                                    class="h-[122px] w-[122px] object-contain" />
-                            </div>
-                            <h3
-                                class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white">
-                                Flashcards
-                            </h3>
-                            <p
-                                class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
-                                Practice JLPT Flashcards
-                            </p>
-                        </article>
+                            <article
+                                class="practice-carousel__slide relative h-[278px] shrink-0 overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
+                                <div
+                                    class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
+                                    <img src="../../static/assets/icons/arcticons_flashcards.svg" alt="Flashcards"
+                                        class="h-[122px] w-[122px] object-contain" />
+                                </div>
+                                <h3
+                                    class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white">
+                                    Flashcards
+                                </h3>
+                                <p
+                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
+                                    Practice JLPT Flashcards
+                                </p>
+                            </article>
 
-                        <article class="relative h-[278px] overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
-                            <div
-                                class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
-                                <img src="../../static/assets/icons/listening_icon.svg" alt="Listening"
-                                    class="h-[122px] w-[122px] object-contain" />
-                            </div>
-                            <h3
-                                class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white">
-                                Listening
-                            </h3>
-                            <p
-                                class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
-                                Practice JLPT Audio
-                            </p>
-                        </article>
+                            <article
+                                class="practice-carousel__slide relative h-[278px] shrink-0 overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
+                                <div
+                                    class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
+                                    <img src="../../static/assets/icons/listening_icon.svg" alt="Listening"
+                                        class="h-[122px] w-[122px] object-contain" />
+                                </div>
+                                <h3
+                                    class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white">
+                                    Listening
+                                </h3>
+                                <p
+                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
+                                    Practice JLPT Audio
+                                </p>
+                            </article>
+
+                            <article
+                                class="practice-carousel__slide relative h-[278px] shrink-0 overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
+                                <div
+                                    class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
+                                    <img src="../../static/assets/icons/headphone.svg" alt="Speaking practice"
+                                        class="h-[122px] w-[122px] object-contain" />
+                                </div>
+                                <h3
+                                    class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white">
+                                    Speaking
+                                </h3>
+                                <p
+                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
+                                    Practice Conversation
+                                </p>
+                            </article>
+
+                            <article
+                                class="practice-carousel__slide relative h-[278px] shrink-0 overflow-hidden rounded-[15px] bg-[#D9D9D9]/20 text-center">
+                                <div
+                                    class="absolute left-1/2 top-6 grid h-[147px] w-[147px] -translate-x-1/2 place-items-center">
+                                    <img src="../../static/assets/icons/stopwatch.svg" alt="Timed tests"
+                                        class="h-[122px] w-[122px] object-contain" />
+                                </div>
+                                <h3
+                                    class="absolute left-0 top-[180px] w-full font-inter text-[28px] font-semibold leading-[34px] text-white">
+                                    Timed Tests
+                                </h3>
+                                <p
+                                    class="absolute left-0 top-[220px] w-full font-inter text-xl lg:text-[22px] leading-[27px] text-[#C1C1C1]">
+                                    Practice Exam Speed
+                                </p>
+                            </article>
+                        </div>
+
+                        <button type="button"
+                            class="practice-carousel__control practice-carousel__control--prev absolute left-0 top-1/2 z-10 hidden h-11 w-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-brand-accent/35 bg-[#101010]/90 text-brand-accent shadow-glow transition hover:bg-brand-accent hover:text-[#262626] md:grid"
+                            aria-label="Previous practice lab item" data-practice-prev>
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button type="button"
+                            class="practice-carousel__control practice-carousel__control--next absolute right-0 top-1/2 z-10 hidden h-11 w-11 translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-brand-accent/35 bg-[#101010]/90 text-brand-accent shadow-glow transition hover:bg-brand-accent hover:text-[#262626] md:grid"
+                            aria-label="Next practice lab item" data-practice-next>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                     </div>
 
-                    <div
-                        class="grid h-11 w-11 place-items-center self-center rounded-full border border-brand-accent/35 bg-brand-accent/10 text-brand-accent">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </div>
+                    <div class="mt-5 flex items-center justify-center gap-2" aria-label="Practice lab slider pages"
+                        data-practice-dots></div>
                 </div>
             </div>
         </section>
@@ -570,9 +669,9 @@
             </div>
 
             <div class="mt-14 space-y-5">
-                <div class="flex w-max gap-5 px-2.5 overflow-x-auto max-w-full pb-2">
+                <div class="trusted-marquee__track flex w-max gap-5 px-2.5" data-trusted-marquee>
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Esther Howard"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -599,7 +698,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Arlene McCoy"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -625,7 +724,7 @@
                         </h3>
                     </article>
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Arlene McCoy"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -651,7 +750,7 @@
                         </h3>
                     </article>
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Arlene McCoy"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -678,7 +777,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Jane Cooper"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -705,7 +804,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Ronal Richards"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -732,7 +831,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Jacob Jones"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -759,9 +858,10 @@
                     </article>
                 </div>
 
-                <div class="flex w-max gap-5 px-2.5 overflow-x-auto max-w-full pb-2">
+                <div class="trusted-marquee__track trusted-marquee__track--middle flex w-max gap-5 px-2.5"
+                    data-trusted-marquee>
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Albert Flores"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -788,7 +888,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Jerome Bell"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -815,7 +915,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Darrell Steward"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -842,7 +942,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Ralph Edwards"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -869,7 +969,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Kathryn Murphy"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -896,7 +996,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Courtney Henry"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -923,7 +1023,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Leslie Alexander"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -950,7 +1050,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Devon Lane"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -977,9 +1077,10 @@
                     </article>
                 </div>
 
-                <div class="flex w-max gap-5 px-2.5">
+                <div class="trusted-marquee__track trusted-marquee__track--bottom flex w-max gap-5 px-2.5"
+                    data-trusted-marquee>
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Wade Warren"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1006,7 +1107,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Courtney Henry"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1033,7 +1134,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Bessie Cooper"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1060,7 +1161,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Jacob Jones"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1087,7 +1188,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Darrell Steward"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1114,7 +1215,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Dianne Russell"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1141,7 +1242,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Cody Fisher"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1168,7 +1269,7 @@
                     </article>
 
                     <article
-                        class="h-[168px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+                        class="h-[180px] w-[280px] shrink-0 overflow-hidden rounded-[15px] bg-[#EBEBEB] p-[14px] text-black shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
                         <div class="flex gap-5">
                             <img src="../../static/assets/avatars/user1.png" alt="Jenny Wilson"
                                 class="h-[98px] w-[98px] rounded-full object-cover" />
@@ -1370,6 +1471,9 @@
         </div>
     </footer>
     <!-- End Footer Section -->
+
+    <script src="../../static/js/app.js"></script>
+    <script src="../../static/js/home.js"></script>
 </body>
 
 </html>
