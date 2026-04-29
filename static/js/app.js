@@ -23,8 +23,14 @@ const applyTheme = (theme) => {
 
   document.querySelectorAll("[data-theme-toggle]").forEach((toggle) => {
     const isDark = activeTheme === "dark";
-    toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-    toggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+    toggle.setAttribute(
+      "aria-label",
+      isDark ? "Switch to light mode" : "Switch to dark mode",
+    );
+    toggle.setAttribute(
+      "title",
+      isDark ? "Switch to light mode" : "Switch to dark mode",
+    );
 
     const darkIcon = toggle.querySelector("[data-theme-dark-icon]");
     const lightIcon = toggle.querySelector("[data-theme-light-icon]");
@@ -48,7 +54,9 @@ applyTheme(initialTheme);
 
 document.querySelectorAll("[data-theme-toggle]").forEach((toggle) => {
   toggle.addEventListener("click", () => {
-    const nextTheme = document.body.classList.contains("dark") ? "light" : "dark";
+    const nextTheme = document.body.classList.contains("dark")
+      ? "light"
+      : "dark";
     applyTheme(nextTheme);
     storeTheme(nextTheme);
   });
@@ -76,7 +84,10 @@ document.querySelectorAll("[data-site-header]").forEach((header) => {
     }
 
     toggle.setAttribute("aria-expanded", String(isOpen));
-    toggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    toggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close navigation menu" : "Open navigation menu",
+    );
   };
 
   setMenuOpen(false);
