@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | speak easy japanese</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../static/css/app.css" />
+    <script src="../../static/js/tailwind.config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="light bg-white dark:bg-[#090909] font-inter text-[#0d0d0d] dark:text-white transition-colors duration-200"
+  >
+    <!-- Header Section -->
+    <header
+      class="sticky top-0 z-40 border-b border-black/10 dark:border-white/10 bg-[#010500] text-white"
+      data-site-header
+    >
+      <div
+        class="mx-auto flex max-w-section w-full items-center justify-between gap-3 sm:gap-5 px-4 sm:px-6 py-3"
+      >
+        <a href="home.html" class="flex items-center gap-3">
+          <img
+            src="../../static/assets/common/logo.svg"
+            alt="Speak Easy Japanese logo"
+            class="h-10"
+          />
+          <div>
+            <span class="block text-sm font-semibold">Speak Easy</span>
+            <span class="block text-sm font-semibold text-brand-accent"
+              >Japanese</span
+            >
+          </div>
+        </a>
+
+        <div class="flex items-center gap-9">
+          <nav class="hidden items-center gap-5 text-sm text-white lg:flex">
+            <div class="group relative">
+              <a
+                href="courses.html"
+                class="inline-flex items-center gap-1 transition hover:text-brand-accent"
+              >
+                <span>Courses</span>
+                <i
+                  class="fa-solid fa-angle-down text-xs transition-transform group-hover:rotate-180 group-focus-within:rotate-180"
+                ></i>
+              </a>
+              <div
+                class="pointer-events-none absolute left-0 top-[calc(100%+14px)] z-50 grid min-w-[230px] translate-y-2 gap-1 rounded-xl border border-brand-accent/25 bg-[#050505]/95 p-2.5 opacity-0 shadow-[0_18px_45px_rgba(0,0,0,0.35)] transition duration-200 before:absolute before:-top-4 before:left-0 before:right-0 before:h-4 before:content-[''] group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100"
+              >
+                <a
+                  class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                  href="#courses"
+                  >All Courses</a
+                >
+                <a
+                  class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                  href="#courses"
+                  >JLPT N5 Beginner</a
+                >
+                <a
+                  class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                  href="#courses"
+                  >JLPT N4 Elementary</a
+                >
+                <a
+                  class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                  href="#courses"
+                  >JLPT N3 Intermediate</a
+                >
+                <a
+                  class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                  href="#courses"
+                  >JLPT N2 Advanced</a
+                >
+              </div>
+            </div>
+            <a href="#practice" class="transition hover:text-brand-accent"
+              >Practice Lab</a
+            >
+            <a href="#teachers" class="transition hover:text-brand-accent"
+              >Meet</a
+            >
+            <a href="#trusted" class="transition hover:text-brand-accent"
+              >FAQ</a
+            >
+            <a href="#" class="font-bold text-brand-accent">ENG</a>
+          </nav>
+
+          <div class="hidden flex-wrap items-center gap-3 sm:gap-6 lg:flex">
+            <button
+              class="site-enroll-button rounded-[10px] bg-brand-accent px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-[#262626] transition hover:bg-brand-strong"
+            >
+              Enroll now
+            </button>
+            <button
+              class="rounded-[10px] border-2 border-brand-accent px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold text-brand-accent hover:text-white transition hover:bg-brand-accent/50"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="site-theme-toggle inline-flex min-h-10 items-center justify-center gap-2 rounded-[10px] border border-brand-accent/50 bg-brand-accent/10 px-3 py-[9px] text-brand-accent transition hover:border-brand-accent hover:bg-brand-accent/20 focus-visible:outline-none"
+              aria-label="Switch to dark mode"
+              data-theme-toggle
+            >
+              <i class="fa-solid fa-moon" data-theme-dark-icon></i>
+              <i class="fa-solid fa-sun" data-theme-light-icon hidden></i>
+            </button>
+          </div>
+
+          <button
+            type="button"
+            class="grid h-11 w-11 place-items-center rounded-[10px] border border-brand-accent/50 text-xl text-brand-accent transition hover:bg-brand-accent/15 lg:hidden"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            data-nav-toggle
+          >
+            <i
+              class="fa-solid fa-bars col-start-1 row-start-1 transition"
+              data-nav-open-icon
+            ></i>
+            <i
+              class="fa-solid fa-xmark col-start-1 row-start-1 transition"
+              data-nav-close-icon
+              hidden
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="site-mobile-nav hidden border-t border-black/10 dark:border-white/10 bg-[#010500] px-4 py-5 lg:hidden"
+        data-mobile-nav
+      >
+        <nav class="grid gap-4 text-sm text-white">
+          <details class="group rounded-[10px]">
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between transition marker:content-none [&::-webkit-details-marker]:hidden group-open:text-brand-accent"
+            >
+              <span>Courses</span
+              ><i
+                class="fa-solid fa-angle-down text-xs transition-transform group-open:rotate-180"
+              ></i>
+            </summary>
+            <div class="mt-3 grid gap-2 border-l border-brand-accent/35 pl-3.5">
+              <a
+                class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                href="#courses"
+                >All Courses</a
+              >
+              <a
+                class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                href="#courses"
+                >JLPT N5 Beginner</a
+              >
+              <a
+                class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                href="#courses"
+                >JLPT N4 Elementary</a
+              >
+              <a
+                class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                href="#courses"
+                >JLPT N3 Intermediate</a
+              >
+              <a
+                class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                href="#courses"
+                >JLPT N2 Advanced</a
+              >
+            </div>
+          </details>
+          <a href="#practice" class="transition hover:text-brand-accent"
+            >Practice Lab</a
+          >
+          <a href="#teachers" class="transition hover:text-brand-accent"
+            >Meet</a
+          >
+          <a href="#trusted" class="transition hover:text-brand-accent">FAQ</a>
+          <a href="#" class="font-bold text-brand-accent">ENG</a>
+        </nav>
+
+        <div class="mt-5 grid grid-cols-2 gap-3">
+          <button
+            class="site-enroll-button rounded-[10px] bg-brand-accent px-4 py-2.5 text-sm font-bold text-[#262626] transition hover:bg-brand-strong"
+          >
+            Enroll now
+          </button>
+          <button
+            class="rounded-[10px] border-2 border-brand-accent px-4 py-2.5 text-sm font-bold text-brand-accent transition hover:bg-brand-accent/50 hover:text-white"
+          >
+            Login
+          </button>
+        </div>
+        <button
+          type="button"
+          class="site-theme-toggle mt-4 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-[10px] border border-brand-accent/50 bg-brand-accent/10 px-3 py-[9px] text-brand-accent transition hover:border-brand-accent hover:bg-brand-accent/20 focus-visible:outline-none"
+          aria-label="Switch to dark mode"
+          data-theme-toggle
+        >
+          <span class="mr-auto font-bold text-white">Theme</span>
+          <i class="fa-solid fa-moon" data-theme-dark-icon></i>
+          <i class="fa-solid fa-sun" data-theme-light-icon hidden></i>
+        </button>
+      </div>
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Main Section -->
+    <main>
+      <section class="max-w-section mx-auto py-[95px]">
+        <div
+          class="w-full max-w-section grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-8 lg:gap-[65px]"
+        >
+          <!-- Left Side - Illustration -->
+          <div
+            class="relative w-full max-w-[560px] aspect-[1.1/1] flex-shrink-0 hidden lg:block"
+          >
+            <img
+              src="../../static/assets/auth/singup.svg"
+              alt="Sign In Illustration"
+            />
+          </div>
+
+          <!-- Right Side - Sign In Card -->
+          <div
+            class="w-full p-10 bg-[rgba(217,217,217,0.15)] backdrop-blur-xl rounded-2xl flex flex-col gap-6"
+          >
+            <!-- Title -->
+            <h1 class="text-white text-[34px] font-bold leading-tight">
+              Sign up to Continue
+            </h1>
+
+            <!-- Name Field -->
+            <div class="flex flex-col gap-2">
+              <label class="text-[#D9D9D9] text-[18px] font-medium">Name</label>
+              <input
+                type="text"
+                placeholder="e.g. @gmail.com"
+                class="bg-white rounded-2xl px-5 py-3.5 text-[18px] text-gray-500 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#38EF08] transition-all"
+              />
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="flex flex-col gap-2">
+              <label class="text-[#D9D9D9] text-[18px] font-medium"
+                >Phone Number</label
+              >
+              <input
+                type="tel"
+                placeholder="01_ _ _ _ _ _ _ _ _"
+                class="bg-white rounded-2xl px-5 py-3.5 text-[18px] text-gray-500 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#38EF08] transition-all"
+              />
+            </div>
+
+            <!-- Email Field -->
+            <div class="flex flex-col gap-2">
+              <label class="text-[#D9D9D9] text-[18px] font-medium"
+                >Email</label
+              >
+              <input
+                type="email"
+                placeholder="e.g. @gmail.com"
+                class="bg-white rounded-2xl px-5 py-3.5 text-[18px] text-gray-500 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#38EF08] transition-all"
+              />
+            </div>
+
+            <!-- Password & Confirm Password Row -->
+            <div class="flex gap-5">
+              <div class="flex flex-col gap-2 flex-1">
+                <label class="text-[#D9D9D9] text-[18px] font-medium"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  placeholder="e.g. Password"
+                  class="bg-white rounded-2xl px-5 py-3.5 text-[18px] text-gray-500 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#38EF08] transition-all w-full"
+                />
+              </div>
+              <div class="flex flex-col gap-2 flex-1">
+                <label class="text-[#D9D9D9] text-[18px] font-medium"
+                  >Confirm Password</label
+                >
+                <input
+                  type="password"
+                  placeholder="e.g. Password"
+                  class="bg-white rounded-2xl px-5 py-3.5 text-[18px] text-gray-500 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#38EF08] transition-all w-full"
+                />
+              </div>
+            </div>
+
+            <!-- Sign Up Button -->
+            <button
+              class="bg-[#38EF08] text-white text-[22px] font-bold py-2.5 px-8 rounded-xl hover:bg-[#2fd907] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#38EF08]/30 w-full mt-2"
+            >
+              Sign up
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End Main Section -->
+
+    <!-- Footer Section -->
+    <footer
+      class="bg-[#e5e5e5] dark:bg-[#1a1a1a] font-['Roboto',sans-serif] text-[#0d0d0d] dark:text-white"
+    >
+      <div
+        class="mx-auto grid min-h-[328px] w-full max-w-section gap-10 px-4 sm:px-6 py-14 md:grid-cols-3 md:pt-[128px] md:pb-5"
+      >
+        <div>
+          <h4 class="mb-[8px] text-lg font-normal leading-[21px]">
+            Navigation
+          </h4>
+          <ul
+            class="grid text-sm font-normal leading-[30px] text-[#0d0d0d] dark:text-[#c1c1c1]"
+          >
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="mb-[4px] text-lg font-normal leading-[21px]">
+            Collaborate
+          </h4>
+          <ul
+            class="grid text-xs font-normal leading-[30px] text-[#0d0d0d] dark:text-[#c1c1c1]"
+          >
+            <li>Careers Explore</li>
+            <li>Be come a rider</li>
+            <li>Your Team</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="mb-[15px] text-lg font-normal leading-[21px]">
+            Follow us on
+          </h4>
+          <div class="mb-[11px] flex items-center gap-[11px]">
+            <a href="#" aria-label="Facebook">
+              <img
+                src="../../static/assets/icons/logos_facebook.svg"
+                alt=""
+                class="size-[26px]"
+              />
+            </a>
+            <a href="#" aria-label="Twitter">
+              <img
+                src="../../static/assets/icons/skill-icons_twitter.svg"
+                alt=""
+                class="size-6"
+              />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img
+                src="../../static/assets/icons/instagram_icon.svg"
+                alt=""
+                class="size-6"
+              />
+            </a>
+          </div>
+
+          <p class="text-lg font-normal leading-[21px]">Payment method</p>
+          <div class="mt-[14px] flex flex-wrap items-center gap-[26px]">
+            <img
+              src="../../static/assets/icons/mastercard_icon.svg"
+              alt="Mastercard"
+              class="h-[26px] w-[34px]"
+            />
+            <img
+              src="../../static/assets/icons/visacard_icon.svg"
+              alt="Visa card"
+              class="size-[31px] object-contain"
+            />
+          </div>
+
+          <div class="mt-[14px] flex flex-wrap items-center gap-[9px]">
+            <img
+              src="../../static/assets/icons/playstore_icon.svg"
+              alt="Get it on Play Store"
+              class="h-[26px] w-[76px]"
+            />
+            <img
+              src="../../static/assets/icons/apple_store.svg"
+              alt="Download on the App Store"
+              class="h-7 w-[72px]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#31ab00] dark:bg-[#4a4949]">
+        <div
+          class="mx-auto flex min-h-[63px] w-full max-w-section px-4 sm:px-6 flex-col items-start justify-center gap-3 text-sm font-normal leading-4 text-[#e4e4e4] dark:text-white md:flex-row md:items-center md:justify-between"
+        >
+          <span>© Copyright 2025 mamarhat all right reserved</span>
+          <span class="leading-[121.27%]">Privacy policy</span>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <script src="../../static/js/app.js"></script>
+  </body>
+</html>
