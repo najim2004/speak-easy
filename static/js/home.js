@@ -4,6 +4,8 @@ document.querySelectorAll("[data-practice-carousel]").forEach((carousel) => {
   const prevButton = carousel.querySelector("[data-practice-prev]");
   const nextButton = carousel.querySelector("[data-practice-next]");
   const dotsWrap = carousel.querySelector("[data-practice-dots]");
+  const autoSlideDelay = 3500;
+  let autoSlideTimer;
 
   const getSlideStep = () => {
     const firstSlide = slides[0];
@@ -29,6 +31,24 @@ document.querySelectorAll("[data-practice-carousel]").forEach((carousel) => {
     });
   };
 
+  const stopAutoSlide = () => {
+    window.clearInterval(autoSlideTimer);
+  };
+
+  const startAutoSlide = () => {
+    stopAutoSlide();
+
+    autoSlideTimer = window.setInterval(() => {
+      const activeIndex = Math.min(getActiveIndex(), getMaxIndex());
+      const nextIndex = activeIndex >= getMaxIndex() ? 0 : activeIndex + 1;
+      scrollToSlide(nextIndex);
+    }, autoSlideDelay);
+  };
+
+  const restartAutoSlide = () => {
+    startAutoSlide();
+  };
+
   const renderDots = () => {
     const dotCount = getMaxIndex() + 1;
 
@@ -44,7 +64,10 @@ document.querySelectorAll("[data-practice-carousel]").forEach((carousel) => {
       dot.className =
         "h-[9px] w-[9px] rounded-full border border-brand-accent/65 bg-brand-accent/15 transition-[width,background-color] duration-200";
       dot.setAttribute("aria-label", `Go to practice lab slide ${index + 1}`);
-      dot.addEventListener("click", () => scrollToSlide(index));
+      dot.addEventListener("click", () => {
+        scrollToSlide(index);
+        restartAutoSlide();
+      });
       dotsWrap.appendChild(dot);
     });
   };
@@ -67,11 +90,23 @@ document.querySelectorAll("[data-practice-carousel]").forEach((carousel) => {
     nextButton.disabled = track.scrollLeft >= maxScrollLeft;
   };
 
-  prevButton.addEventListener("click", () => scrollToSlide(Math.max(getActiveIndex() - 1, 0)));
-  nextButton.addEventListener("click", () => scrollToSlide(Math.min(getActiveIndex() + 1, slides.length - 1)));
+  prevButton.addEventListener("click", () => {
+    scrollToSlide(Math.max(getActiveIndex() - 1, 0));
+    restartAutoSlide();
+  });
+  nextButton.addEventListener("click", () => {
+    const activeIndex = Math.min(getActiveIndex(), getMaxIndex());
+    scrollToSlide(activeIndex >= getMaxIndex() ? 0 : activeIndex + 1);
+    restartAutoSlide();
+  });
+  carousel.addEventListener("mouseenter", stopAutoSlide);
+  carousel.addEventListener("mouseleave", startAutoSlide);
+  carousel.addEventListener("focusin", stopAutoSlide);
+  carousel.addEventListener("focusout", startAutoSlide);
   track.addEventListener("scroll", updateControls, { passive: true });
   window.addEventListener("resize", updateControls);
   updateControls();
+  startAutoSlide();
 });
 
 document.querySelectorAll("[data-trusted-marquee]").forEach((track) => {
