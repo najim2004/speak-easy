@@ -2023,7 +2023,7 @@
       class="bg-[#e5e5e5] dark:bg-[#1a1a1a] font-['Roboto',sans-serif] text-[#0d0d0d] dark:text-white"
     >
       <div
-        class="mx-auto grid min-h-[328px] w-full max-w-section gap-10 px-4 sm:px-6 py-14 md:grid-cols-3 md:pt-[128px] md:pb-5"
+        class="mx-auto grid min-h-[328px] w-full max-w-section grid-cols-2 gap-x-6 gap-y-10 px-4 py-14 text-center sm:px-6 md:pt-[128px] md:pb-5 lg:grid-cols-3 lg:text-left"
       >
         <div>
           <h4 class="mb-[8px] text-lg font-normal leading-[21px]">
@@ -2051,11 +2051,15 @@
           </ul>
         </div>
 
-        <div>
+        <div
+          class="col-span-2 justify-self-center lg:col-span-1 lg:justify-self-auto"
+        >
           <h4 class="mb-[15px] text-lg font-normal leading-[21px]">
             Follow us on
           </h4>
-          <div class="mb-[11px] flex items-center gap-[11px]">
+          <div
+            class="mb-[11px] flex items-center justify-center gap-[11px] lg:justify-start"
+          >
             <a href="#" aria-label="Facebook">
               <img
                 src="../../static/assets/icons/logos_facebook.svg"
@@ -2080,7 +2084,9 @@
           </div>
 
           <p class="text-lg font-normal leading-[21px]">Payment method</p>
-          <div class="mt-[14px] flex flex-wrap items-center gap-[26px]">
+          <div
+            class="mt-[14px] flex flex-wrap items-center justify-center gap-[26px] lg:justify-start"
+          >
             <img
               src="../../static/assets/icons/mastercard_icon.svg"
               alt="Mastercard"
@@ -2093,7 +2099,9 @@
             />
           </div>
 
-          <div class="mt-[14px] flex flex-wrap items-center gap-[9px]">
+          <div
+            class="mt-[14px] flex flex-wrap items-center justify-center gap-[9px] lg:justify-start"
+          >
             <img
               src="../../static/assets/icons/playstore_icon.svg"
               alt="Get it on Play Store"
@@ -2110,7 +2118,7 @@
 
       <div class="bg-[#31ab00] dark:bg-[#4a4949]">
         <div
-          class="mx-auto flex min-h-[63px] w-full max-w-section px-4 sm:px-6 flex-col items-start justify-center gap-3 text-sm font-normal leading-4 text-[#e4e4e4] dark:text-white md:flex-row md:items-center md:justify-between"
+          class="mx-auto flex min-h-[63px] w-full max-w-section flex-col items-center justify-center gap-3 px-4 text-center text-sm font-normal leading-4 text-[#e4e4e4] dark:text-white sm:px-6 md:flex-row md:justify-between md:text-left"
         >
           <span>© Copyright 2025 mamarhat all right reserved</span>
           <span class="leading-[121.27%]">Privacy policy</span>

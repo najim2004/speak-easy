@@ -217,9 +217,11 @@
 
     <!-- Main Section -->
     <main>
-      <section class="max-w-section mx-auto py-[140px]">
+      <section
+        class="max-w-section w-full mx-auto px-4 sm:px-6 py-12 md:py-20 lg:py-[140px]"
+      >
         <div
-          class="w-full max-w-section grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-8 lg:gap-[65px]"
+          class="w-full grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-8 lg:gap-[65px]"
         >
           <!-- Left Side - Illustration -->
           <div
@@ -233,32 +235,38 @@
 
           <!-- Right Side - Sign In Card -->
           <div
-            class="w-full p-10 bg-[rgba(217,217,217,0.15)] backdrop-blur-xl rounded-2xl flex flex-col gap-6"
+            class="w-full p-6 sm:p-10 bg-white dark:bg-[rgba(217,217,217,0.15)] border border-black/5 dark:border-none shadow-2xl shadow-black/5 dark:shadow-none backdrop-blur-xl rounded-2xl flex flex-col gap-5 sm:gap-6"
           >
             <!-- Title -->
-            <h1 class="text-white text-[34px] font-bold leading-tight">
+            <h1
+              class="text-black dark:text-white text-2xl sm:text-[34px] font-bold leading-tight text-center sm:text-left"
+            >
               Sign in to Continue
             </h1>
 
             <!-- Phone/Email Field -->
-            <div class="flex flex-col gap-2">
-              <label class="text-white text-[18px] font-medium"
+            <div class="flex flex-col gap-1.5 sm:gap-2">
+              <label
+                class="text-black dark:text-white text-base sm:text-[18px] font-medium"
                 >Phone/Email</label
               >
               <input
                 type="text"
                 placeholder="e.g. @gmail.com"
-                class="bg-white rounded-2xl px-5 py-3.5 text-[18px] text-gray-500 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#38EF08] transition-all"
+                class="bg-gray-50 dark:bg-white border border-black/10 dark:border-transparent rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3 sm:py-3.5 text-base sm:text-[18px] text-black dark:text-gray-500 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#38EF08] transition-all"
               />
             </div>
 
             <!-- Password Field -->
-            <div class="flex flex-col gap-2">
-              <label class="text-white text-[18px] font-medium">Password</label>
+            <div class="flex flex-col gap-1.5 sm:gap-2">
+              <label
+                class="text-black dark:text-white text-base sm:text-[18px] font-medium"
+                >Password</label
+              >
               <input
                 type="password"
                 placeholder="e.g. Password"
-                class="bg-white rounded-2xl px-5 py-3.5 text-[18px] text-gray-500 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#38EF08] transition-all"
+                class="bg-gray-50 dark:bg-white border border-black/10 dark:border-transparent rounded-xl sm:rounded-2xl px-4 sm:px-5 py-3 sm:py-3.5 text-base sm:text-[18px] text-black dark:text-gray-500 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#38EF08] transition-all"
               />
             </div>
 
@@ -266,28 +274,35 @@
             <div class="flex justify-end">
               <a
                 href="#"
-                class="text-white text-[18px] font-medium hover:underline hover:text-[#8DFD6F] transition-colors"
+                class="text-black dark:text-white text-sm sm:text-[18px] font-medium hover:underline hover:text-[#38EF08] dark:hover:text-[#8DFD6F] transition-colors"
                 >Forget Password?</a
               >
             </div>
 
             <!-- Sign In Button -->
             <button
-              class="bg-[#38EF08] text-white text-[22px] font-bold py-2.5 px-8 rounded-xl hover:bg-[#2fd907] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#38EF08]/30"
+              class="bg-[#38EF08] text-white text-lg sm:text-[22px] font-bold py-3 sm:py-2.5 px-8 rounded-xl hover:bg-[#2fd907] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#38EF08]/30 mt-2 sm:mt-0"
             >
               Sign in
             </button>
 
             <!-- Divider with Or -->
             <div class="flex items-center gap-4">
-              <div class="flex-1 border-t border-[#9B9898]"></div>
-              <span class="text-white text-[22px] font-bold">Or</span>
-              <div class="flex-1 border-t border-[#9B9898]"></div>
+              <div
+                class="flex-1 border-t border-black/20 dark:border-[#9B9898]"
+              ></div>
+              <span
+                class="text-black dark:text-white text-lg sm:text-[22px] font-bold"
+                >Or</span
+              >
+              <div
+                class="flex-1 border-t border-black/20 dark:border-[#9B9898]"
+              ></div>
             </div>
 
             <!-- Sign Up Button -->
             <button
-              class="bg-[#8C8989] text-white text-[22px] font-bold py-2.5 px-8 rounded-xl hover:bg-[#7a7777] active:scale-[0.98] transition-all duration-200"
+              class="bg-[#8C8989] text-white text-lg sm:text-[22px] font-bold py-3 sm:py-2.5 px-8 rounded-xl hover:bg-[#7a7777] active:scale-[0.98] transition-all duration-200"
             >
               Sign up
             </button>
@@ -302,7 +317,7 @@
       class="bg-[#e5e5e5] dark:bg-[#1a1a1a] font-['Roboto',sans-serif] text-[#0d0d0d] dark:text-white"
     >
       <div
-        class="mx-auto grid min-h-[328px] w-full max-w-section gap-10 px-4 sm:px-6 py-14 md:grid-cols-3 md:pt-[128px] md:pb-5"
+        class="mx-auto grid min-h-[328px] w-full max-w-section grid-cols-2 gap-x-6 gap-y-10 px-4 py-14 text-center sm:px-6 md:pt-[128px] md:pb-5 lg:grid-cols-3 lg:text-left"
       >
         <div>
           <h4 class="mb-[8px] text-lg font-normal leading-[21px]">
@@ -330,11 +345,15 @@
           </ul>
         </div>
 
-        <div>
+        <div
+          class="col-span-2 justify-self-center lg:col-span-1 lg:justify-self-auto"
+        >
           <h4 class="mb-[15px] text-lg font-normal leading-[21px]">
             Follow us on
           </h4>
-          <div class="mb-[11px] flex items-center gap-[11px]">
+          <div
+            class="mb-[11px] flex items-center justify-center gap-[11px] lg:justify-start"
+          >
             <a href="#" aria-label="Facebook">
               <img
                 src="../../static/assets/icons/logos_facebook.svg"
@@ -359,7 +378,9 @@
           </div>
 
           <p class="text-lg font-normal leading-[21px]">Payment method</p>
-          <div class="mt-[14px] flex flex-wrap items-center gap-[26px]">
+          <div
+            class="mt-[14px] flex flex-wrap items-center justify-center gap-[26px] lg:justify-start"
+          >
             <img
               src="../../static/assets/icons/mastercard_icon.svg"
               alt="Mastercard"
@@ -372,7 +393,9 @@
             />
           </div>
 
-          <div class="mt-[14px] flex flex-wrap items-center gap-[9px]">
+          <div
+            class="mt-[14px] flex flex-wrap items-center justify-center gap-[9px] lg:justify-start"
+          >
             <img
               src="../../static/assets/icons/playstore_icon.svg"
               alt="Get it on Play Store"
@@ -389,7 +412,7 @@
 
       <div class="bg-[#31ab00] dark:bg-[#4a4949]">
         <div
-          class="mx-auto flex min-h-[63px] w-full max-w-section px-4 sm:px-6 flex-col items-start justify-center gap-3 text-sm font-normal leading-4 text-[#e4e4e4] dark:text-white md:flex-row md:items-center md:justify-between"
+          class="mx-auto flex min-h-[63px] w-full max-w-section flex-col items-center justify-center gap-3 px-4 text-center text-sm font-normal leading-4 text-[#e4e4e4] dark:text-white sm:px-6 md:flex-row md:justify-between md:text-left"
         >
           <span>© Copyright 2025 mamarhat all right reserved</span>
           <span class="leading-[121.27%]">Privacy policy</span>
