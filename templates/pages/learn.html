@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP Verification | speak easy japanese</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../../static/css/app.css" />
+    <script src="../../static/js/tailwind.config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body
+    class="light bg-white dark:bg-[#090909] font-inter text-[#0d0d0d] dark:text-white transition-colors duration-200"
+  >
+    <!-- Header Section -->
+    <header
+      class="sticky top-0 z-40 border-b border-black/10 dark:border-white/10 bg-[#010500] text-white"
+      data-site-header
+    >
+      <div
+        class="mx-auto flex max-w-section w-full items-center justify-between gap-3 sm:gap-5 px-4 sm:px-6 py-3"
+      >
+        <a href="home.html" class="flex items-center gap-3">
+          <img
+            src="../../static/assets/common/logo.svg"
+            alt="Speak Easy Japanese logo"
+            class="h-10"
+          />
+          <div>
+            <span class="block text-sm font-semibold">Speak Easy</span>
+            <span class="block text-sm font-semibold text-brand-accent"
+              >Japanese</span
+            >
+          </div>
+        </a>
+
+        <div class="flex items-center gap-9">
+          <nav class="hidden items-center gap-5 text-sm text-white lg:flex">
+            <div class="group relative">
+              <a
+                href="courses.html"
+                class="inline-flex items-center gap-1 transition hover:text-brand-accent"
+              >
+                <span>Courses</span>
+                <i
+                  class="fa-solid fa-angle-down text-xs transition-transform group-hover:rotate-180 group-focus-within:rotate-180"
+                ></i>
+              </a>
+              <div
+                class="pointer-events-none absolute left-0 top-[calc(100%+14px)] z-50 grid min-w-[230px] translate-y-2 gap-1 rounded-xl border border-brand-accent/25 bg-[#050505]/95 p-2.5 opacity-0 shadow-[0_18px_45px_rgba(0,0,0,0.35)] transition duration-200 before:absolute before:-top-4 before:left-0 before:right-0 before:h-4 before:content-[''] group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100"
+              >
+                <a
+                  class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                  href="#courses"
+                  >All Courses</a
+                >
+                <a
+                  class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                  href="#courses"
+                  >JLPT N5 Beginner</a
+                >
+                <a
+                  class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                  href="#courses"
+                  >JLPT N4 Elementary</a
+                >
+                <a
+                  class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                  href="#courses"
+                  >JLPT N3 Intermediate</a
+                >
+                <a
+                  class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                  href="#courses"
+                  >JLPT N2 Advanced</a
+                >
+              </div>
+            </div>
+            <a href="#practice" class="transition hover:text-brand-accent"
+              >Practice Lab</a
+            >
+            <a href="#teachers" class="transition hover:text-brand-accent"
+              >Meet</a
+            >
+            <a href="#trusted" class="transition hover:text-brand-accent"
+              >FAQ</a
+            >
+            <a href="#" class="font-bold text-brand-accent">ENG</a>
+          </nav>
+
+          <div class="hidden flex-wrap items-center gap-3 sm:gap-6 lg:flex">
+            <button
+              class="site-enroll-button rounded-[10px] bg-brand-accent px-4 sm:px-5 py-2.5 text-xs sm:text-sm font-bold text-[#262626] transition hover:bg-brand-strong"
+            >
+              Enroll now
+            </button>
+            <button
+              class="rounded-[10px] border-2 border-brand-accent px-3 sm:px-4 py-2.5 text-xs sm:text-sm font-bold text-brand-accent hover:text-white transition hover:bg-brand-accent/50"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              class="site-theme-toggle inline-flex min-h-10 items-center justify-center gap-2 rounded-[10px] border border-brand-accent/50 bg-brand-accent/10 px-3 py-[9px] text-brand-accent transition hover:border-brand-accent hover:bg-brand-accent/20 focus-visible:outline-none"
+              aria-label="Switch to dark mode"
+              data-theme-toggle
+            >
+              <i class="fa-solid fa-moon" data-theme-dark-icon></i>
+              <i class="fa-solid fa-sun" data-theme-light-icon hidden></i>
+            </button>
+          </div>
+
+          <button
+            type="button"
+            class="grid h-11 w-11 place-items-center rounded-[10px] border border-brand-accent/50 text-xl text-brand-accent transition hover:bg-brand-accent/15 lg:hidden"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            data-nav-toggle
+          >
+            <i
+              class="fa-solid fa-bars col-start-1 row-start-1 transition"
+              data-nav-open-icon
+            ></i>
+            <i
+              class="fa-solid fa-xmark col-start-1 row-start-1 transition"
+              data-nav-close-icon
+              hidden
+            ></i>
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="site-mobile-nav hidden border-t border-black/10 dark:border-white/10 bg-[#010500] px-4 py-5 lg:hidden"
+        data-mobile-nav
+      >
+        <nav class="grid gap-4 text-sm text-white">
+          <details class="group rounded-[10px]">
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between transition marker:content-none [&::-webkit-details-marker]:hidden group-open:text-brand-accent"
+            >
+              <span>Courses</span
+              ><i
+                class="fa-solid fa-angle-down text-xs transition-transform group-open:rotate-180"
+              ></i>
+            </summary>
+            <div class="mt-3 grid gap-2 border-l border-brand-accent/35 pl-3.5">
+              <a
+                class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                href="#courses"
+                >All Courses</a
+              >
+              <a
+                class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                href="#courses"
+                >JLPT N5 Beginner</a
+              >
+              <a
+                class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                href="#courses"
+                >JLPT N4 Elementary</a
+              >
+              <a
+                class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                href="#courses"
+                >JLPT N3 Intermediate</a
+              >
+              <a
+                class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
+                href="#courses"
+                >JLPT N2 Advanced</a
+              >
+            </div>
+          </details>
+          <a href="#practice" class="transition hover:text-brand-accent"
+            >Practice Lab</a
+          >
+          <a href="#teachers" class="transition hover:text-brand-accent"
+            >Meet</a
+          >
+          <a href="#trusted" class="transition hover:text-brand-accent">FAQ</a>
+          <a href="#" class="font-bold text-brand-accent">ENG</a>
+        </nav>
+
+        <div class="mt-5 grid grid-cols-2 gap-3">
+          <button
+            class="site-enroll-button rounded-[10px] bg-brand-accent px-4 py-2.5 text-sm font-bold text-[#262626] transition hover:bg-brand-strong"
+          >
+            Enroll now
+          </button>
+          <button
+            class="rounded-[10px] border-2 border-brand-accent px-4 py-2.5 text-sm font-bold text-brand-accent transition hover:bg-brand-accent/50 hover:text-white"
+          >
+            Login
+          </button>
+        </div>
+        <button
+          type="button"
+          class="site-theme-toggle mt-4 inline-flex min-h-10 w-full items-center justify-center gap-2 rounded-[10px] border border-brand-accent/50 bg-brand-accent/10 px-3 py-[9px] text-brand-accent transition hover:border-brand-accent hover:bg-brand-accent/20 focus-visible:outline-none"
+          aria-label="Switch to dark mode"
+          data-theme-toggle
+        >
+          <span class="mr-auto font-bold text-white">Theme</span>
+          <i class="fa-solid fa-moon" data-theme-dark-icon></i>
+          <i class="fa-solid fa-sun" data-theme-light-icon hidden></i>
+        </button>
+      </div>
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Main Section -->
+    <main>
+      <!-- Hero Section -->
+      <section class="overflow-hidden mb-[70px]">
+        <div
+          class="w-full max-w-section mx-auto mt-[90px] flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-[50px]"
+        >
+          <!-- Left Side - Text Content -->
+          <div
+            class="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-8 order-2 lg:order-1"
+          >
+            <!-- Heading -->
+            <h1
+              class="font-changa-one text-white text-[40px] sm:text-[50px] lg:text-[70px] leading-[1.05] tracking-tight"
+            >
+              Learn Japanese<br />Step by Step
+            </h1>
+
+            <!-- Subheading -->
+            <p
+              class="text-[#38EF08] text-[20px] sm:text-[26px] lg:text-[35px] font-semibold leading-[1.2] max-w-[620px]"
+            >
+              Master grammar, kanji, vocabulary and sentence patterns with easy
+              study tools.
+            </p>
+
+            <!-- Search and Filters -->
+            <div class="flex flex-col sm:flex-row gap-3 w-full max-w-[620px]">
+              <!-- Search Bar -->
+              <div
+                class="flex items-center bg-white rounded-2xl px-4 sm:px-5 py-3 gap-2 sm:gap-3 flex-1"
+              >
+                <!-- Search Icon -->
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  class="flex-shrink-0"
+                >
+                  <circle
+                    cx="9.5"
+                    cy="9.5"
+                    r="6.5"
+                    stroke="#8C8989"
+                    stroke-width="2.5"
+                  />
+                  <line
+                    x1="14.5"
+                    y1="14.5"
+                    x2="19.5"
+                    y2="19.5"
+                    stroke="#8C8989"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                  />
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Search Japanese To.."
+                  class="text-[16px] sm:text-[20px] text-[#8C8989] placeholder-[#8C8989] bg-transparent outline-none w-full font-medium"
+                />
+              </div>
+
+              <!-- Level Dropdown -->
+              <div
+                class="flex items-center bg-white rounded-2xl px-4 sm:px-5 py-3 gap-2 cursor-pointer hover:bg-gray-100 transition-colors flex-shrink-0"
+              >
+                <span
+                  class="text-[16px] sm:text-[20px] text-[#8C8989] font-medium whitespace-nowrap"
+                  >Level</span
+                >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  class="flex-shrink-0"
+                >
+                  <polyline
+                    points="5,7 9,12 13,7"
+                    stroke="#0E0E0E"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+
+              <!-- Category Dropdown -->
+              <div
+                class="flex items-center bg-white rounded-2xl px-4 sm:px-5 py-3 gap-2 cursor-pointer hover:bg-gray-100 transition-colors flex-shrink-0"
+              >
+                <span
+                  class="text-[16px] sm:text-[20px] text-[#8C8989] font-medium whitespace-nowrap"
+                  >Category</span
+                >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  class="flex-shrink-0"
+                >
+                  <polyline
+                    points="5,7 9,12 13,7"
+                    stroke="#0E0E0E"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side - Illustration -->
+          <div
+            class="relative overflow-visible w-full max-w-[490px] h-full max-h-[424px] flex items-center justify-center order-1 lg:order-2"
+          >
+            <img
+              src="../../static/assets/learn/Frame.svg"
+              class="relative z-40 w-full h-full"
+              alt="learn from online japanese"
+            />
+            <div
+              class="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 aspect-square rounded-full"
+              style="
+                width: 888px;
+                height: 818px;
+                background: radial-gradient(
+                  ellipse at center,
+                  rgba(93, 214, 44, 0.43) 0%,
+                  rgba(93, 214, 44, 0) 70%
+                );
+                transform: rotate(-90deg);
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section End -->
+      <section
+        class="w-full max-w-section mx-auto flex flex-col gap-8 mb-[200px]"
+      >
+        <!-- Section Heading -->
+        <h2
+          class="text-white text-[32px] sm:text-[44px] font-semibold leading-tight"
+        >
+          Learning Cards
+        </h2>
+
+        <!-- Cards Container -->
+        <div
+          class="bg-[rgba(217,217,217,0.2)] backdrop-blur-lg rounded-2xl p-5 sm:p-6 flex flex-col gap-5"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Grammar Sheet Card -->
+            <div
+              class="bg-[rgba(56,239,8,0.2)] rounded-2xl p-5 sm:p-6 flex flex-col gap-4"
+            >
+              <!-- Icon + Title -->
+              <div class="flex items-center gap-3">
+                <!-- Grammar icon SVG -->
+                <img src="../../static/assets/icons/book.svg" alt="" />
+                <h3
+                  class="text-white text-[24px] sm:text-[32px] font-semibold leading-[1.2]"
+                >
+                  Grammar Sheet
+                </h3>
+              </div>
+              <!-- Description -->
+              <p
+                class="text-white text-[16px] sm:text-[20px] font-medium leading-[1.3]"
+              >
+                Learn Japanese grammar with easy Bangla explanations, examples
+                and lesson articles.
+              </p>
+              <!-- Feature List -->
+              <ul class="flex flex-col gap-3">
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Grammar topics by JLPT level</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Blog CMS based articles</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Searchable lessons</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Example sentences</span
+                  >
+                </li>
+              </ul>
+              <!-- Button -->
+              <button
+                class="bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full mt-2"
+              >
+                Explore Grammar
+              </button>
+            </div>
+
+            <!-- Kanji Flashcards Card -->
+            <div
+              class="bg-[rgba(56,239,8,0.2)] rounded-2xl p-5 sm:p-6 flex flex-col gap-4"
+            >
+              <!-- Icon + Title -->
+              <div class="flex items-center gap-3">
+                <!-- Kanji icon SVG -->
+                <img src="../../static/assets/icons/gears.svg" alt="" />
+                <h3
+                  class="text-white text-[24px] sm:text-[32px] font-semibold leading-[1.2]"
+                >
+                  Kanji Flashcards
+                </h3>
+              </div>
+              <!-- Description -->
+              <p
+                class="text-white text-[16px] sm:text-[20px] font-medium leading-[1.3]"
+              >
+                Learn Kanji using interactive flashcards.
+              </p>
+              <!-- Feature List -->
+              <ul class="flex flex-col gap-3">
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Kanji Character</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Main Meaning</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Pronunciation (Onyomi / Kunyomi)</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Example sentences</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Bangla / English Meaning</span
+                  >
+                </li>
+              </ul>
+              <!-- Button -->
+              <button
+                class="bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full mt-2"
+              >
+                Start Kanji Flashcards
+              </button>
+            </div>
+            <!-- Vocabulary Flashcards Card -->
+            <div
+              class="bg-[rgba(56,239,8,0.2)] rounded-2xl p-5 sm:p-6 flex flex-col gap-4"
+            >
+              <!-- Icon + Title -->
+              <div class="flex items-center gap-3">
+                <!-- Vocabulary icon SVG -->
+                <img src="../../static/assets/icons/notebook.svg" alt="" />
+                <h3
+                  class="text-white text-[24px] sm:text-[32px] font-semibold leading-[1.2]"
+                >
+                  Vocabulary Flashcards
+                </h3>
+              </div>
+              <!-- Description -->
+              <p
+                class="text-white text-[16px] sm:text-[20px] font-medium leading-[1.3]"
+              >
+                Japanese vocabulary using interactive flip cards.
+              </p>
+              <!-- Feature List -->
+              <ul class="flex flex-col gap-3">
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Japanese Word</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Pronunciation</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Meaning</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Example Sentence</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Bangla / English Meaning</span
+                  >
+                </li>
+              </ul>
+              <!-- Button -->
+              <button
+                class="bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full mt-2"
+              >
+                Start Vocabulary Flashcards
+              </button>
+            </div>
+
+            <!-- Sentence Flashcards Card -->
+            <div
+              class="bg-[rgba(56,239,8,0.2)] rounded-2xl p-5 sm:p-6 flex flex-col gap-4"
+            >
+              <!-- Icon + Title -->
+              <div class="flex items-center gap-3">
+                <!-- Sentence icon SVG -->
+                <img src="../../static/assets/icons/puzzle.svg" alt="" />
+                <h3
+                  class="text-white text-[24px] sm:text-[32px] font-semibold leading-[1.2]"
+                >
+                  Sentence Flashcards
+                </h3>
+              </div>
+              <!-- Description -->
+              <p
+                class="text-white text-[16px] sm:text-[20px] font-medium leading-[1.3]"
+              >
+                Learn useful Japanese sentences and expressions.
+              </p>
+              <!-- Feature List -->
+              <ul class="flex flex-col gap-3">
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Japanese Sentence</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Pronunciation</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Meaning</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Example Usage</span
+                  >
+                </li>
+              </ul>
+              <!-- Button -->
+              <button
+                class="bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full mt-2"
+              >
+                Start Sentence Flashcards
+              </button>
+            </div>
+            <!-- Vocabulary Builder Card -->
+            <div
+              class="bg-[rgba(56,239,8,0.2)] rounded-2xl p-5 sm:p-6 flex flex-col gap-4"
+            >
+              <!-- Icon + Title -->
+              <div class="flex items-center gap-3">
+                <!-- Vocabulary Builder icon SVG -->
+                <img src="../../static/assets/icons/writing_pen.svg" alt="" />
+                <h3
+                  class="text-white text-[24px] sm:text-[32px] font-semibold leading-[1.2]"
+                >
+                  Vocabulary Builder
+                </h3>
+              </div>
+              <!-- Description -->
+              <p
+                class="text-white text-[16px] sm:text-[20px] font-medium leading-[1.3]"
+              >
+                Learn vocabulary by topic using blog-style lessons.
+              </p>
+              <!-- Feature List -->
+              <ul class="flex flex-col gap-3">
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Topic wise words</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Meaning</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Pronunciation</span
+                  >
+                </li>
+                <li class="flex items-center gap-3">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    class="flex-shrink-0"
+                  >
+                    <circle cx="16" cy="16" r="14" fill="white" />
+                    <circle cx="16" cy="16" r="12" fill="white" />
+                    <polyline
+                      points="10,16 14,21 22,11"
+                      stroke="#219653"
+                      stroke-width="3.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      fill="none"
+                    />
+                  </svg>
+                  <span class="text-white text-[16px] sm:text-[20px]"
+                    >Example usage</span
+                  >
+                </li>
+              </ul>
+              <!-- Button -->
+              <button
+                class="bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full mt-2"
+              >
+                View Vocabulary Builder
+              </button>
+            </div>
+
+            <!-- Empty spacer for grid alignment -->
+            <div class="hidden lg:block"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End Main Section -->
+
+    <!-- Footer Section -->
+    <footer
+      class="bg-[#e5e5e5] dark:bg-[#1a1a1a] font-['Roboto',sans-serif] text-[#0d0d0d] dark:text-white"
+    >
+      <div
+        class="mx-auto grid min-h-[328px] w-full max-w-section grid-cols-2 gap-x-6 gap-y-10 px-4 py-14 text-center sm:px-6 md:pt-[128px] md:pb-5 lg:grid-cols-3 lg:text-left"
+      >
+        <div>
+          <h4 class="mb-[8px] text-lg font-normal leading-[21px]">
+            Navigation
+          </h4>
+          <ul
+            class="grid text-sm font-normal leading-[30px] text-[#0d0d0d] dark:text-[#c1c1c1]"
+          >
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="mb-[4px] text-lg font-normal leading-[21px]">
+            Collaborate
+          </h4>
+          <ul
+            class="grid text-xs font-normal leading-[30px] text-[#0d0d0d] dark:text-[#c1c1c1]"
+          >
+            <li>Careers Explore</li>
+            <li>Be come a rider</li>
+            <li>Your Team</li>
+          </ul>
+        </div>
+
+        <div
+          class="col-span-2 justify-self-center lg:col-span-1 lg:justify-self-auto"
+        >
+          <h4 class="mb-[15px] text-lg font-normal leading-[21px]">
+            Follow us on
+          </h4>
+          <div
+            class="mb-[11px] flex items-center justify-center gap-[11px] lg:justify-start"
+          >
+            <a href="#" aria-label="Facebook">
+              <img
+                src="../../static/assets/icons/logos_facebook.svg"
+                alt=""
+                class="size-[26px]"
+              />
+            </a>
+            <a href="#" aria-label="Twitter">
+              <img
+                src="../../static/assets/icons/skill-icons_twitter.svg"
+                alt=""
+                class="size-6"
+              />
+            </a>
+            <a href="#" aria-label="Instagram">
+              <img
+                src="../../static/assets/icons/instagram_icon.svg"
+                alt=""
+                class="size-6"
+              />
+            </a>
+          </div>
+
+          <p class="text-lg font-normal leading-[21px]">Payment method</p>
+          <div
+            class="mt-[14px] flex flex-wrap items-center justify-center gap-[26px] lg:justify-start"
+          >
+            <img
+              src="../../static/assets/icons/mastercard_icon.svg"
+              alt="Mastercard"
+              class="h-[26px] w-[34px]"
+            />
+            <img
+              src="../../static/assets/icons/visacard_icon.svg"
+              alt="Visa card"
+              class="size-[31px] object-contain"
+            />
+          </div>
+
+          <div
+            class="mt-[14px] flex flex-wrap items-center justify-center gap-[9px] lg:justify-start"
+          >
+            <img
+              src="../../static/assets/icons/playstore_icon.svg"
+              alt="Get it on Play Store"
+              class="h-[26px] w-[76px]"
+            />
+            <img
+              src="../../static/assets/icons/apple_store.svg"
+              alt="Download on the App Store"
+              class="h-7 w-[72px]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-[#31ab00] dark:bg-[#4a4949]">
+        <div
+          class="mx-auto flex min-h-[63px] w-full max-w-section flex-col items-center justify-center gap-3 px-4 text-center text-sm font-normal leading-4 text-[#e4e4e4] dark:text-white sm:px-6 md:flex-row md:justify-between md:text-left"
+        >
+          <span>© Copyright 2025 mamarhat all right reserved</span>
+          <span class="leading-[121.27%]">Privacy policy</span>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer Section -->
+
+    <script src="../../static/js/app.js"></script>
+  </body>
+</html>
