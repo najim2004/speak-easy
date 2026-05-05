@@ -1,165 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Index - Project Navigation</title>
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --border-color: #e2e8f0;
-        }
+      :root {
+        --primary-color: #2563eb;
+        --bg-color: #f8fafc;
+        --card-bg: #ffffff;
+        --text-main: #1e293b;
+        --text-muted: #64748b;
+        --border-color: #e2e8f0;
+      }
 
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+      }
 
+      .index-card {
+        background: var(--card-bg);
+        width: 100%;
+        max-width: 450px;
+        padding: 32px;
+        border-radius: 16px;
+        box-shadow:
+          0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        border: 1px solid var(--border-color);
+      }
+
+      .header {
+        margin-bottom: 24px;
+        border-bottom: 2px solid var(--bg-color);
+        padding-bottom: 16px;
+      }
+
+      .header h1 {
+        font-size: 22px;
+        font-weight: 700;
+        margin: 0;
+        color: var(--text-main);
+      }
+
+      .header p {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin-top: 4px;
+      }
+
+      .page-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .page-item {
+        margin-bottom: 12px;
+      }
+
+      .page-link {
+        display: flex;
+        align-items: center;
+        padding: 14px 18px;
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+      }
+
+      .page-link:hover {
+        border-color: var(--primary-color);
+        background-color: #eff6ff;
+        color: var(--primary-color);
+        transform: translateX(5px);
+      }
+
+      .page-link .icon {
+        margin-right: 12px;
+        font-size: 18px;
+      }
+
+      .page-link .arrow {
+        margin-left: auto;
+        opacity: 0.3;
+        transition: opacity 0.2s;
+      }
+
+      .page-link:hover .arrow {
+        opacity: 1;
+      }
+
+      @media (max-width: 480px) {
         .index-card {
-            background: var(--card-bg);
-            width: 100%;
-            max-width: 450px;
-            padding: 32px;
-            border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            border: 1px solid var(--border-color);
+          width: 90%;
+          padding: 24px;
         }
-
-        .header {
-            margin-bottom: 24px;
-            border-bottom: 2px solid var(--bg-color);
-            padding-bottom: 16px;
-        }
-
-        .header h1 {
-            font-size: 22px;
-            font-weight: 700;
-            margin: 0;
-            color: var(--text-main);
-        }
-
-        .header p {
-            font-size: 14px;
-            color: var(--text-muted);
-            margin-top: 4px;
-        }
-
-        .page-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .page-item {
-            margin-bottom: 12px;
-        }
-
-        .page-link {
-            display: flex;
-            align-items: center;
-            padding: 14px 18px;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 500;
-            transition: all 0.2s ease;
-            border: 1px solid transparent;
-        }
-
-        .page-link:hover {
-            border-color: var(--primary-color);
-            background-color: #eff6ff;
-            color: var(--primary-color);
-            transform: translateX(5px);
-        }
-
-        .page-link .icon {
-            margin-right: 12px;
-            font-size: 18px;
-        }
-
-        .page-link .arrow {
-            margin-left: auto;
-            opacity: 0.3;
-            transition: opacity 0.2s;
-        }
-
-        .page-link:hover .arrow {
-            opacity: 1;
-        }
-
-        @media (max-width: 480px) {
-            .index-card {
-                width: 90%;
-                padding: 24px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="index-card">
-        <div class="header">
-            <h1>Project Pages</h1>
-            <p>Main directory of all available templates</p>
-        </div>
-        
-        <div class="page-list">
-            <div class="page-item">
-                <a href="./templates/pages/home.html" class="page-link">
-                    <span class="icon">🏠</span> 
-                    <span>Home Page</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-            <div class="page-item">
-                <a href="./templates/pages/courses.html" class="page-link">
-                    <span class="icon">📚</span> 
-                    <span>Course Catalog</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-            <div class="page-item">
-                <a href="./templates/pages/signin.html" class="page-link">
-                    <span class="icon">🔐</span> 
-                    <span>Sign In</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-            <div class="page-item">
-                <a href="./templates/pages/signup.html" class="page-link">
-                    <span class="icon">👤</span> 
-                    <span>Create Account</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-            <div class="page-item">
-                <a href="./templates/pages/forgot-password.html" class="page-link">
-                    <span class="icon">🔑</span> 
-                    <span>Reset Password</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-            <div class="page-item">
-                <a href="./templates/pages/otp-verification.html" class="page-link">
-                    <span class="icon">🔢</span> 
-                    <span>OTP Verification</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
-        </div>
-    </div>
+      <div class="header">
+        <h1>Project Pages</h1>
+        <p>Main directory of all available templates</p>
+      </div>
 
-</body>
+      <div class="page-list">
+        <div class="page-item">
+          <a href="./templates/pages/home.html" class="page-link">
+            <span class="icon">🏠</span>
+            <span>Home Page</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="page-item">
+          <a href="./templates/pages/courses.html" class="page-link">
+            <span class="icon">📚</span>
+            <span>Course Catalog</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="page-item">
+          <a href="./templates/pages/grammar-sheets.html" class="page-link">
+            <span class="icon">📖</span>
+            <span>Grammar Sheets</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="page-item">
+          <a href="./templates/pages/blog.html" class="page-link">
+            <span class="icon">📝</span>
+            <span>Blog</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="page-item">
+          <a href="./templates/pages/learn.html" class="page-link">
+            <span class="icon">🎓</span>
+            <span>Learn</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="page-item">
+          <a href="./templates/pages/practice-lab.html" class="page-link">
+            <span class="icon">🧪</span>
+            <span>Practice Lab</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="page-item">
+          <a href="./templates/pages/signin.html" class="page-link">
+            <span class="icon">🔐</span>
+            <span>Sign In</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="page-item">
+          <a href="./templates/pages/signup.html" class="page-link">
+            <span class="icon">👤</span>
+            <span>Create Account</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="page-item">
+          <a href="./templates/pages/forgot-password.html" class="page-link">
+            <span class="icon">🔑</span>
+            <span>Reset Password</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+        <div class="page-item">
+          <a href="./templates/pages/otp-verification.html" class="page-link">
+            <span class="icon">🔢</span>
+            <span>OTP Verification</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
