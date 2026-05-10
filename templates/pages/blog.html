@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forgot Password | speak easy japanese</title>
+    <title>Blog | speak easy japanese</title>
 
     <link
       rel="stylesheet"
@@ -15,34 +15,6 @@
     <link rel="stylesheet" href="../../static/css/app.css" />
     <script src="../../static/js/tailwind.config.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style>
-      .glass-card {
-        background: rgba(217, 217, 217, 0.12);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 15px;
-        overflow: hidden;
-      }
-      .enroll-btn {
-        background: linear-gradient(
-          90deg,
-          #5dd62c 0%,
-          #afff8f 35.33%,
-          #5dd62c 100%
-        );
-        border-radius: 10px;
-      }
-      .card-image-bg {
-        background:
-          linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.05) 0%,
-            rgba(0, 0, 0, 0.55) 100%
-          ),
-          url("https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80")
-            center/cover no-repeat;
-        border-radius: 15px 15px 0 0;
-      }
-    </style>
   </head>
   <body
     class="light bg-white dark:bg-[#090909] font-inter text-[#0d0d0d] dark:text-white transition-colors duration-200"
@@ -245,18 +217,33 @@
 
     <!-- Main Section -->
     <main
-      class="max-w-[1320px] mx-auto px-5 md:px-8 xl:px-10 py-10 lg:flex lg:gap-12 lg:items-start"
+      class="max-w-section mx-auto px-5 md:px-8 xl:px-10 pt-[70px] lg:flex lg:gap-12 lg:items-start"
     >
       <!-- ───── RIGHT SIDEBAR CARD ─────
            • Mobile/tablet: full-width block, sits at top above content
            • Desktop: sticky on the right, 370px wide
       ──────────────────────────────── -->
       <aside
-        class="glass-card w-full mb-10 lg:order-2 lg:mb-0 lg:w-[370px] lg:shrink-0 lg:sticky lg:top-6 lg:self-start"
+        class="w-full mb-10 lg:order-2 lg:mb-0 lg:w-[370px] lg:shrink-0 lg:sticky lg:top-6 lg:self-start"
+        style="
+          background: rgba(217, 217, 217, 0.12);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 15px;
+          overflow: hidden;
+        "
       >
         <!-- Card Image -->
-        <div class="card-image-bg h-[220px] md:h-[250px] flex items-end p-5">
-          <div>
+        <div class="h-[220px] md:h-[240px] flex items-end rounded-xl">
+          <img
+            src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80"
+            alt="Japanese N5 Beginner"
+            class="w-full h-full object-cover rounded-t-xl"
+          />
+        </div>
+
+        <!-- Card Body -->
+        <div class="p-5 pt-3">
+          <div class="mb-4">
             <p class="font-bold text-xl text-white leading-tight">
               Japanese N5 Beginner
             </p>
@@ -264,44 +251,51 @@
               Introductory JLPT level covering basic Japanese foundations.
             </p>
           </div>
-        </div>
+          <div class="space-y-4">
+            <ul class="text-white text-[15px] font-medium space-y-2">
+              <li class="flex items-start gap-3">
+                <span>📅</span> Weekly 2 Classes
+              </li>
+              <li class="flex items-start gap-3">
+                <span>📋</span> Daily Home Task
+              </li>
+              <li class="flex items-start gap-3">
+                <span>✏️</span> After 15 Days Written Exam
+              </li>
+              <li class="flex items-start gap-3">
+                <span>🔁</span> Revision week at the end of every month
+              </li>
+            </ul>
 
-        <!-- Card Body -->
-        <div class="p-5 space-y-4">
-          <ul class="text-white text-[15px] font-medium space-y-2">
-            <li class="flex items-start gap-3">
-              <span>📅</span> Weekly 2 Classes
-            </li>
-            <li class="flex items-start gap-3">
-              <span>📋</span> Daily Home Task
-            </li>
-            <li class="flex items-start gap-3">
-              <span>✏️</span> After 15 Days Written Exam
-            </li>
-            <li class="flex items-start gap-3">
-              <span>🔁</span> Revision week at the end of every month
-            </li>
-          </ul>
+            <div
+              class="border-t border-white/10 pt-3 space-y-2 text-[15px] font-medium text-white"
+            >
+              <p class="flex items-center gap-3">
+                <span>📆</span> Start Date: 15 May 2025
+              </p>
+              <p class="flex items-center gap-3">
+                <span>🎓</span> 24 Live Classes
+              </p>
+              <p class="flex items-center gap-3">
+                <span>⏱️</span> Duration: 3 Months
+              </p>
+            </div>
 
-          <div
-            class="border-t border-white/10 pt-3 space-y-2 text-[15px] font-medium text-white"
-          >
-            <p class="flex items-center gap-3">
-              <span>📆</span> Start Date: 15 May 2025
-            </p>
-            <p class="flex items-center gap-3">
-              <span>🎓</span> 24 Live Classes
-            </p>
-            <p class="flex items-center gap-3">
-              <span>⏱️</span> Duration: 3 Months
-            </p>
+            <button
+              class="w-full py-3 text-[#262626] font-semibold text-xl rounded-xl"
+              style="
+                background: linear-gradient(
+                  90deg,
+                  #5dd62c 0%,
+                  #afff8f 35.33%,
+                  #5dd62c 100%
+                );
+                border-radius: 10px;
+              "
+            >
+              Enroll Now
+            </button>
           </div>
-
-          <button
-            class="enroll-btn w-full py-3 text-[#262626] font-semibold text-xl rounded-xl"
-          >
-            Enroll Now
-          </button>
         </div>
       </aside>
 
@@ -312,7 +306,7 @@
         <!-- Hero -->
         <section class="mb-12">
           <h1
-            class="changa text-[40px] sm:text-[54px] lg:text-[62px] leading-[1.1] text-brand-accent mb-5"
+            class="font-changa-one text-[40px] sm:text-[54px] lg:text-[62px] leading-[1.1] text-brand-accent mb-5"
           >
             JLPT N5 Express: 90-Day Masterclass for Beginners
           </h1>
