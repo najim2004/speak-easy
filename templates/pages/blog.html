@@ -217,293 +217,365 @@
 
     <!-- Main Section -->
     <main
-      class="max-w-section mx-auto px-5 md:px-8 xl:px-10 pt-[70px] lg:flex lg:gap-12 lg:items-start"
+      class="relative [background:radial-gradient(circle_at_82%_7%,rgba(93,214,44,0.2),transparent_16%),radial-gradient(circle_at_0%_45%,rgba(93,214,44,0.13),transparent_16%),#ffffff] dark:[background:#090909]"
     >
-      <!-- ───── RIGHT SIDEBAR CARD ─────
+      <div
+        class="mx-auto flex max-w-section flex-col px-5 pt-[70px] md:px-8 xl:px-10 lg:flex-row lg:items-start lg:gap-12"
+      >
+        <!-- ───── RIGHT SIDEBAR CARD ─────
            • Mobile/tablet: full-width block, sits at top above content
            • Desktop: sticky on the right, 370px wide
       ──────────────────────────────── -->
-      <aside
-        class="w-full mb-10 lg:order-2 lg:mb-0 lg:w-[370px] lg:shrink-0 lg:sticky lg:top-6 lg:self-start"
-        style="
-          background: rgba(217, 217, 217, 0.12);
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          border-radius: 15px;
-          overflow: hidden;
-        "
-      >
-        <!-- Card Image -->
-        <div class="h-[220px] md:h-[240px] flex items-end rounded-xl">
-          <img
-            src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80"
-            alt="Japanese N5 Beginner"
-            class="w-full h-full object-cover rounded-t-xl"
-          />
-        </div>
-
-        <!-- Card Body -->
-        <div class="p-5 pt-3">
-          <div class="mb-4">
-            <p class="font-bold text-xl text-white leading-tight">
-              Japanese N5 Beginner
-            </p>
-            <p class="text-white/80 text-sm mt-1 font-medium">
-              Introductory JLPT level covering basic Japanese foundations.
-            </p>
+        <aside
+          class="w-full mb-10 overflow-hidden rounded-[15px] border border-black/10 bg-white/95 shadow-sm lg:order-2 lg:mb-0 lg:w-[370px] lg:shrink-0 lg:sticky lg:top-6 lg:self-start dark:border-white/10 dark:bg-white/20 dark:shadow-none"
+        >
+          <!-- Card Image -->
+          <div class="h-[220px] md:h-[240px] flex items-end rounded-xl">
+            <img
+              src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=700&q=80"
+              alt="Japanese N5 Beginner"
+              class="w-full h-full object-cover rounded-t-xl"
+            />
           </div>
-          <div class="space-y-4">
-            <ul class="text-white text-[15px] font-medium space-y-2">
-              <li class="flex items-start gap-3">
-                <span>📅</span> Weekly 2 Classes
-              </li>
-              <li class="flex items-start gap-3">
-                <span>📋</span> Daily Home Task
-              </li>
-              <li class="flex items-start gap-3">
-                <span>✏️</span> After 15 Days Written Exam
-              </li>
-              <li class="flex items-start gap-3">
-                <span>🔁</span> Revision week at the end of every month
-              </li>
-            </ul>
 
-            <div
-              class="border-t border-white/10 pt-3 space-y-2 text-[15px] font-medium text-white"
-            >
-              <p class="flex items-center gap-3">
-                <span>📆</span> Start Date: 15 May 2025
+          <!-- Card Body -->
+          <div class="p-5 pt-3">
+            <div class="mb-4">
+              <p
+                class="font-bold text-xl text-[#0d0d0d] dark:text-white leading-tight"
+              >
+                Japanese N5 Beginner
               </p>
-              <p class="flex items-center gap-3">
-                <span>🎓</span> 24 Live Classes
-              </p>
-              <p class="flex items-center gap-3">
-                <span>⏱️</span> Duration: 3 Months
+              <p
+                class="text-neutral-600 dark:text-white/80 text-sm mt-1 font-medium"
+              >
+                Introductory JLPT level covering basic Japanese foundations.
               </p>
             </div>
+            <div class="space-y-4">
+              <ul
+                class="text-[#0d0d0d] dark:text-white text-[15px] font-medium space-y-2"
+              >
+                <li class="flex items-start gap-3">
+                  <span
+                    ><img
+                      src="../../static/assets/icons/calender.svg"
+                      alt="Calendar"
+                      class="w-4 h-4"
+                  /></span>
+                  Weekly 2 Classes
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    ><img
+                      src="../../static/assets/icons/clipboad.svg"
+                      alt="Home Task"
+                      class="w-4 h-4"
+                  /></span>
+                  Daily Home Task
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    ><img
+                      src="../../static/assets/icons/book_white.svg"
+                      alt="Written Exam"
+                      class="w-4 h-4"
+                  /></span>
+                  After 15 Days Written Exam
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    ><img
+                      src="../../static/assets/icons/relaod_icon.svg"
+                      alt="Revision"
+                      class="w-4 h-4"
+                  /></span>
+                  Revision week at the end of every month
+                </li>
+              </ul>
 
-            <button
-              class="w-full py-3 text-[#262626] font-semibold text-xl rounded-xl"
-              style="
-                background: linear-gradient(
-                  90deg,
-                  #5dd62c 0%,
-                  #afff8f 35.33%,
-                  #5dd62c 100%
-                );
-                border-radius: 10px;
-              "
-            >
-              Enroll Now
-            </button>
+              <div
+                class="space-y-2 text-[15px] font-medium text-[#0d0d0d] dark:border-white/10 dark:text-white"
+              >
+                <p class="flex items-center gap-3">
+                  <span
+                    ><img
+                      src="../../static/assets/icons/timer.svg"
+                      alt="Calendar"
+                      class="w-4 h-4"
+                  /></span>
+                  Start Date: 15 May 2025
+                </p>
+                <p class="flex items-center gap-3">
+                  <span
+                    ><img
+                      src="../../static/assets/icons/tree_node_icon.svg"
+                      alt="Live Classes"
+                      class="w-4 h-4"
+                  /></span>
+                  24 Live Classes
+                </p>
+                <p class="flex items-center gap-3">
+                  <span
+                    ><img
+                      src="../../static/assets/icons/stopwatch.svg"
+                      alt="Duration"
+                      class="w-4 h-4"
+                  /></span>
+                  Duration: 3 Months
+                </p>
+              </div>
+
+              <button
+                class="w-full py-3 text-[#262626] font-semibold text-xl rounded-xl"
+                style="
+                  background: linear-gradient(
+                    90deg,
+                    #5dd62c 0%,
+                    #afff8f 35.33%,
+                    #5dd62c 100%
+                  );
+                  border-radius: 10px;
+                "
+              >
+                Enroll Now
+              </button>
+            </div>
           </div>
-        </div>
-      </aside>
+        </aside>
 
-      <!-- ───── LEFT CONTENT COLUMN ─────
+        <!-- ───── LEFT CONTENT COLUMN ─────
            Scrolls normally while the sidebar stays sticky on desktop
       ───────────────────────────────── -->
-      <div class="lg:order-1 lg:flex-1 lg:min-w-0">
-        <!-- Hero -->
-        <section class="mb-12">
-          <h1
-            class="font-changa-one text-[40px] sm:text-[54px] lg:text-[62px] leading-[1.1] text-brand-accent mb-5"
-          >
-            JLPT N5 Express: 90-Day Masterclass for Beginners
-          </h1>
-          <p
-            class="text-[#B7B7B7] text-[17px] sm:text-[20px] font-semibold leading-7 max-w-[680px]"
-          >
-            The introductory level of the Japanese Language Proficiency Test
-            (JLPT), designed for absolute beginners to establish a foundational
-            understanding of the language
-          </p>
-        </section>
-
-        <!-- Course Details -->
-        <section class="mb-14">
-          <h2
-            class="font-semibold text-[34px] sm:text-[42px] leading-tight text-white mb-3"
-          >
-            Course Details
-          </h2>
-          <p
-            class="text-white/80 text-[17px] sm:text-[19px] leading-7 mb-8 max-w-[680px]"
-          >
-            There are basically 4 main topics that will be taught in this JLPT
-            N5 course. Below is a brief list of them:
-          </p>
-
-          <!-- 1 -->
-          <div class="mb-8">
-            <h3 class="text-[20px] sm:text-[25px] font-medium text-white mb-3">
-              1. Writing Systems (The Basics)
-            </h3>
-            <ul
-              class="list-disc list-inside ml-4 text-white/85 text-[15px] sm:text-[17px] leading-8 space-y-1"
+        <div class="min-w-0 overflow-x-hidden lg:order-1 lg:flex-1">
+          <!-- Hero -->
+          <section class="mb-12">
+            <h1
+              class="font-changa-one text-[40px] sm:text-[54px] lg:text-[62px] leading-[1.1] text-brand-accent mb-5"
             >
-              <li>
-                Hiragana: Complete mastery of all 46 characters (used for native
-                Japanese words and grammar).
-              </li>
-              <li>
-                Katakana: Complete mastery of all 46 characters (used for
-                foreign names and loanwords like "Coffee").
-              </li>
-              <li>
-                Kanji: Approximately 100–120 basic characters (e.g., numbers,
-                days, people, and common verbs like "eat" or "go").
-              </li>
-            </ul>
-          </div>
-
-          <!-- 2 -->
-          <div class="mb-8">
-            <h3 class="text-[20px] sm:text-[25px] font-medium text-white mb-3">
-              2. Vocabulary &amp; Expressions
-            </h3>
-            <ul
-              class="list-disc list-inside ml-4 text-white/85 text-[15px] sm:text-[17px] leading-8 space-y-1"
-            >
-              <li>Word Count: Around 800–1,000 common words.</li>
-              <li>
-                Topics: Self-introduction, family, food, daily routines,
-                shopping, weather, and time.
-              </li>
-            </ul>
-          </div>
-
-          <!-- 3 -->
-          <div class="mb-8">
-            <h3 class="text-[20px] sm:text-[25px] font-medium text-white mb-3">
-              3. Grammar Foundations
-            </h3>
-            <ul
-              class="list-disc list-inside ml-4 text-white/85 text-[15px] sm:text-[17px] leading-8 space-y-1"
-            >
-              <li>
-                Particles: Correct use of markers like は (wa), が (ga), を (o),
-                に (ni), で (de).
-              </li>
-              <li>Verb Tenses: Present and past forms (Polite ~masu form).</li>
-              <li>
-                Adjectives: Using i-adjectives and na-adjectives correctly.
-              </li>
-              <li>
-                Sentence Structure: Understanding the Subject-Object-Verb (SOV)
-                order.
-              </li>
-            </ul>
-          </div>
-
-          <!-- 4 -->
-          <div class="mb-8">
-            <h3 class="text-[20px] sm:text-[25px] font-medium text-white mb-3">
-              4. Reading &amp; Listening
-            </h3>
-            <ul
-              class="list-disc list-inside ml-4 text-white/85 text-[15px] sm:text-[17px] leading-8 space-y-1"
-            >
-              <li>
-                Reading: Ability to read short, simple sentences and signs
-                written in Hiragana, Katakana, and basic Kanji.
-              </li>
-              <li>
-                Listening: Comprehending slow, clear conversations about
-                everyday topics (like classroom instructions or asking for
-                directions).
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- Core Course -->
-        <section class="mb-24">
-          <h2
-            class="font-semibold text-[34px] sm:text-[42px] leading-tight text-white mb-8"
-          >
-            Core Course
-          </h2>
-
-          <div class="space-y-6">
-            <p class="text-[16px] sm:text-[21px] leading-8 text-white">
-              <span class="font-bold text-brand-accent">Module 1:</span>
-              <span class="font-semibold">
-                Introduction to the Japanese Language</span
-              >
-              <span class="font-normal text-white/80">
-                – Basics of pronunciation, intonation, and common
-                greetings.</span
-              >
-            </p>
-            <p class="text-[16px] sm:text-[21px] leading-8 text-white">
-              <span class="font-bold text-brand-accent">Module 2:</span>
-              <span class="font-semibold">
-                Writing Systems (Hiragana &amp; Katakana)</span
-              >
-              <span class="font-normal text-white/80">
-                – Mastery of the two phonetic scripts, including stroke order
-                and reading practice.</span
-              >
-            </p>
-            <p class="text-[16px] sm:text-[21px] leading-8 text-white">
-              <span class="font-bold text-brand-accent">Module 3:</span>
-              <span class="font-semibold"> Basic Kanji</span>
-              <span class="font-normal text-white/80">
-                – Recognition and writing of approximately 100–120 essential
-                characters (e.g., numbers, time, and common nouns).</span
-              >
-            </p>
-            <p class="text-[16px] sm:text-[21px] leading-8 text-white">
-              <span class="font-bold text-brand-accent">Module 4:</span>
-              <span class="font-semibold"> Grammar Foundations</span>
-              <span class="font-normal text-white/80">
-                – Fundamental sentence structures (SOV), essential particles
-                (like wa, ga, wo, ni), and basic verb/adjective
-                conjugations.</span
-              >
-            </p>
-            <p class="text-[16px] sm:text-[21px] leading-8 text-white">
-              <span class="font-bold text-brand-accent">Module 5:</span>
-              <span class="font-semibold"> Vocabulary Development</span>
-              <span class="font-normal text-white/80">
-                – Building a repertoire of 800–1,000 common words related to
-                family, food, shopping, and daily routines.</span
-              >
-            </p>
-            <p class="text-[16px] sm:text-[21px] leading-8 text-white">
-              <span class="font-bold text-brand-accent">Module 6:</span>
-              <span class="font-semibold"> Listening &amp; Speaking</span>
-              <span class="font-normal text-white/80">
-                – Understanding slow, clear speech in everyday situations and
-                practicing basic conversational drills.</span
-              >
-            </p>
-            <p class="text-[16px] sm:text-[21px] leading-8 text-white">
-              <span class="font-bold text-brand-accent">Module 7:</span>
-              <span class="font-semibold"> Reading Comprehension</span>
-              <span class="font-normal text-white/80">
-                – Practice reading short, simple passages, signs, and notices
-                using basic vocabulary and Kanji.</span
-              >
-            </p>
-            <p class="text-[16px] sm:text-[21px] leading-8 text-white">
-              <span class="font-bold text-brand-accent">Module 8:</span>
-              <span class="font-semibold"> JLPT N5 Exam Preparation</span>
-              <span class="font-normal text-white/80">
-                – Mock tests, section-wise strategies, and time management tips
-                for the official exam.</span
-              >
-            </p>
-
+              JLPT N5 Express: 90-Day Masterclass for Beginners
+            </h1>
             <p
-              class="text-[#4A4949] text-[16px] cursor-pointer hover:text-white/40 transition-colors pt-1"
+              class="text-[#595959] dark:text-[#B7B7B7] text-[17px] sm:text-[20px] font-semibold leading-7 max-w-[680px]"
             >
-              + Add more module
+              The introductory level of the Japanese Language Proficiency Test
+              (JLPT), designed for absolute beginners to establish a
+              foundational understanding of the language
             </p>
-          </div>
-        </section>
+          </section>
+
+          <!-- Course Details -->
+          <section class="mb-14">
+            <h2
+              class="font-semibold text-[34px] sm:text-[42px] leading-tight text-[#0d0d0d] dark:text-white mb-3"
+            >
+              Course Details
+            </h2>
+            <p
+              class="text-neutral-600 dark:text-white/80 text-[17px] sm:text-[19px] leading-7 mb-8 max-w-[680px]"
+            >
+              There are basically 4 main topics that will be taught in this JLPT
+              N5 course. Below is a brief list of them:
+            </p>
+
+            <!-- 1 -->
+            <div class="mb-8">
+              <h3
+                class="text-[20px] sm:text-[25px] font-medium text-[#0d0d0d] dark:text-white mb-3"
+              >
+                1. Writing Systems (The Basics)
+              </h3>
+              <ul
+                class="list-disc list-inside ml-4 text-[#454545] dark:text-white/85 text-[15px] sm:text-[17px] leading-8 space-y-1"
+              >
+                <li>
+                  Hiragana: Complete mastery of all 46 characters (used for
+                  native Japanese words and grammar).
+                </li>
+                <li>
+                  Katakana: Complete mastery of all 46 characters (used for
+                  foreign names and loanwords like "Coffee").
+                </li>
+                <li>
+                  Kanji: Approximately 100–120 basic characters (e.g., numbers,
+                  days, people, and common verbs like "eat" or "go").
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2 -->
+            <div class="mb-8">
+              <h3
+                class="text-[20px] sm:text-[25px] font-medium text-[#0d0d0d] dark:text-white mb-3"
+              >
+                2. Vocabulary &amp; Expressions
+              </h3>
+              <ul
+                class="list-disc list-inside ml-4 text-[#454545] dark:text-white/85 text-[15px] sm:text-[17px] leading-8 space-y-1"
+              >
+                <li>Word Count: Around 800–1,000 common words.</li>
+                <li>
+                  Topics: Self-introduction, family, food, daily routines,
+                  shopping, weather, and time.
+                </li>
+              </ul>
+            </div>
+
+            <!-- 3 -->
+            <div class="mb-8">
+              <h3
+                class="text-[20px] sm:text-[25px] font-medium text-[#0d0d0d] dark:text-white mb-3"
+              >
+                3. Grammar Foundations
+              </h3>
+              <ul
+                class="list-disc list-inside ml-4 text-[#454545] dark:text-white/85 text-[15px] sm:text-[17px] leading-8 space-y-1"
+              >
+                <li>
+                  Particles: Correct use of markers like は (wa), が (ga), を
+                  (o), に (ni), で (de).
+                </li>
+                <li>
+                  Verb Tenses: Present and past forms (Polite ~masu form).
+                </li>
+                <li>
+                  Adjectives: Using i-adjectives and na-adjectives correctly.
+                </li>
+                <li>
+                  Sentence Structure: Understanding the Subject-Object-Verb
+                  (SOV) order.
+                </li>
+              </ul>
+            </div>
+
+            <!-- 4 -->
+            <div class="mb-8">
+              <h3
+                class="text-[20px] sm:text-[25px] font-medium text-[#0d0d0d] dark:text-white mb-3"
+              >
+                4. Reading &amp; Listening
+              </h3>
+              <ul
+                class="list-disc list-inside ml-4 text-[#454545] dark:text-white/85 text-[15px] sm:text-[17px] leading-8 space-y-1"
+              >
+                <li>
+                  Reading: Ability to read short, simple sentences and signs
+                  written in Hiragana, Katakana, and basic Kanji.
+                </li>
+                <li>
+                  Listening: Comprehending slow, clear conversations about
+                  everyday topics (like classroom instructions or asking for
+                  directions).
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Core Course -->
+          <section class="mb-24">
+            <h2
+              class="font-semibold text-[34px] sm:text-[42px] leading-tight text-[#0d0d0d] dark:text-white mb-8"
+            >
+              Core Course
+            </h2>
+
+            <div class="space-y-6">
+              <p
+                class="text-[16px] sm:text-[21px] leading-8 text-[#0d0d0d] dark:text-white"
+              >
+                <span class="font-bold text-brand-accent">Module 1:</span>
+                <span class="font-semibold">
+                  Introduction to the Japanese Language</span
+                >
+                <span class="font-normal text-neutral-600 dark:text-white/80">
+                  – Basics of pronunciation, intonation, and common
+                  greetings.</span
+                >
+              </p>
+              <p
+                class="text-[16px] sm:text-[21px] leading-8 text-[#0d0d0d] dark:text-white"
+              >
+                <span class="font-bold text-brand-accent">Module 2:</span>
+                <span class="font-semibold">
+                  Writing Systems (Hiragana &amp; Katakana)</span
+                >
+                <span class="font-normal text-neutral-600 dark:text-white/80">
+                  – Mastery of the two phonetic scripts, including stroke order
+                  and reading practice.</span
+                >
+              </p>
+              <p
+                class="text-[16px] sm:text-[21px] leading-8 text-[#0d0d0d] dark:text-white"
+              >
+                <span class="font-bold text-brand-accent">Module 3:</span>
+                <span class="font-semibold"> Basic Kanji</span>
+                <span class="font-normal text-neutral-600 dark:text-white/80">
+                  – Recognition and writing of approximately 100–120 essential
+                  characters (e.g., numbers, time, and common nouns).</span
+                >
+              </p>
+              <p
+                class="text-[16px] sm:text-[21px] leading-8 text-[#0d0d0d] dark:text-white"
+              >
+                <span class="font-bold text-brand-accent">Module 4:</span>
+                <span class="font-semibold"> Grammar Foundations</span>
+                <span class="font-normal text-neutral-600 dark:text-white/80">
+                  – Fundamental sentence structures (SOV), essential particles
+                  (like wa, ga, wo, ni), and basic verb/adjective
+                  conjugations.</span
+                >
+              </p>
+              <p
+                class="text-[16px] sm:text-[21px] leading-8 text-[#0d0d0d] dark:text-white"
+              >
+                <span class="font-bold text-brand-accent">Module 5:</span>
+                <span class="font-semibold"> Vocabulary Development</span>
+                <span class="font-normal text-neutral-600 dark:text-white/80">
+                  – Building a repertoire of 800–1,000 common words related to
+                  family, food, shopping, and daily routines.</span
+                >
+              </p>
+              <p
+                class="text-[16px] sm:text-[21px] leading-8 text-[#0d0d0d] dark:text-white"
+              >
+                <span class="font-bold text-brand-accent">Module 6:</span>
+                <span class="font-semibold"> Listening &amp; Speaking</span>
+                <span class="font-normal text-neutral-600 dark:text-white/80">
+                  – Understanding slow, clear speech in everyday situations and
+                  practicing basic conversational drills.</span
+                >
+              </p>
+              <p
+                class="text-[16px] sm:text-[21px] leading-8 text-[#0d0d0d] dark:text-white"
+              >
+                <span class="font-bold text-brand-accent">Module 7:</span>
+                <span class="font-semibold"> Reading Comprehension</span>
+                <span class="font-normal text-neutral-600 dark:text-white/80">
+                  – Practice reading short, simple passages, signs, and notices
+                  using basic vocabulary and Kanji.</span
+                >
+              </p>
+              <p
+                class="text-[16px] sm:text-[21px] leading-8 text-[#0d0d0d] dark:text-white"
+              >
+                <span class="font-bold text-brand-accent">Module 8:</span>
+                <span class="font-semibold"> JLPT N5 Exam Preparation</span>
+                <span class="font-normal text-neutral-600 dark:text-white/80">
+                  – Mock tests, section-wise strategies, and time management
+                  tips for the official exam.</span
+                >
+              </p>
+
+              <p
+                class="cursor-pointer pt-1 text-[16px] text-[#4A4949] transition-colors hover:text-neutral-800 dark:hover:text-white/40"
+              >
+                + Add more module
+              </p>
+            </div>
+          </section>
+        </div>
+        <!-- /left content -->
       </div>
-      <!-- /left content -->
     </main>
     <!-- Main Section End -->
 
