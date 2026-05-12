@@ -216,11 +216,13 @@
     <!-- End Header Section -->
 
     <!-- Main Section -->
-    <main class="overflow-x-hidden relative [background:radial-gradient(circle_at_82%_7%,rgba(93,214,44,0.2),transparent_16%),radial-gradient(circle_at_0%_45%,rgba(93,214,44,0.13),transparent_16%),#ffffff] dark:[background:#090909]">
+    <main
+      class="overflow-x-hidden relative [background:radial-gradient(circle_at_82%_7%,rgba(93,214,44,0.2),transparent_16%),radial-gradient(circle_at_0%_45%,rgba(93,214,44,0.13),transparent_16%),#ffffff] dark:[background:#090909]"
+    >
       <!-- Hero Section -->
-      <section class="overflow-hidden mb-[70px]">
+      <section class="overflow-hidden mb-16 px-4 sm:px-6 lg:mb-[70px]">
         <div
-          class="w-full max-w-section mx-auto mt-[90px] flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-[50px]"
+          class="w-full max-w-section mx-auto pt-12 lg:pt-[90px] flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-[50px]"
         >
           <!-- Left Side - Text Content -->
           <div
@@ -242,7 +244,9 @@
             </p>
 
             <!-- Search and Filters -->
-            <div class="flex flex-col sm:flex-row gap-3 w-full">
+            <div
+              class="flex w-full flex-col flex-wrap gap-3 sm:flex-row"
+            >
               <!-- Search Bar -->
               <div
                 class="flex items-center bg-white rounded-2xl px-4 sm:px-5 py-2 gap-2 sm:gap-3 flex-1"
@@ -279,55 +283,42 @@
                 />
               </div>
 
-              <!-- Level Dropdown -->
-              <div
-                class="flex items-center bg-white rounded-2xl px-4 sm:px-5 py-2 gap-2 cursor-pointer hover:bg-gray-100 transition-colors flex-shrink-0"
-              >
-                <span
-                  class="text-[16px] sm:text-[20px] text-[#8C8989] font-medium whitespace-nowrap"
-                  >Level</span
-                >
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  class="flex-shrink-0"
-                >
-                  <polyline
-                    points="5,7 9,12 13,7"
-                    stroke="#0E0E0E"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
+              <!-- Level -->
+              <label class="site-select-wrap min-w-0 shrink-0 sm:min-w-[140px]">
+                  <span class="sr-only">Content level</span>
+                  <select
+                    class="site-select site-select--white w-full rounded-2xl pr-10"
+                  >
+                    <option>All levels</option>
+                    <option>N5</option>
+                    <option>N4</option>
+                    <option>N3</option>
+                    <option>N2</option>
+                  </select>
+                  <i
+                    class="fa-solid fa-chevron-down site-select-chevron text-[#262626] dark:text-neutral-300"
+                    aria-hidden="true"
+                  ></i>
+              </label>
 
-              <!-- Category Dropdown -->
-              <div
-                class="flex items-center bg-white rounded-2xl px-4 sm:px-5 py-2 gap-2 cursor-pointer hover:bg-gray-100 transition-colors flex-shrink-0"
-              >
-                <span
-                  class="text-[16px] sm:text-[20px] text-[#8C8989] font-medium whitespace-nowrap"
-                  >Category</span
-                >
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 18 18"
-                  fill="none"
-                  class="flex-shrink-0"
-                >
-                  <polyline
-                    points="5,7 9,12 13,7"
-                    stroke="#0E0E0E"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </div>
+              <!-- Category -->
+              <label class="site-select-wrap min-w-0 shrink-0 sm:min-w-[160px]">
+                  <span class="sr-only">Lesson category</span>
+                  <select
+                    class="site-select site-select--white w-full rounded-2xl pr-10"
+                  >
+                    <option>All categories</option>
+                    <option>Lessons</option>
+                    <option>Grammar sheets</option>
+                    <option>Quizzes</option>
+                    <option>Shadowing</option>
+                    <option>Live recap</option>
+                  </select>
+                  <i
+                    class="fa-solid fa-chevron-down site-select-chevron text-[#262626] dark:text-neutral-300"
+                    aria-hidden="true"
+                  ></i>
+              </label>
             </div>
           </div>
 
@@ -343,8 +334,8 @@
             <div
               class="absolute z-10 bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 aspect-square rounded-full"
               style="
-                width: 888px;
-                height: 818px;
+                width: min(888px, 150vw);
+                height: min(818px, 150vw);
                 background: radial-gradient(
                   ellipse at center,
                   rgba(93, 214, 44, 0.43) 0%,
@@ -358,7 +349,7 @@
       </section>
       <!-- Hero Section End -->
       <section
-        class="w-full max-w-section mx-auto flex flex-col gap-8 mb-[200px]"
+        class="w-full max-w-section mx-auto flex flex-col gap-8 px-4 sm:px-6 mb-20 lg:mb-[200px]"
       >
         <!-- Section Heading -->
         <h2
@@ -371,7 +362,7 @@
         <div
           class="rounded-2xl border border-black/10 bg-white/85 p-5 shadow-sm backdrop-blur-lg dark:border-transparent dark:bg-[rgba(217,217,217,0.2)] dark:shadow-none sm:p-6 flex flex-col gap-5"
         >
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Grammar Sheet Card -->
             <div
               class="bg-[rgba(56,239,8,0.2)] rounded-2xl p-5 sm:p-6 flex flex-col gap-4"
@@ -394,7 +385,7 @@
                 and lesson articles.
               </p>
               <!-- Feature List -->
-              <ul class="flex flex-col gap-3">
+              <ul class="flex flex-col gap-3 mb-2">
                 <li class="flex items-center gap-3">
                   <svg
                     width="32"
@@ -414,7 +405,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Grammar topics by JLPT level</span
                   >
                 </li>
@@ -437,7 +429,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Blog CMS based articles</span
                   >
                 </li>
@@ -460,7 +453,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Searchable lessons</span
                   >
                 </li>
@@ -483,14 +477,15 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Example sentences</span
                   >
                 </li>
               </ul>
               <!-- Button -->
               <button
-                class="bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full mt-2"
+                class="mt-auto bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full"
               >
                 Explore Grammar
               </button>
@@ -517,7 +512,7 @@
                 Learn Kanji using interactive flashcards.
               </p>
               <!-- Feature List -->
-              <ul class="flex flex-col gap-3">
+              <ul class="flex flex-col gap-3 mb-2">
                 <li class="flex items-center gap-3">
                   <svg
                     width="32"
@@ -537,7 +532,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Kanji Character</span
                   >
                 </li>
@@ -560,7 +556,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Main Meaning</span
                   >
                 </li>
@@ -583,7 +580,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Pronunciation (Onyomi / Kunyomi)</span
                   >
                 </li>
@@ -606,7 +604,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Example sentences</span
                   >
                 </li>
@@ -629,14 +628,15 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Bangla / English Meaning</span
                   >
                 </li>
               </ul>
               <!-- Button -->
               <button
-                class="bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full mt-2"
+                class="mt-auto bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full"
               >
                 Start Kanji Flashcards
               </button>
@@ -662,7 +662,7 @@
                 Japanese vocabulary using interactive flip cards.
               </p>
               <!-- Feature List -->
-              <ul class="flex flex-col gap-3">
+              <ul class="flex flex-col gap-3 mb-2">
                 <li class="flex items-center gap-3">
                   <svg
                     width="32"
@@ -682,7 +682,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Japanese Word</span
                   >
                 </li>
@@ -705,7 +706,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Pronunciation</span
                   >
                 </li>
@@ -728,7 +730,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Meaning</span
                   >
                 </li>
@@ -751,7 +754,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Example Sentence</span
                   >
                 </li>
@@ -774,14 +778,15 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Bangla / English Meaning</span
                   >
                 </li>
               </ul>
               <!-- Button -->
               <button
-                class="bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full mt-2"
+                class="mt-auto bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full"
               >
                 Start Vocabulary Flashcards
               </button>
@@ -808,7 +813,7 @@
                 Learn useful Japanese sentences and expressions.
               </p>
               <!-- Feature List -->
-              <ul class="flex flex-col gap-3">
+              <ul class="flex flex-col gap-3 mb-2">
                 <li class="flex items-center gap-3">
                   <svg
                     width="32"
@@ -828,7 +833,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Japanese Sentence</span
                   >
                 </li>
@@ -851,7 +857,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Pronunciation</span
                   >
                 </li>
@@ -874,7 +881,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Meaning</span
                   >
                 </li>
@@ -897,14 +905,15 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Example Usage</span
                   >
                 </li>
               </ul>
               <!-- Button -->
               <button
-                class="bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full mt-2"
+                class="mt-auto bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full"
               >
                 Start Sentence Flashcards
               </button>
@@ -930,7 +939,7 @@
                 Learn vocabulary by topic using blog-style lessons.
               </p>
               <!-- Feature List -->
-              <ul class="flex flex-col gap-3">
+              <ul class="flex flex-col gap-3 mb-2">
                 <li class="flex items-center gap-3">
                   <svg
                     width="32"
@@ -950,7 +959,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Topic wise words</span
                   >
                 </li>
@@ -973,7 +983,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Meaning</span
                   >
                 </li>
@@ -996,7 +1007,8 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Pronunciation</span
                   >
                 </li>
@@ -1019,14 +1031,15 @@
                       fill="none"
                     />
                   </svg>
-                  <span class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
+                  <span
+                    class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px]"
                     >Example usage</span
                   >
                 </li>
               </ul>
               <!-- Button -->
               <button
-                class="bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full mt-2"
+                class="mt-auto bg-white text-[#262626] text-[16px] sm:text-[20px] font-bold py-3 px-8 rounded-xl hover:bg-gray-100 active:scale-[0.98] transition-all duration-200 shadow-lg shadow-black/25 w-full"
               >
                 View Vocabulary Builder
               </button>

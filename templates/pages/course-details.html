@@ -216,11 +216,13 @@
     <!-- End Header Section -->
 
     <!-- Main Section -->
-    <main class="overflow-x-hidden relative [background:radial-gradient(circle_at_82%_7%,rgba(93,214,44,0.2),transparent_16%),radial-gradient(circle_at_0%_45%,rgba(93,214,44,0.13),transparent_16%),#ffffff] dark:[background:#090909]">
+    <main
+      class="overflow-x-hidden relative [background:radial-gradient(circle_at_82%_7%,rgba(93,214,44,0.2),transparent_16%),radial-gradient(circle_at_0%_45%,rgba(93,214,44,0.13),transparent_16%),#ffffff] dark:[background:#090909]"
+    >
       <!-- Hero Section -->
-      <section class="mb-[100px]">
+      <section class="mb-16 px-4 sm:px-6 lg:mb-[100px]">
         <div
-          class="w-full max-w-section mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0 relative z-10 mt-[50px]"
+          class="w-full max-w-section mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-0 relative z-10 pt-10 lg:pt-[50px]"
         >
           <!-- Left Side - Text Content -->
           <div
@@ -294,7 +296,7 @@
             </div>
 
             <!-- CTA Buttons -->
-            <div class="flex flex-wrap gap-4">
+            <div class="grid w-full grid-cols-1 gap-4 sm:flex sm:flex-wrap">
               <!-- Enroll Now -->
               <button
                 class="bg-gradient-to-r from-[#5DD62C] via-[#AFFF8F] to-[#5DD62C] text-[#262626] text-[18px] sm:text-[24px] font-semibold py-3.5 px-8 rounded-xl hover:opacity-90 active:scale-[0.98] transition-all duration-200 shadow-lg"
@@ -317,11 +319,11 @@
             <img
               src="../../static/assets/course_details/hero_img.svg"
               alt=""
-              class="relative z-20"
+              class="relative z-20 w-full max-w-[560px]"
             />
             <!-- Background glow effect -->
             <div
-              class="absolute z-10 w-[800px] aspect-square rounded-full"
+              class="absolute z-10 w-[520px] max-w-[140vw] aspect-square rounded-full lg:w-[800px]"
               style="
                 background: radial-gradient(
                   ellipse at center,
@@ -338,7 +340,7 @@
       <!-- What You Learn Section -->
 
       <section
-        class="w-full max-w-section mx-auto flex flex-col gap-8 mb-[100px]"
+        class="w-full max-w-section mx-auto flex flex-col gap-8 mb-16 px-4 sm:px-6 lg:mb-[100px]"
       >
         <!-- Section Heading -->
         <h2
@@ -348,139 +350,173 @@
         </h2>
 
         <!-- Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          class="grid w-full grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
+        >
           <!-- Card 1: Hiragana & Katakana -->
           <div
-            class="flex flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
+            class="flex min-w-0 w-full max-w-md flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white min-[480px]:max-w-none dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
           >
             <!-- Image -->
-            <div class="w-full aspect-[255/175] rounded-2xl overflow-hidden">
+            <div
+              class="w-full aspect-[255/175] max-h-[220px] overflow-hidden rounded-2xl sm:max-h-none"
+            >
               <img
                 src="../../static/assets/course_details/card_img.svg"
                 alt=""
               />
             </div>
             <!-- Title -->
-            <h3 class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center">
+            <h3
+              class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center"
+            >
               Hiragana & Katakana
             </h3>
           </div>
 
           <!-- Card 2: Basic Grammar -->
           <div
-            class="flex flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
+            class="flex min-w-0 w-full max-w-md flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white min-[480px]:max-w-none dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
           >
             <!-- Image -->
-            <div class="w-full aspect-[255/175] rounded-2xl overflow-hidden">
+            <div
+              class="w-full aspect-[255/175] max-h-[220px] overflow-hidden rounded-2xl sm:max-h-none"
+            >
               <img
                 src="../../static/assets/course_details/card_img.svg"
                 alt=""
               />
             </div>
             <!-- Title -->
-            <h3 class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center">
+            <h3
+              class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center"
+            >
               Basic Grammar
             </h3>
           </div>
 
           <!-- Card 3: Essential Vocabulary -->
           <div
-            class="flex flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
+            class="flex min-w-0 w-full max-w-md flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white min-[480px]:max-w-none dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
           >
             <!-- Image -->
-            <div class="w-full aspect-[255/175] rounded-2xl overflow-hidden">
+            <div
+              class="w-full aspect-[255/175] max-h-[220px] overflow-hidden rounded-2xl sm:max-h-none"
+            >
               <img
                 src="../../static/assets/course_details/card_img.svg"
                 alt=""
               />
             </div>
             <!-- Title -->
-            <h3 class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center">
+            <h3
+              class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center"
+            >
               Essential Vocabulary
             </h3>
           </div>
 
           <!-- Card 4: Daily Conversation -->
           <div
-            class="flex flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
+            class="flex min-w-0 w-full max-w-md flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white min-[480px]:max-w-none dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
           >
             <!-- Image -->
-            <div class="w-full aspect-[255/175] rounded-2xl overflow-hidden">
+            <div
+              class="w-full aspect-[255/175] max-h-[220px] overflow-hidden rounded-2xl sm:max-h-none"
+            >
               <img
                 src="../../static/assets/course_details/card_img.svg"
                 alt=""
               />
             </div>
             <!-- Title -->
-            <h3 class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center">
+            <h3
+              class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center"
+            >
               Daily Conversation
             </h3>
           </div>
 
           <!-- Card 5: Listening Skills -->
           <div
-            class="flex flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
+            class="flex min-w-0 w-full max-w-md flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white min-[480px]:max-w-none dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
           >
             <!-- Image -->
-            <div class="w-full aspect-[255/175] rounded-2xl overflow-hidden">
+            <div
+              class="w-full aspect-[255/175] max-h-[220px] overflow-hidden rounded-2xl sm:max-h-none"
+            >
               <img
                 src="../../static/assets/course_details/card_img.svg"
                 alt=""
               />
             </div>
             <!-- Title -->
-            <h3 class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center">
+            <h3
+              class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center"
+            >
               Listening Skills
             </h3>
           </div>
 
           <!-- Card 6: Simple Kanji -->
           <div
-            class="flex flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
+            class="flex min-w-0 w-full max-w-md flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white min-[480px]:max-w-none dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
           >
             <!-- Image -->
-            <div class="w-full aspect-[255/175] rounded-2xl overflow-hidden">
+            <div
+              class="w-full aspect-[255/175] max-h-[220px] overflow-hidden rounded-2xl sm:max-h-none"
+            >
               <img
                 src="../../static/assets/course_details/card_img.svg"
                 alt=""
               />
             </div>
             <!-- Title -->
-            <h3 class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center">
+            <h3
+              class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center"
+            >
               Simple Kanji
             </h3>
           </div>
 
           <!-- Card 7: Speaking Practice -->
           <div
-            class="flex flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
+            class="flex min-w-0 w-full max-w-md flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white min-[480px]:max-w-none dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
           >
             <!-- Image -->
-            <div class="w-full aspect-[255/175] rounded-2xl overflow-hidden">
+            <div
+              class="w-full aspect-[255/175] max-h-[220px] overflow-hidden rounded-2xl sm:max-h-none"
+            >
               <img
                 src="../../static/assets/course_details/card_img.svg"
                 alt=""
               />
             </div>
             <!-- Title -->
-            <h3 class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center">
+            <h3
+              class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center"
+            >
               Speaking Practice
             </h3>
           </div>
 
           <!-- Card 8: Shadowing Practice -->
           <div
-            class="flex flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
+            class="flex min-w-0 w-full max-w-md flex-col items-center gap-4 rounded-2xl border border-black/12 bg-white/90 p-4 backdrop-blur-lg transition-all duration-300 hover:bg-white min-[480px]:max-w-none dark:border-white/20 dark:bg-[rgba(255,255,255,0.2)] dark:hover:bg-[rgba(255,255,255,0.25)]"
           >
             <!-- Image -->
-            <div class="w-full aspect-[255/175] rounded-2xl overflow-hidden">
+            <div
+              class="w-full aspect-[255/175] max-h-[220px] overflow-hidden rounded-2xl sm:max-h-none"
+            >
               <img
                 src="../../static/assets/course_details/card_img.svg"
                 alt=""
               />
             </div>
             <!-- Title -->
-            <h3 class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center">
+            <h3
+              class="text-[#0d0d0d] dark:text-white text-2xl font-bold text-center"
+            >
               Shadowing Practice
             </h3>
           </div>
@@ -490,7 +526,7 @@
 
       <!-- Course Curriculum Section -->
       <section
-        class="w-full max-w-section mx-auto flex flex-col gap-8 mb-[100px]"
+        class="w-full max-w-section mx-auto flex flex-col gap-8 mb-16 px-4 sm:px-6 lg:mb-[100px]"
       >
         <!-- Section Heading -->
         <h2
@@ -501,238 +537,560 @@
 
         <!-- Content Grid -->
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 items-start">
-          <!-- Left: Modules List (3 columns) -->
-          <div class="lg:col-span-3 flex flex-col gap-3 w-full">
-            <!-- Module 1 -->
-            <div
-              class="module-item flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-neutral-100 px-5 py-3 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+          <!-- Left: modules accordion -->
+          <div class="lg:col-span-3 flex w-full flex-col gap-3">
+            <details
+              class="curriculum-details group overflow-hidden rounded-2xl border border-black/10 bg-neutral-100 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
             >
-              <div>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Module 1
-                </p>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Hiragana Basics
-                </p>
-              </div>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                class="flex-shrink-0 text-neutral-700 dark:text-white"
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 outline-none transition hover:bg-black/5 dark:hover:bg-white/10 [&::-webkit-details-marker]:hidden"
               >
-                <polyline
-                  points="5,7 10,13 15,7"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+                <div class="min-w-0 text-left">
+                  <p
+                    class="text-xs font-bold uppercase tracking-wider text-[#38EF08] sm:text-sm"
+                  >
+                    Module 1
+                  </p>
+                  <p
+                    class="text-[#0d0d0d] dark:text-white text-[17px] font-semibold leading-tight sm:text-xl lg:text-2xl"
+                  >
+                    Hiragana Basics
+                  </p>
+                </div>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  aria-hidden="true"
+                  class="curriculum-chevron shrink-0 text-neutral-700 transition-transform duration-200 dark:text-white"
+                >
+                  <polyline
+                    points="5,7 10,13 15,7"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </summary>
+              <div
+                class="border-t border-black/10 bg-gradient-to-b from-white/40 to-transparent px-4 pb-4 pt-3 dark:border-white/10 dark:from-black/20"
+              >
+                <ul class="m-0 grid list-none gap-2.5 p-0">
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >01</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >あ行・い行の発音と書き方</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >02</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >濁音・半濁音の練習</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >03</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >拗音・促音・長音</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </details>
 
-            <!-- Module 2 -->
-            <div
-              class="module-item flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-neutral-100 px-5 py-3 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+            <details
+              class="curriculum-details group overflow-hidden rounded-2xl border border-black/10 bg-neutral-100 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
             >
-              <div>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Module 2
-                </p>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Basic Vocabulary
-                </p>
-              </div>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                class="flex-shrink-0 text-neutral-700 dark:text-white"
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 outline-none transition hover:bg-black/5 dark:hover:bg-white/10 [&::-webkit-details-marker]:hidden"
               >
-                <polyline
-                  points="5,7 10,13 15,7"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+                <div class="min-w-0 text-left">
+                  <p
+                    class="text-xs font-bold uppercase tracking-wider text-[#38EF08] sm:text-sm"
+                  >
+                    Module 2
+                  </p>
+                  <p
+                    class="text-[#0d0d0d] dark:text-white text-[17px] font-semibold leading-tight sm:text-xl lg:text-2xl"
+                  >
+                    Basic Vocabulary
+                  </p>
+                </div>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  aria-hidden="true"
+                  class="curriculum-chevron shrink-0 text-neutral-700 transition-transform duration-200 dark:text-white"
+                >
+                  <polyline
+                    points="5,7 10,13 15,7"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </summary>
+              <div
+                class="border-t border-black/10 bg-gradient-to-b from-white/40 to-transparent px-4 pb-4 pt-3 dark:border-white/10 dark:from-black/20"
+              >
+                <ul class="m-0 grid list-none gap-2.5 p-0">
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >01</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >数字・曜日・月</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >02</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >家族・自己紹介フレーズ</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >03</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >指示語・こそあど言葉</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </details>
 
-            <!-- Module 3 -->
-            <div
-              class="module-item flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-neutral-100 px-5 py-3 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+            <details
+              class="curriculum-details group overflow-hidden rounded-2xl border border-black/10 bg-neutral-100 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
             >
-              <div>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Module 3
-                </p>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Basic Vocabulary
-                </p>
-              </div>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                class="flex-shrink-0 text-neutral-700 dark:text-white"
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 outline-none transition hover:bg-black/5 dark:hover:bg-white/10 [&::-webkit-details-marker]:hidden"
               >
-                <polyline
-                  points="5,7 10,13 15,7"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+                <div class="min-w-0 text-left">
+                  <p
+                    class="text-xs font-bold uppercase tracking-wider text-[#38EF08] sm:text-sm"
+                  >
+                    Module 3
+                  </p>
+                  <p
+                    class="text-[#0d0d0d] dark:text-white text-[17px] font-semibold leading-tight sm:text-xl lg:text-2xl"
+                  >
+                    Essential Grammar
+                  </p>
+                </div>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  aria-hidden="true"
+                  class="curriculum-chevron shrink-0 text-neutral-700 transition-transform duration-200 dark:text-white"
+                >
+                  <polyline
+                    points="5,7 10,13 15,7"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </summary>
+              <div
+                class="border-t border-black/10 bg-gradient-to-b from-white/40 to-transparent px-4 pb-4 pt-3 dark:border-white/10 dark:from-black/20"
+              >
+                <ul class="m-0 grid list-none gap-2.5 p-0">
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >01</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >助詞「は」「が」「を」</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >02</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >です・ます体の文型</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >03</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >否定・疑問・過去形入門</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </details>
 
-            <!-- Module 4 -->
-            <div
-              class="module-item flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-neutral-100 px-5 py-3 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+            <details
+              class="curriculum-details group overflow-hidden rounded-2xl border border-black/10 bg-neutral-100 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
             >
-              <div>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Module 4
-                </p>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Daily Conversation
-                </p>
-              </div>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                class="flex-shrink-0 text-neutral-700 dark:text-white"
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 outline-none transition hover:bg-black/5 dark:hover:bg-white/10 [&::-webkit-details-marker]:hidden"
               >
-                <polyline
-                  points="5,7 10,13 15,7"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+                <div class="min-w-0 text-left">
+                  <p
+                    class="text-xs font-bold uppercase tracking-wider text-[#38EF08] sm:text-sm"
+                  >
+                    Module 4
+                  </p>
+                  <p
+                    class="text-[#0d0d0d] dark:text-white text-[17px] font-semibold leading-tight sm:text-xl lg:text-2xl"
+                  >
+                    Daily Conversation
+                  </p>
+                </div>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  aria-hidden="true"
+                  class="curriculum-chevron shrink-0 text-neutral-700 transition-transform duration-200 dark:text-white"
+                >
+                  <polyline
+                    points="5,7 10,13 15,7"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </summary>
+              <div
+                class="border-t border-black/10 bg-gradient-to-b from-white/40 to-transparent px-4 pb-4 pt-3 dark:border-white/10 dark:from-black/20"
+              >
+                <ul class="m-0 grid list-none gap-2.5 p-0">
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >01</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >あいさつ・道案内</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >02</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >レストラン・買い物</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >03</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >電話・予約の基本表現</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </details>
 
-            <!-- Module 5 -->
-            <div
-              class="module-item flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-neutral-100 px-5 py-3 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+            <details
+              class="curriculum-details group overflow-hidden rounded-2xl border border-black/10 bg-neutral-100 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
             >
-              <div>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Module 5
-                </p>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Listening
-                </p>
-              </div>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                class="flex-shrink-0 text-neutral-700 dark:text-white"
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 outline-none transition hover:bg-black/5 dark:hover:bg-white/10 [&::-webkit-details-marker]:hidden"
               >
-                <polyline
-                  points="5,7 10,13 15,7"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+                <div class="min-w-0 text-left">
+                  <p
+                    class="text-xs font-bold uppercase tracking-wider text-[#38EF08] sm:text-sm"
+                  >
+                    Module 5
+                  </p>
+                  <p
+                    class="text-[#0d0d0d] dark:text-white text-[17px] font-semibold leading-tight sm:text-xl lg:text-2xl"
+                  >
+                    Listening
+                  </p>
+                </div>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  aria-hidden="true"
+                  class="curriculum-chevron shrink-0 text-neutral-700 transition-transform duration-200 dark:text-white"
+                >
+                  <polyline
+                    points="5,7 10,13 15,7"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </summary>
+              <div
+                class="border-t border-black/10 bg-gradient-to-b from-white/40 to-transparent px-4 pb-4 pt-3 dark:border-white/10 dark:from-black/20"
+              >
+                <ul class="m-0 grid list-none gap-2.5 p-0">
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >01</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >スロー音声ディクテーション</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >02</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >会話のイントネーション</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >03</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >リスニング模試パート</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </details>
 
-            <!-- Module 6 -->
-            <div
-              class="module-item flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-neutral-100 p-5 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+            <details
+              class="curriculum-details group overflow-hidden rounded-2xl border border-black/10 bg-neutral-100 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
             >
-              <div>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Module 6
-                </p>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Practice & Quizzes
-                </p>
-              </div>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                class="flex-shrink-0 text-neutral-700 dark:text-white"
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 outline-none transition hover:bg-black/5 dark:hover:bg-white/10 [&::-webkit-details-marker]:hidden"
               >
-                <polyline
-                  points="5,7 10,13 15,7"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+                <div class="min-w-0 text-left">
+                  <p
+                    class="text-xs font-bold uppercase tracking-wider text-[#38EF08] sm:text-sm"
+                  >
+                    Module 6
+                  </p>
+                  <p
+                    class="text-[#0d0d0d] dark:text-white text-[17px] font-semibold leading-tight sm:text-xl lg:text-2xl"
+                  >
+                    Practice &amp; Quizzes
+                  </p>
+                </div>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  aria-hidden="true"
+                  class="curriculum-chevron shrink-0 text-neutral-700 transition-transform duration-200 dark:text-white"
+                >
+                  <polyline
+                    points="5,7 10,13 15,7"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </summary>
+              <div
+                class="border-t border-black/10 bg-gradient-to-b from-white/40 to-transparent px-4 pb-4 pt-3 dark:border-white/10 dark:from-black/20"
+              >
+                <ul class="m-0 grid list-none gap-2.5 p-0">
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >01</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >ユニット総復習クイズ</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >02</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >ミニライティング課題</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >03</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >フラッシュカード・スピード練習</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </details>
 
-            <!-- Module 7 -->
-            <div
-              class="module-item flex cursor-pointer items-center justify-between rounded-2xl border border-black/10 bg-neutral-100 px-5 py-3 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
+            <details
+              class="curriculum-details group overflow-hidden rounded-2xl border border-black/10 bg-neutral-100 shadow-[0px_4px_8px_rgba(0,0,0,0.08)] dark:border-transparent dark:bg-[#4C4C4C] dark:shadow-[0px_4px_4px_rgba(0,0,0,0.25)]"
             >
-              <div>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Module 7
-                </p>
-                <p
-                  class="text-[#0d0d0d] dark:text-white text-[16px] sm:text-[20px] lg:text-[24px] font-semibold leading-[1.2]"
-                >
-                  Mock Test
-                </p>
-              </div>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                class="flex-shrink-0 text-neutral-700 dark:text-white"
+              <summary
+                class="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 outline-none transition hover:bg-black/5 dark:hover:bg-white/10 [&::-webkit-details-marker]:hidden"
               >
-                <polyline
-                  points="5,7 10,13 15,7"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </div>
+                <div class="min-w-0 text-left">
+                  <p
+                    class="text-xs font-bold uppercase tracking-wider text-[#38EF08] sm:text-sm"
+                  >
+                    Module 7
+                  </p>
+                  <p
+                    class="text-[#0d0d0d] dark:text-white text-[17px] font-semibold leading-tight sm:text-xl lg:text-2xl"
+                  >
+                    Mock Test
+                  </p>
+                </div>
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  aria-hidden="true"
+                  class="curriculum-chevron shrink-0 text-neutral-700 transition-transform duration-200 dark:text-white"
+                >
+                  <polyline
+                    points="5,7 10,13 15,7"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </summary>
+              <div
+                class="border-t border-black/10 bg-gradient-to-b from-white/40 to-transparent px-4 pb-4 pt-3 dark:border-white/10 dark:from-black/20"
+              >
+                <ul class="m-0 grid list-none gap-2.5 p-0">
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >01</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >語彙・文法セクション模試</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >02</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >読解・聴解タイムトライアル</span
+                    >
+                  </li>
+                  <li
+                    class="flex items-start gap-3 rounded-xl border border-black/10 bg-white/95 px-4 py-3 shadow-sm dark:border-white/10 dark:bg-black/35"
+                  >
+                    <span
+                      class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#38EF08]/20 text-xs font-bold text-[#0d0d0d] dark:bg-[#38EF08]/25 dark:text-white"
+                      >03</span
+                    >
+                    <span
+                      class="text-[15px] font-medium leading-snug text-[#0d0d0d] dark:text-white sm:text-base"
+                      >採点フィードバック・弱点レポート</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </details>
           </div>
 
           <!-- Right: Class Routine Card (2 columns) -->
@@ -766,7 +1124,7 @@
       <div class="bg-[#f2f2f2] py-[50px] dark:bg-[#1a1a1a]">
         <!-- Class Routine Section -->
         <section
-          class="w-full max-w-section mx-auto flex flex-col items-center gap-8"
+          class="w-full max-w-section mx-auto flex flex-col items-center gap-8 px-4 sm:px-6"
         >
           <!-- Section Heading -->
           <h2
@@ -777,7 +1135,7 @@
 
           <!-- Cards Grid -->
           <div
-            class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 w-full"
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 w-full"
           >
             <!-- Card 1: Quizzes -->
             <div
@@ -916,7 +1274,7 @@
 
         <!-- Live Classes & Teacher Support Section -->
         <section
-          class="w-full max-w-section mx-auto flex flex-col gap-8 mt-[100px] mb-[50px]"
+          class="w-full max-w-section mx-auto flex flex-col gap-8 px-4 sm:px-6 mt-16 lg:mt-[100px] mb-[50px]"
         >
           <!-- Section Heading -->
           <h2
@@ -926,10 +1284,10 @@
           </h2>
 
           <div
-            class="relative z-40 flex flex-col lg:flex-row gap-7 items-start"
+            class="relative z-40 grid items-start gap-7 lg:grid-cols-[minmax(0,1fr)_420px]"
           >
             <!-- Left: Feature Buttons -->
-            <div class="flex flex-col gap-5 w-full lg:w-auto">
+            <div class="flex w-full flex-col gap-5">
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 <!-- Weekly Live Lesson -->
                 <button
@@ -999,7 +1357,7 @@
 
             <!-- Right: Instructor Card -->
             <div
-              class="top-0 right-0 flex w-full flex-shrink-0 flex-col overflow-hidden rounded-2xl border border-black/12 bg-white/90 backdrop-blur-lg dark:border-white/20 dark:bg-[rgba(209,205,205,0.2)] lg:absolute lg:w-[420px]"
+              class="flex lg:absolute lg:w-[420px] top-0 right-0 w-full flex-col overflow-hidden rounded-2xl border border-black/12 bg-white/90 backdrop-blur-lg dark:border-white/20 dark:bg-[rgba(209,205,205,0.2)]"
             >
               <!-- Instructor Image -->
               <div
@@ -1019,7 +1377,9 @@
                 >
                   Leslie Alexander
                 </h3>
-                <p class="text-[#0d0d0d] dark:text-white text-[18px] sm:text-[23px] font-medium">
+                <p
+                  class="text-[#0d0d0d] dark:text-white text-[18px] sm:text-[23px] font-medium"
+                >
                   Certified Japanese Instructor
                 </p>
 
@@ -1058,10 +1418,10 @@
       <!-- Students Target Section -->
       <section class="relative">
         <div
-          class="w-full max-w-section mx-auto flex flex-col sm:flex-row gap-8 items-start pt-5"
+          class="w-full max-w-section mx-auto flex flex-col sm:flex-row gap-8 items-start px-4 sm:px-6 pt-5"
         >
           <div
-            class="absolute -top-0 -right-0 z-10 w-[900px] aspect-square overflow-hidden"
+            class="absolute -top-0 -right-0 z-10 hidden w-[900px] aspect-square overflow-hidden md:block"
           >
             <!-- Background glow effect -->
             <div
@@ -1090,7 +1450,9 @@
             >
               Students Target
             </h3>
-            <ul class="text-[#0d0d0d] dark:text-white text-[18px] sm:text-[24px] leading-8">
+            <ul
+              class="text-[#0d0d0d] dark:text-white text-[18px] sm:text-[24px] leading-8"
+            >
               <li>Complete Beginners</li>
               <li>JLPT N5 Aspirants</li>
               <li>Students Planning to Study in Japan</li>
@@ -1105,11 +1467,11 @@
       <section class="my-[100px]">
         <!-- Section Heading -->
         <h2
-          class="w-full max-w-section mx-auto text-[#0d0d0d] dark:text-white text-[32px] sm:text-[44px] font-semibold leading-tight text-center lg:text-left mb-5"
+          class="w-full max-w-section mx-auto px-4 sm:px-6 text-[#0d0d0d] dark:text-white text-[32px] sm:text-[44px] font-semibold leading-tight text-center lg:text-left mb-5"
         >
           Start Your Japanese Learning Journey Today
         </h2>
-        <div class="relative w-full min-h-[500px] py-20">
+        <div class="relative w-full min-h-[500px] px-4 py-14 sm:px-6 lg:py-20">
           <div
             class="absolute top-0 left-0 inset-0 h-full w-full bg-[url('../../static/assets/course_details/cloud.svg')] bg-repeat"
           ></div>
