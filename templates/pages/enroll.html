@@ -225,7 +225,7 @@
       >
         <!-- Heading -->
         <h1
-          class="text-[#595959] dark:text-[#C1C1C1] text-[22px] sm:text-[28px] lg:text-[35px] font-semibold leading-tight mb-14"
+          class="text-center lg:text-left text-[#595959] dark:text-[#C1C1C1] text-[22px] sm:text-[28px] lg:text-[35px] font-semibold leading-tight mb-14"
         >
           Please fill in the information below to activate your course access.
         </h1>
@@ -367,7 +367,7 @@
             <img
               src="../../static/assets/enroll/hero_vector.svg"
               alt="Student Illustration"
-              class="lg:absolute top-0 -left-16 h-auto w-full max-w-[320px] object-contain sm:max-w-[380px] lg:max-w-full"
+              class="lg:absolute top-0 left-0 h-auto w-full max-w-[420px]! object-contain sm:max-w-[380px]! lg:max-w-full"
             />
           </div>
         </div>
@@ -403,8 +403,11 @@
               >
               <input
                 type="tel"
+                name="phone"
+                inputmode="tel"
+                autocomplete="tel"
                 placeholder="Enter Your Number"
-                class="w-full max-w-[742px] rounded-2xl border border-black/10 bg-gray-50 px-5 py-3.5 text-[16px] text-gray-600 placeholder-gray-400 transition-all focus:outline-none focus:ring-2 focus:ring-[#38EF08] dark:border-transparent dark:bg-white sm:text-[18px]"
+                class="w-full max-w-[742px] rounded-2xl border border-black/10 bg-gray-50 px-5 py-3.5 text-[16px] text-[#1a1a1a] placeholder:text-gray-400 transition-all focus:outline-none focus:ring-2 focus:ring-[#38EF08] dark:border-transparent dark:bg-white dark:text-[#1a1a1a] sm:text-[18px]"
               />
             </div>
 
@@ -416,8 +419,10 @@
               >
               <input
                 type="text"
+                name="bkash-txn-id"
+                autocomplete="one-time-code"
                 placeholder="e.g. XYY00123"
-                class="w-full max-w-[742px] rounded-2xl border border-black/10 bg-gray-50 px-5 py-3.5 text-[16px] text-gray-600 placeholder-gray-400 transition-all focus:outline-none focus:ring-2 focus:ring-[#38EF08] dark:border-transparent dark:bg-white sm:text-[18px]"
+                class="w-full max-w-[742px] rounded-2xl border border-black/10 bg-gray-50 px-5 py-3.5 text-[16px] text-[#1a1a1a] placeholder:text-gray-400 transition-all focus:outline-none focus:ring-2 focus:ring-[#38EF08] dark:border-transparent dark:bg-white dark:text-[#1a1a1a] sm:text-[18px]"
               />
             </div>
 
@@ -438,7 +443,7 @@
 
             <!-- Payment Confirm Button -->
             <button
-              class="bg-[#38EF08] text-[#262626] text-[18px] sm:text-[24px] font-semibold py-3.5 px-8 sm:px-20 rounded-xl hover:bg-[#2fd907] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#38EF08]/30 w-full max-w-[482px] mx-auto mt-4 self-start"
+              class="bg-[#38EF08] text-[#262626] text-[18px] sm:text-[24px] font-semibold py-3.5 px-8 sm:px-20 rounded-xl hover:bg-[#2fd907] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#38EF08]/30 w-full md:max-w-[482px] mx-auto mt-4 self-start"
             >
               Payment Confirm
             </button>
