@@ -232,7 +232,7 @@
 
         <!-- Main Content -->
         <div
-          class="relative flex w-full flex-col items-stretch gap-10 overflow-visible lg:flex-row lg:items-start lg:justify-between lg:gap-12"
+          class="relative flex w-full flex-col items-end overflow-visible lg:flex-row lg:items-start lg:justify-between"
         >
           <!-- Glass Card -->
           <div
@@ -362,12 +362,12 @@
 
           <!-- Illustration -->
           <div
-            class="order-1 flex w-full shrink-0 justify-center lg:order-2 lg:max-w-[min(480px,46%)] lg:justify-end"
+            class="order-1 lg:relative flex w-full shrink-0 justify-center lg:order-2 lg:max-w-[min(480px,46%)] lg:justify-end h-full"
           >
             <img
               src="../../static/assets/enroll/hero_vector.svg"
               alt="Student Illustration"
-              class="h-auto w-full max-w-[320px] object-contain sm:max-w-[380px] lg:max-w-full"
+              class="lg:absolute top-0 -left-16 h-auto w-full max-w-[320px] object-contain sm:max-w-[380px] lg:max-w-full"
             />
           </div>
         </div>
@@ -438,7 +438,7 @@
 
             <!-- Payment Confirm Button -->
             <button
-              class="bg-[#38EF08] text-[#262626] text-[18px] sm:text-[24px] font-semibold py-3.5 px-8 sm:px-20 rounded-xl hover:bg-[#2fd907] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#38EF08]/30 w-full max-w-[482px] mt-4 self-start"
+              class="bg-[#38EF08] text-[#262626] text-[18px] sm:text-[24px] font-semibold py-3.5 px-8 sm:px-20 rounded-xl hover:bg-[#2fd907] active:scale-[0.98] transition-all duration-200 shadow-lg shadow-[#38EF08]/30 w-full max-w-[482px] mx-auto mt-4 self-start"
             >
               Payment Confirm
             </button>
