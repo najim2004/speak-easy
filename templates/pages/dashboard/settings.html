@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings | Speak Easy Japanese</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../../../static/js/tailwind.config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="../../../static/js/app.js"></script>
+    <script defer src="js/dashboard-common.js"></script>
+    <script defer src="js/settings.js"></script>
+  </head>
+  <body class="dark min-h-screen bg-[#f5f7fa] font-inter text-[#1a1a1a] transition-colors duration-200 dark:bg-[#0a0a0a] dark:text-white">
+    <div class="flex min-h-screen">
+      <aside data-dashboard-sidebar class="fixed inset-y-0 left-0 z-50 flex w-72 -translate-x-full flex-col border-r border-gray-200 bg-white transition-transform duration-300 dark:border-[#1a1a1a] dark:bg-black lg:static lg:translate-x-0">
+        <div class="flex h-full flex-col p-6">
+          <div class="mb-8 flex items-center justify-between"><a href="overview.html" class="flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-xl bg-brand-accent text-black shadow-lg"><i class="fa-solid fa-book-open"></i></span><span class="text-xl font-black uppercase tracking-tight">LearnJapan</span></a><button type="button" data-sidebar-close class="grid h-10 w-10 place-items-center rounded-xl text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5 lg:hidden" aria-label="Close sidebar"><i class="fa-solid fa-xmark text-xl"></i></button></div>
+          <div class="relative mb-8"><button type="button" data-course-toggle aria-expanded="false" class="flex w-full items-center justify-between gap-3 rounded-2xl border border-gray-100 bg-gray-50 px-4 py-3 text-left transition hover:border-brand-accent/50 dark:border-[#222] dark:bg-[#111]"><span class="min-w-0"><span class="mb-1 block text-[10px] font-black uppercase leading-none tracking-wider text-brand-accent">Switch Batch</span><span class="block truncate text-sm font-bold">Japanese N5 Beginner Course</span></span><i class="fa-solid fa-chevron-down text-xs text-gray-500"></i></button><div data-course-menu class="absolute left-0 top-full z-50 mt-2 hidden w-full overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-2xl dark:border-[#333] dark:bg-[#1a1a1a]"><button class="w-full border-l-4 border-brand-accent border-b border-gray-100 p-4 text-left dark:border-b-[#222]"><span class="block text-xs font-bold">Japanese N5 Beginner Course</span><span class="mt-1 block text-[10px] font-semibold text-gray-500">Tokyo 2026</span></button><button class="w-full border-b border-gray-100 p-4 text-left hover:bg-gray-50 dark:border-b-[#222] dark:hover:bg-white/5"><span class="block text-xs font-bold">Japanese N4 Intermediate Course</span><span class="mt-1 block text-[10px] font-semibold text-gray-500">Osaka 2026</span></button></div></div>
+          <nav class="flex-1 space-y-1 overflow-y-auto pr-1">
+            <a href="overview.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-table-columns w-5"></i><span>Overview</span></a>
+            <a href="attendance.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-clock-rotate-left w-5"></i><span>Attendance</span></a>
+            <a href="class-routine.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-calendar-days w-5"></i><span>Class Routine</span></a>
+            <a href="recordings.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-video w-5"></i><span>Recordings</span></a>
+            <a href="performance.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-arrow-trend-up w-5"></i><span>Performance</span></a>
+            <a href="leaderboard.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-trophy w-5"></i><span>Leaderboard</span></a>
+          </nav>
+          <div class="space-y-1 border-t border-gray-100 pt-4 dark:border-[#1a1a1a]"><a href="settings.html" class="flex items-center gap-4 rounded-xl bg-brand-accent px-4 py-3 text-sm font-bold text-black shadow-md"><i class="fa-solid fa-gear w-5"></i><span>Settings</span></a><a href="../signin.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-rose-500 transition hover:bg-rose-500/10"><i class="fa-solid fa-right-from-bracket w-5"></i><span>Sign Out</span></a></div>
+        </div>
+      </aside>
+
+      <div class="flex min-w-0 flex-1 flex-col">
+        <header class="sticky top-0 z-40 flex items-center justify-between border-b border-gray-100 bg-white/80 px-4 py-4 backdrop-blur-md dark:border-[#1a1a1a] dark:bg-black/80 sm:px-6">
+          <div class="flex items-center gap-4"><button type="button" data-sidebar-open aria-expanded="false" class="grid h-10 w-10 place-items-center rounded-xl text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5 lg:hidden" aria-label="Open sidebar"><i class="fa-solid fa-bars text-xl"></i></button><div class="hidden sm:block"><h1 class="text-xl font-black uppercase tracking-tight">Settings</h1><p class="text-[10px] font-black uppercase tracking-[0.22em] text-gray-500">Tokyo 2026 Student Portal</p></div></div>
+          <div class="flex items-center gap-3"><button type="button" data-theme-toggle class="grid h-10 w-10 place-items-center rounded-xl border border-gray-200 bg-gray-100 text-gray-600 transition hover:border-brand-accent/60 dark:border-[#222] dark:bg-[#111] dark:text-brand-accent" aria-label="Switch theme"><i class="fa-solid fa-moon" data-theme-dark-icon></i><i class="fa-solid fa-sun" data-theme-light-icon hidden></i></button><div class="flex rounded-xl border border-gray-200 bg-gray-100 p-1 dark:border-[#222] dark:bg-[#111]"><button class="rounded-lg bg-brand-accent px-3 py-1 text-[10px] font-black text-black shadow-sm">EN</button><button class="rounded-lg px-3 py-1 text-[10px] font-black text-gray-500">BN</button></div><a href="notification-sidebar.html" class="relative grid h-10 w-10 place-items-center rounded-xl border border-gray-200 bg-gray-100 text-gray-600 transition hover:border-brand-accent/60 dark:border-[#222] dark:bg-[#111] dark:text-brand-accent" aria-label="Open notifications"><i class="fa-solid fa-bell"></i><span class="absolute right-2 top-2 h-2.5 w-2.5 rounded-full border-2 border-white bg-rose-500 dark:border-black"></span></a><div class="grid h-10 w-10 place-items-center rounded-xl border border-gray-200 bg-gray-100 text-gray-400 dark:border-[#222] dark:bg-[#111]"><i class="fa-solid fa-user"></i></div></div>
+        </header>
+
+        <main class="mx-auto w-full max-w-6xl p-4 sm:p-6">
+          <section class="space-y-6">
+            <div><h2 class="text-3xl font-black">Profile Settings</h2><p class="mt-2 font-semibold text-gray-500">Manage account information and notification preferences.</p></div>
+            <div class="grid gap-6 lg:grid-cols-[0.75fr_1.25fr]">
+              <aside class="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm dark:border-[#2a2a2a] dark:bg-[#1a1a1a]">
+                <div class="flex items-center gap-5">
+                  <span class="grid h-20 w-20 place-items-center rounded-2xl border border-gray-200 bg-gray-50 text-gray-300 dark:border-[#222] dark:bg-[#111] dark:text-gray-700"><i class="fa-solid fa-user text-4xl"></i></span>
+                  <div><h3 class="text-xl font-black">Rafi</h3><p class="mt-1 text-xs font-black uppercase text-brand-accent">ID: #LJ-2026-0045</p></div>
+                </div>
+                <div class="mt-8 space-y-4">
+                  <div class="flex items-center justify-between rounded-2xl bg-gray-50 p-4 dark:bg-[#111]"><span class="text-sm font-bold">Day Streak</span><span class="text-sm font-black text-brand-accent">5 Days</span></div>
+                  <div class="flex items-center justify-between rounded-2xl bg-gray-50 p-4 dark:bg-[#111]"><span class="text-sm font-bold">Batch</span><span class="text-sm font-black text-brand-accent">Tokyo 2026</span></div>
+                </div>
+              </aside>
+
+              <section class="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm dark:border-[#2a2a2a] dark:bg-[#1a1a1a] sm:p-8">
+                <form class="grid gap-5">
+                  <label class="grid gap-2"><span class="ml-1 text-[10px] font-black uppercase tracking-widest text-gray-500">Full Name</span><input type="text" value="Rafiul Islam Rafi" class="rounded-2xl border border-transparent bg-gray-50 px-4 py-3 text-sm font-bold outline-none transition focus:border-brand-accent dark:bg-[#111] dark:text-white" /></label>
+                  <label class="grid gap-2"><span class="ml-1 text-[10px] font-black uppercase tracking-widest text-gray-500">Email</span><input type="email" value="rafi@learnjapan.com" class="rounded-2xl border border-transparent bg-gray-50 px-4 py-3 text-sm font-bold outline-none transition focus:border-brand-accent dark:bg-[#111] dark:text-white" /></label>
+                  <label class="grid gap-2"><span class="ml-1 text-[10px] font-black uppercase tracking-widest text-gray-500">Phone</span><input type="tel" value="+880 1700 000000" class="rounded-2xl border border-transparent bg-gray-50 px-4 py-3 text-sm font-bold outline-none transition focus:border-brand-accent dark:bg-[#111] dark:text-white" /></label>
+                  <div class="grid gap-3 rounded-2xl bg-gray-50 p-4 dark:bg-[#111]">
+                    <p class="text-[10px] font-black uppercase tracking-widest text-gray-500">Notification Preferences</p>
+                    <label class="flex items-center justify-between gap-4"><span class="text-sm font-bold">Class reminders</span><input type="checkbox" checked class="h-5 w-5 accent-brand-accent" /></label>
+                    <label class="flex items-center justify-between gap-4"><span class="text-sm font-bold">Assignment deadlines</span><input type="checkbox" checked class="h-5 w-5 accent-brand-accent" /></label>
+                  </div>
+                  <button type="button" class="rounded-2xl bg-brand-accent px-6 py-4 text-sm font-black uppercase tracking-widest text-black shadow-lg">Save Changes</button>
+                </form>
+              </section>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <a href="ai-chat-window.html" class="fixed bottom-6 right-6 z-40 grid h-14 w-14 place-items-center rounded-2xl bg-brand-accent text-black shadow-xl transition hover:scale-105" aria-label="Open Sensei AI"><i class="fa-solid fa-wand-magic-sparkles text-xl"></i></a>
+    <div data-sidebar-overlay class="fixed inset-0 z-40 hidden bg-black/60 backdrop-blur-md lg:hidden"></div>
+  </body>
+</html>
