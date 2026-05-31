@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Performance | Speak Easy Japanese</title>
+    <title>Chapter 02: Everyday Greetings | Speak Easy Japanese</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -13,89 +13,78 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script defer src="../../../static/js/app.js"></script>
     <script defer src="../../../static/js/dashboard/dashboard.js"></script>
+    <script defer src="../../../static/js/dashboard/recordings.js"></script>
   </head>
   <body class="light min-h-screen bg-[#f5f7fa] font-inter text-[#0d0d0d] transition-colors duration-200 dark:bg-[#090909] dark:text-white">
-    <!-- ================================================================
-         DASHBOARD LAYOUT SHELL
-         ================================================================ -->
+    <!-- DASHBOARD LAYOUT SHELL -->
     <div class="flex min-h-screen">
       <!-- COMPONENT: Left Sidebar Navigation -->
       <aside data-dashboard-sidebar class="fixed inset-y-0 left-0 z-50 flex w-[min(100vw-16rem,18rem)] -translate-x-full sm:w-72 flex-col border-r border-gray-200 bg-white transition-transform duration-300 dark:border-[#1a1a1a] dark:bg-black lg:static lg:translate-x-0">
         <div class="flex h-full flex-col p-4 sm:p-6">
-          <!-- Sidebar: Brand Logo -->
-          <div class="mb-8 flex items-center justify-between"><a href="overview.html" class="flex min-w-0 items-center gap-2 sm:gap-3">
-              <img src="../../../static/assets/common/logo.svg" alt="Speak Easy Japanese logo" class="h-9 w-auto shrink-0 sm:h-10" />
-              <div class="min-w-0">
-                <span class="block truncate text-xs font-semibold leading-tight sm:text-sm">Speak Easy</span>
-                <span class="block truncate text-xs font-semibold leading-tight text-brand-accent sm:text-sm">Japanese</span>
-              </div>
-            </a><button type="button" data-sidebar-close class="grid h-10 w-10 place-items-center rounded-xl text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5 lg:hidden" aria-label="Close sidebar"><i class="fa-solid fa-xmark text-xl"></i></button></div>
-          <!-- Sidebar: Course / Batch Switcher -->
+          <div class="mb-8 flex items-center justify-between"><a href="overview.html" class="flex min-w-0 items-center gap-2 sm:gap-3"><img src="../../../static/assets/common/logo.svg" alt="Speak Easy Japanese logo" class="h-9 w-auto shrink-0 sm:h-10" /><div class="min-w-0"><span class="block truncate text-xs font-semibold leading-tight sm:text-sm">Speak Easy</span><span class="block truncate text-xs font-semibold leading-tight text-brand-accent sm:text-sm">Japanese</span></div></a><button type="button" data-sidebar-close class="grid h-10 w-10 place-items-center rounded-xl text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5 lg:hidden" aria-label="Close sidebar"><i class="fa-solid fa-xmark text-xl"></i></button></div>
           <div class="relative mb-8"><button type="button" data-course-toggle aria-expanded="false" class="flex w-full items-center justify-between gap-3 rounded-2xl border border-gray-100 bg-gray-50 px-4 py-3 text-left transition hover:border-brand-accent/50 dark:border-[#222] dark:bg-[#111]"><span class="min-w-0"><span class="mb-1 block text-[10px] font-black uppercase leading-none tracking-wider text-brand-accent">Switch Batch</span><span data-course-label class="block truncate text-sm font-bold">Japanese N5 Beginner Course</span></span><i class="fa-solid fa-chevron-down text-xs text-gray-500"></i></button><div data-course-menu class="absolute left-0 top-full z-50 mt-2 hidden w-full overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-2xl dark:border-[#333] dark:bg-[#1a1a1a]"><button data-course-option="n5" class="w-full border-l-4 border-brand-accent border-b border-gray-100 p-4 text-left dark:border-b-[#222]"><span class="block text-xs font-bold">Japanese N5 Beginner Course</span><span class="mt-1 block text-[10px] font-semibold text-gray-500">Tokyo 2026</span></button><button data-course-option="n4" class="w-full border-b border-gray-100 p-4 text-left hover:bg-gray-50 dark:border-b-[#222] dark:hover:bg-white/5"><span class="block text-xs font-bold">Japanese N4 Intermediate Course</span><span class="mt-1 block text-[10px] font-semibold text-gray-500">Osaka 2026</span></button></div></div>
-          <!-- Sidebar: Main Navigation Links -->
           <nav class="flex-1 space-y-1 overflow-y-auto pr-1">
             <a href="overview.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-table-columns w-5"></i><span>Overview</span></a>
             <a href="attendance.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-clock-rotate-left w-5"></i><span>Attendance</span></a>
             <a href="class-routine.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-calendar-days w-5"></i><span>Class Routine</span></a>
-            <a href="recordings.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-video w-5"></i><span>Recordings</span></a>
-            <a href="performance.html" class="flex items-center gap-4 rounded-xl bg-brand-accent px-4 py-3 text-sm font-bold text-black shadow-md"><i class="fa-solid fa-chart-line w-5"></i><span>Performance</span></a>
+            <a href="recordings.html" class="flex items-center gap-4 rounded-xl bg-brand-accent px-4 py-3 text-sm font-bold text-black shadow-md"><i class="fa-solid fa-video w-5"></i><span>Recordings</span></a>
+            <a href="performance.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-chart-line w-5"></i><span>Performance</span></a>
             <a href="leaderboard.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-trophy w-5"></i><span>Leaderboard</span></a>
           </nav>
-          <!-- Sidebar: Footer Links (Settings, Sign Out) -->
           <div class="space-y-1 border-t border-gray-100 pt-4 dark:border-[#1a1a1a]"><a href="settings.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-gray-500 transition hover:bg-gray-500/10"><i class="fa-solid fa-gear w-5"></i><span>Settings</span></a><a href="../signin.html" class="flex items-center gap-4 rounded-xl px-4 py-3 text-sm font-bold text-rose-500 transition hover:bg-rose-500/10"><i class="fa-solid fa-right-from-bracket w-5"></i><span>Sign Out</span></a></div>
         </div>
       </aside>
-
-      <!-- COMPONENT: Main Content Area -->
       <div class="flex min-w-0 flex-1 flex-col">
-        <!-- COMPONENT: Top Header Bar -->
         <header class="sticky top-0 z-40 flex items-center justify-between border-b border-gray-100 bg-white/80 px-4 py-4 backdrop-blur-md dark:border-[#1a1a1a] dark:bg-black/80 sm:px-6">
-          <!-- Header: Page Title & Mobile Menu Toggle -->
-          <div class="flex items-center gap-4"><button type="button" data-sidebar-open aria-expanded="false" class="grid h-10 w-10 place-items-center rounded-xl text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5 lg:hidden" aria-label="Open sidebar"><i class="fa-solid fa-bars text-xl"></i></button><div class="min-w-0 flex-1 sm:flex-none"><h1 class="truncate text-sm font-black uppercase tracking-tight sm:text-xl">Performance</h1><p data-portal-label class="truncate text-[10px] font-black uppercase tracking-[0.22em] text-gray-500">Tokyo 2026 Student Portal</p></div></div>
-          <!-- Header: Action Buttons (Theme, Language, Notifications, Profile) -->
+          <div class="flex items-center gap-4"><button type="button" data-sidebar-open aria-expanded="false" class="grid h-10 w-10 place-items-center rounded-xl text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5 lg:hidden" aria-label="Open sidebar"><i class="fa-solid fa-bars text-xl"></i></button><div class="min-w-0 flex-1 sm:flex-none"><h1 class="truncate text-sm font-black uppercase tracking-tight sm:text-xl">Recordings</h1><p data-portal-label class="truncate text-[10px] font-black uppercase tracking-[0.22em] text-gray-500">Tokyo 2026 Student Portal</p></div></div>
           <div class="flex shrink-0 items-center gap-1.5 sm:gap-3"><button type="button" data-theme-toggle class="grid h-10 w-10 place-items-center rounded-xl border border-gray-200 bg-gray-100 text-gray-600 transition hover:border-brand-accent/60 dark:border-[#222] dark:bg-[#111] dark:text-brand-accent" aria-label="Switch theme"><i class="fa-solid fa-moon" data-theme-dark-icon></i><i class="fa-solid fa-sun" data-theme-light-icon hidden></i></button><div class="hidden rounded-xl border border-gray-200 bg-gray-100 p-1 dark:border-[#222] dark:bg-[#111] min-[420px]:flex"><button type="button" data-lang-toggle="en" class="rounded-lg bg-brand-accent px-3 py-1 text-[10px] font-black text-black shadow-sm" aria-pressed="true">EN</button><button type="button" data-lang-toggle="bn" class="rounded-lg px-3 py-1 text-[10px] font-black text-gray-500" aria-pressed="false">BN</button></div><button type="button" data-notification-open aria-expanded="false" class="relative grid h-10 w-10 place-items-center rounded-xl border border-gray-200 bg-gray-100 text-gray-600 transition hover:border-brand-accent/60 dark:border-[#222] dark:bg-[#111] dark:text-brand-accent" aria-label="Open notifications"><i class="fa-solid fa-bell"></i><span data-notification-dot class="absolute right-2 top-2 h-2.5 w-2.5 rounded-full border-2 border-white bg-rose-500 dark:border-black"></span></button><button type="button" data-profile-link class="grid h-10 w-10 place-items-center rounded-xl border border-gray-200 bg-gray-100 text-gray-400 transition hover:border-brand-accent/60 dark:border-[#222] dark:bg-[#111]" aria-label="Open profile settings"><i class="fa-solid fa-user"></i></button></div>
         </header>
-
-        <!-- PAGE CONTENT: Performance -->
+        <!-- PAGE CONTENT: Chapter Details -->
         <main class="mx-auto w-full max-w-6xl p-4 sm:p-6">
           <section class="space-y-6">
-            <div><h2 class="text-3xl font-black">Performance</h2><p class="mt-2 font-semibold text-gray-500">Quiz, mock test, and practice progress at a glance.</p></div>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-3">
-              <article class="rounded-3xl border border-gray-100 bg-white p-6 text-center shadow-sm dark:border-[#2a2a2a] dark:bg-[#1a1a1a]">
-                <span class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-blue-500/10 text-blue-500"><i class="fa-solid fa-clipboard-check text-2xl"></i></span>
-                <p class="mt-5 text-[10px] font-black uppercase tracking-widest text-gray-500">Quiz Score</p>
-                <p class="mt-1 text-3xl font-black">80%</p>
-                <div class="mt-5 h-2 overflow-hidden rounded-full bg-gray-100 dark:bg-[#2a2a2a]"><div class="h-full w-4/5 rounded-full bg-blue-500"></div></div>
-              </article>
-              <article class="rounded-3xl border border-gray-100 bg-white p-6 text-center shadow-sm dark:border-[#2a2a2a] dark:bg-[#1a1a1a]">
-                <span class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-amber-500/10 text-amber-500"><i class="fa-solid fa-trophy text-2xl"></i></span>
-                <p class="mt-5 text-[10px] font-black uppercase tracking-widest text-gray-500">Mock Test</p>
-                <p class="mt-1 text-3xl font-black">65%</p>
-                <div class="mt-5 h-2 overflow-hidden rounded-full bg-gray-100 dark:bg-[#2a2a2a]"><div class="h-full w-[65%] rounded-full bg-amber-500"></div></div>
-              </article>
-              <article class="rounded-3xl border border-gray-100 bg-white p-6 text-center shadow-sm dark:border-[#2a2a2a] dark:bg-[#1a1a1a]">
-                <span class="mx-auto grid h-14 w-14 place-items-center rounded-2xl bg-emerald-500/10 text-emerald-500"><i class="fa-solid fa-circle-check text-2xl"></i></span>
-                <p class="mt-5 text-[10px] font-black uppercase tracking-widest text-gray-500">Practice Completion</p>
-                <p class="mt-1 text-3xl font-black">70%</p>
-                <div class="mt-5 h-2 overflow-hidden rounded-full bg-gray-100 dark:bg-[#2a2a2a]"><div class="h-full w-[70%] rounded-full bg-emerald-500"></div></div>
-              </article>
-            </div>
-
-            <div class="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-              <section class="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm dark:border-[#2a2a2a] dark:bg-[#1a1a1a]">
-                <div class="mb-6 flex items-center justify-between"><h3 class="text-lg font-black">Skill Breakdown</h3><span class="text-xs font-black text-brand-accent">N5 Level</span></div>
-                <div class="space-y-5">
-                  <div><div class="mb-2 flex justify-between text-xs font-black"><span>Vocabulary</span><span>84%</span></div><div class="h-2 rounded-full bg-gray-100 dark:bg-[#2a2a2a]"><div class="h-2 w-[84%] rounded-full bg-brand-accent"></div></div></div>
-                  <div><div class="mb-2 flex justify-between text-xs font-black"><span>Grammar</span><span>72%</span></div><div class="h-2 rounded-full bg-gray-100 dark:bg-[#2a2a2a]"><div class="h-2 w-[72%] rounded-full bg-brand-accent"></div></div></div>
-                  <div><div class="mb-2 flex justify-between text-xs font-black"><span>Listening</span><span>61%</span></div><div class="h-2 rounded-full bg-gray-100 dark:bg-[#2a2a2a]"><div class="h-2 w-[61%] rounded-full bg-brand-accent"></div></div></div>
+            <a href="recordings.html" class="inline-flex items-center gap-2 text-sm font-black text-brand-accent transition hover:opacity-80"><i class="fa-solid fa-chevron-left"></i> Back to Chapters</a>
+            <div class="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+              <div class="flex items-start gap-4">
+                <span class="grid h-14 w-14 flex-none place-items-center rounded-2xl bg-brand-accent/10 text-brand-accent"><i class="fa-solid fa-comments text-2xl"></i></span>
+                <div>
+                  <p class="text-[10px] font-black uppercase tracking-[0.2em] text-brand-accent">Chapter Details</p>
+                  <h2 class="mt-1 text-2xl font-black sm:text-3xl">Chapter 02: Everyday Greetings</h2>
+                  <p class="mt-2 font-semibold text-gray-500">Common phrases, classroom etiquette, and roleplay.</p>
                 </div>
-              </section>
-              <aside class="rounded-3xl border border-[#d4f5b5] bg-[#f4ffd4] p-6 dark:border-[#3a4411] dark:bg-[#1a1c10]">
-                <span class="grid h-12 w-12 place-items-center rounded-2xl bg-brand-accent text-black"><i class="fa-solid fa-bullseye"></i></span>
-                <h3 class="mt-5 text-xl font-black">Next Focus</h3>
-                <p class="mt-2 text-sm font-bold text-gray-600 dark:text-gray-300">Revise listening drills before the weekly vocabulary quiz.</p>
-                <a href="recordings.html" class="mt-6 inline-flex rounded-xl bg-brand-accent px-5 py-3 text-sm font-black text-black">Watch Recordings</a>
-              </aside>
+              </div>
+              <span class="inline-flex w-max rounded-2xl bg-brand-accent/10 px-4 py-2 text-xs font-black uppercase tracking-widest text-brand-accent">3 Lessons</span>
+            </div>
+            <div class="space-y-4">
+              <article class="flex flex-col gap-4 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm dark:border-[#2a2a2a] dark:bg-[#1a1a1a] md:flex-row md:items-center md:justify-between">
+                <div class="flex items-center gap-4">
+                  <span class="grid h-12 w-12 place-items-center rounded-xl bg-brand-accent/10 text-brand-accent"><i class="fa-solid fa-circle-play"></i></span>
+                  <div>
+                    <h3 class="font-black">Greetings & Self Introduction</h3>
+                    <p class="mt-1 text-[10px] font-black uppercase tracking-widest text-gray-500">Oct 18, 2023 • 48m</p>
+                  </div>
+                </div>
+                <div class="flex gap-2"><button type="button" data-worksheet-button data-has-worksheet="true" class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-[10px] font-black uppercase text-emerald-500"><i class="fa-solid fa-file-lines mr-1"></i> Worksheet</button><button type="button" data-watch-lesson class="rounded-xl bg-brand-accent px-5 py-2 text-[10px] font-black uppercase text-black transition active:scale-95">Watch</button></div>
+              </article>
+              <article class="flex flex-col gap-4 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm dark:border-[#2a2a2a] dark:bg-[#1a1a1a] md:flex-row md:items-center md:justify-between">
+                <div class="flex items-center gap-4">
+                  <span class="grid h-12 w-12 place-items-center rounded-xl bg-brand-accent/10 text-brand-accent"><i class="fa-solid fa-circle-play"></i></span>
+                  <div>
+                    <h3 class="font-black">Classroom Etiquette Roleplay</h3>
+                    <p class="mt-1 text-[10px] font-black uppercase tracking-widest text-gray-500">Oct 20, 2023 • 41m</p>
+                  </div>
+                </div>
+                <div class="flex gap-2"><button type="button" data-worksheet-button data-has-worksheet="true" class="rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-[10px] font-black uppercase text-emerald-500"><i class="fa-solid fa-file-lines mr-1"></i> Worksheet</button><button type="button" data-watch-lesson class="rounded-xl bg-brand-accent px-5 py-2 text-[10px] font-black uppercase text-black transition active:scale-95">Watch</button></div>
+              </article>
+              <article class="flex flex-col gap-4 rounded-2xl border border-gray-100 bg-white p-5 shadow-sm dark:border-[#2a2a2a] dark:bg-[#1a1a1a] md:flex-row md:items-center md:justify-between">
+                <div class="flex items-center gap-4">
+                  <span class="grid h-12 w-12 place-items-center rounded-xl bg-brand-accent/10 text-brand-accent"><i class="fa-solid fa-circle-play"></i></span>
+                  <div>
+                    <h3 class="font-black">Common Daily Phrases</h3>
+                    <p class="mt-1 text-[10px] font-black uppercase tracking-widest text-gray-500">Oct 22, 2023 • 39m</p>
+                  </div>
+                </div>
+                <div class="flex gap-2"><button type="button" data-worksheet-button data-has-worksheet="false" class="rounded-xl border border-transparent bg-gray-500/10 px-4 py-2 text-[10px] font-black uppercase text-gray-400"><i class="fa-solid fa-file-lines mr-1"></i> Worksheet</button><button type="button" data-watch-lesson class="rounded-xl bg-brand-accent px-5 py-2 text-[10px] font-black uppercase text-black transition active:scale-95">Watch</button></div>
+              </article>
             </div>
           </section>
         </main>
