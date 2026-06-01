@@ -454,8 +454,33 @@ body.light [data-site-header] .site-theme-toggle .font-bold {
 }
 
 [data-dashboard-layout] [data-dashboard-sidebar] {
+  width: min(20rem, calc(100vw - 1.25rem));
+  flex-shrink: 0;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  [data-dashboard-layout] [data-dashboard-sidebar] {
+    width: 20rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  [data-dashboard-layout] [data-dashboard-sidebar] {
+    width: 20rem;
+    min-width: 20rem;
+    max-width: 20rem;
+  }
+
+  [data-dashboard-layout] > .flex {
+    align-items: stretch;
+  }
+}
+
+[data-dashboard-header] {
+  min-width: 0;
+  max-width: 100%;
 }
 
 [data-dashboard-layout] .dashboard-table-wrap {

@@ -20,15 +20,15 @@
          ================================================================ -->
     <div class="flex min-h-screen w-full max-w-[100vw]">
       <!-- COMPONENT: Left Sidebar Navigation -->
-      <aside data-dashboard-sidebar class="fixed inset-y-0 left-0 z-50 flex w-[min(100vw-16rem,18rem)] -translate-x-full sm:w-72 flex-col border-r border-gray-200 bg-white transition-transform duration-300 dark:border-[#1a1a1a] dark:bg-black lg:static lg:translate-x-0">
+      <aside data-dashboard-sidebar class="fixed inset-y-0 left-0 z-50 flex -translate-x-full flex-col border-r border-gray-200 bg-white transition-transform duration-300 dark:border-[#1a1a1a] dark:bg-black lg:static lg:translate-x-0">
         <div class="flex h-full flex-col p-4 sm:p-6">
           <!-- Sidebar: Brand Logo -->
-          <div class="mb-8 flex items-center justify-between">
-            <a href="overview.html" class="flex min-w-0 items-center gap-2 sm:gap-3">
+          <div class="mb-6 flex items-center justify-between gap-3">
+            <a href="overview.html" class="flex min-w-0 flex-1 items-center gap-2 sm:gap-3">
               <img src="../../../static/assets/common/logo.svg" alt="Speak Easy Japanese logo" class="h-9 w-auto shrink-0 sm:h-10" />
               <div class="min-w-0">
-                <span class="block truncate text-xs font-semibold leading-tight sm:text-sm">Speak Easy</span>
-                <span class="block truncate text-xs font-semibold leading-tight text-brand-accent sm:text-sm">Japanese</span>
+                <span class="block text-xs font-semibold leading-tight sm:text-sm">Speak Easy</span>
+                <span class="block text-xs font-semibold leading-tight text-brand-accent sm:text-sm">Japanese</span>
               </div>
             </a>
             <button type="button" data-sidebar-close class="grid h-10 w-10 place-items-center rounded-xl text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5 lg:hidden" aria-label="Close sidebar"><i class="fa-solid fa-xmark text-xl"></i></button>
@@ -39,7 +39,7 @@
             <button type="button" data-course-toggle aria-expanded="false" class="flex w-full items-center justify-between gap-3 rounded-2xl border border-gray-100 bg-gray-50 px-4 py-3 text-left transition hover:border-brand-accent/50 dark:border-[#222] dark:bg-[#111]">
               <span class="min-w-0">
                 <span class="mb-1 block text-[10px] font-black uppercase leading-none tracking-wider text-brand-accent">Switch Batch</span>
-                <span data-course-label class="block truncate text-sm font-bold">Japanese N5 Beginner Course</span>
+                <span data-course-label class="block text-sm font-bold leading-snug">Japanese N5 Beginner Course</span>
               </span>
               <i class="fa-solid fa-chevron-down text-xs text-gray-500"></i>
             </button>
@@ -54,6 +54,14 @@
               </button>
             </div>
           </div>
+
+          <!-- Mobile: theme & language in sidebar; notifications & profile stay in navbar -->
+          <div data-dashboard-sidebar-tools class="mb-6 space-y-3 border-b border-gray-100 pb-6 dark:border-[#1a1a1a] lg:hidden">
+            <p class="text-[10px] font-black uppercase tracking-wider text-gray-500">Quick actions</p>
+            <button type="button" data-theme-toggle class="flex w-full items-center justify-center gap-2 rounded-xl border border-gray-200 bg-gray-50 px-3 py-3 text-sm font-bold text-gray-700 transition hover:border-brand-accent/50 dark:border-[#222] dark:bg-[#111] dark:text-white" aria-label="Switch theme"><i class="fa-solid fa-moon" data-theme-dark-icon></i><i class="fa-solid fa-sun" data-theme-light-icon hidden></i><span>Theme</span></button>
+            <div class="rounded-xl border border-gray-200 bg-gray-50 p-1 dark:border-[#222] dark:bg-[#111]"><div class="grid grid-cols-2 gap-1"><button type="button" data-lang-toggle="en" class="rounded-lg bg-brand-accent px-3 py-2 text-xs font-black text-black shadow-sm" aria-pressed="true">EN</button><button type="button" data-lang-toggle="bn" class="rounded-lg px-3 py-2 text-xs font-black text-gray-500" aria-pressed="false">BN</button></div></div>
+          </div>
+
 
           <!-- Sidebar: Main Navigation Links -->
           <nav class="flex-1 space-y-1 overflow-y-auto pr-1">
@@ -76,17 +84,25 @@
       <!-- COMPONENT: Main Content Area -->
       <div class="flex min-w-0 flex-1 flex-col" data-dashboard-main>
         <!-- COMPONENT: Top Header Bar -->
-        <header class="sticky top-0 z-40 flex items-center justify-between border-b border-gray-100 bg-white/80 px-4 py-4 backdrop-blur-md dark:border-[#1a1a1a] dark:bg-black/80 sm:px-6">
+        <header data-dashboard-header class="sticky top-0 z-40 flex min-w-0 items-center justify-between gap-3 border-b border-gray-100 bg-white/80 px-4 py-3 backdrop-blur-md dark:border-[#1a1a1a] dark:bg-black/80 sm:px-6 sm:py-4">
           <!-- Header: Page Title & Mobile Menu Toggle -->
-          <div class="flex items-center gap-4">
-            <button type="button" data-sidebar-open aria-expanded="false" class="grid h-10 w-10 place-items-center rounded-xl text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5 lg:hidden" aria-label="Open sidebar"><i class="fa-solid fa-bars text-xl"></i></button>
-            <div class="min-w-0 flex-1 sm:flex-none">
-              <h1 class="truncate text-sm font-black uppercase tracking-tight sm:text-xl">Konnichiwa, <span data-profile-name>Rafi</span>!</h1>
-              <p data-portal-label class="truncate text-[10px] font-black uppercase tracking-[0.22em] text-gray-500">Tokyo 2026 Student Portal</p>
+          <div class="flex min-w-0 flex-1 items-center gap-3">
+            <button type="button" data-sidebar-open aria-expanded="false" class="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-gray-500 hover:bg-gray-100 dark:hover:bg-white/5 lg:hidden" aria-label="Open sidebar"><i class="fa-solid fa-bars text-xl"></i></button>
+            <div class="min-w-0">
+              <h1 class="truncate text-base font-black uppercase tracking-tight sm:text-xl">Konnichiwa, <span data-profile-name>Rafi</span>!</h1>
+              <p data-portal-label class="hidden truncate text-[10px] font-black uppercase tracking-[0.22em] text-gray-500 sm:block">Tokyo 2026 Student Portal</p>
             </div>
           </div>
-          <!-- Header: Action Buttons (Theme, Language, Notifications, Profile) -->
-          <div class="flex shrink-0 items-center gap-1.5 sm:gap-3">
+          <!-- Header: Notifications & profile always visible on mobile -->
+          <div data-dashboard-header-mobile class="flex shrink-0 items-center gap-2 lg:hidden">
+            <button type="button" data-notification-open aria-expanded="false" class="relative grid h-10 w-10 place-items-center rounded-xl border border-gray-200 bg-gray-100 text-gray-600 transition hover:border-brand-accent/60 dark:border-[#222] dark:bg-[#111] dark:text-brand-accent" aria-label="Open notifications">
+              <i class="fa-solid fa-bell"></i>
+              <span data-notification-dot class="absolute right-2 top-2 h-2.5 w-2.5 rounded-full border-2 border-white bg-rose-500 dark:border-black"></span>
+            </button>
+            <button type="button" data-profile-link class="grid h-10 w-10 place-items-center rounded-xl border border-gray-200 bg-gray-100 text-gray-400 transition hover:border-brand-accent/60 dark:border-[#222] dark:bg-[#111]" aria-label="Open profile settings"><i class="fa-solid fa-user"></i></button>
+          </div>
+          <!-- Header: Full actions on desktop -->
+          <div data-dashboard-header-actions class="hidden shrink-0 items-center gap-2 lg:flex">
             <button type="button" data-theme-toggle class="grid h-10 w-10 place-items-center rounded-xl border border-gray-200 bg-gray-100 text-gray-600 transition hover:border-brand-accent/60 dark:border-[#222] dark:bg-[#111] dark:text-brand-accent" aria-label="Switch theme"><i class="fa-solid fa-moon" data-theme-dark-icon></i><i class="fa-solid fa-sun" data-theme-light-icon hidden></i></button>
             <div class="hidden rounded-xl border border-gray-200 bg-gray-100 p-1 dark:border-[#222] dark:bg-[#111] min-[420px]:flex">
               <button type="button" data-lang-toggle="en" class="rounded-lg bg-brand-accent px-3 py-1 text-[10px] font-black text-black shadow-sm" aria-pressed="true">EN</button>
