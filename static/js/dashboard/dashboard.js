@@ -16,9 +16,9 @@
 
   const notificationPanel = document.querySelector("[data-notification-panel]");
   const notificationOverlay = document.querySelector("[data-notification-overlay]");
-  const openNotificationBtn = document.querySelector("[data-notification-open]");
+  const openNotificationBtns = document.querySelectorAll("[data-notification-open]");
   const closeNotificationBtn = document.querySelector("[data-notification-close]");
-  const notificationDot = document.querySelector("[data-notification-dot]");
+  const notificationDots = document.querySelectorAll("[data-notification-dot]");
 
   const chatWindow = document.querySelector("[data-ai-chat-window]");
   const chatToggle = document.querySelector("[data-ai-chat-toggle]");
@@ -73,10 +73,12 @@
     notificationPanel.classList.toggle("translate-x-0", isOpen);
     notificationPanel.setAttribute("aria-hidden", String(!isOpen));
     notificationOverlay?.classList.toggle("hidden", !isOpen);
-    openNotificationBtn?.setAttribute("aria-expanded", String(isOpen));
+    openNotificationBtns.forEach((btn) => {
+      btn.setAttribute("aria-expanded", String(isOpen));
+    });
     document.body.classList.toggle("dashboard-notification-open", isOpen);
     if (isOpen) {
-      notificationDot?.classList.add("hidden");
+      notificationDots.forEach((dot) => dot.classList.add("hidden"));
       try {
         localStorage.setItem(notifReadKey, "true");
       } catch {
@@ -139,7 +141,7 @@
       if (storedLang === "en" || storedLang === "bn") applyLang(storedLang);
 
       const notifRead = localStorage.getItem(notifReadKey) === "true";
-      if (notifRead) notificationDot?.classList.add("hidden");
+      if (notifRead) notificationDots.forEach((dot) => dot.classList.add("hidden"));
 
       const storedProfile = localStorage.getItem(profileStorageKey);
       if (storedProfile) {
@@ -173,7 +175,12 @@
   closeSidebarBtn?.addEventListener("click", () => setSidebarOpen(false));
   sidebarOverlay?.addEventListener("click", () => setSidebarOpen(false));
 
-  openNotificationBtn?.addEventListener("click", () => setNotificationOpen(true));
+  openNotificationBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setSidebarOpen(false);
+      setNotificationOpen(true);
+    });
+  });
   closeNotificationBtn?.addEventListener("click", () => setNotificationOpen(false));
   notificationOverlay?.addEventListener("click", () => setNotificationOpen(false));
 
@@ -209,8 +216,11 @@
     });
   });
 
-  document.querySelector("[data-profile-link]")?.addEventListener("click", () => {
-    window.location.href = "settings.html";
+  document.querySelectorAll("[data-profile-link]").forEach((link) => {
+    link.addEventListener("click", () => {
+      setSidebarOpen(false);
+      window.location.href = "settings.html";
+    });
   });
 
   document.querySelector("[data-join-live]")?.addEventListener("click", () => {
