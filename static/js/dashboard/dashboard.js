@@ -74,7 +74,7 @@
     notificationPanel.setAttribute("aria-hidden", String(!isOpen));
     notificationOverlay?.classList.toggle("hidden", !isOpen);
     openNotificationBtn?.setAttribute("aria-expanded", String(isOpen));
-    document.body.classList.toggle("overflow-hidden", isOpen);
+    document.body.classList.toggle("dashboard-notification-open", isOpen);
     if (isOpen) {
       notificationDot?.classList.add("hidden");
       try {
@@ -359,7 +359,7 @@
   window.addEventListener("resize", () => {
     if (window.innerWidth >= 1024) setSidebarOpen(false);
     if (window.innerWidth >= 640 && notificationPanel?.classList.contains("translate-x-0")) {
-      document.body.classList.remove("overflow-hidden");
+      document.body.classList.remove("dashboard-notification-open");
     }
   });
 
