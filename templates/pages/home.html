@@ -23,7 +23,7 @@
   >
     <!-- Header Section -->
     <header
-      class="sticky top-0 z-40 border-b border-black/10 dark:border-white/10 bg-[#010500] text-white"
+      class="site-header sticky top-0 z-40 border-b border-black/10 bg-white text-[#0d0d0d] dark:border-white/10 dark:bg-[#010500] dark:text-white"
       data-site-header
     >
       <div
@@ -44,7 +44,7 @@
         </a>
 
         <div class="flex items-center gap-9">
-          <nav class="hidden items-center gap-5 text-sm text-white lg:flex">
+          <nav class="hidden items-center gap-5 text-sm lg:flex">
             <div class="group relative">
               <a
                 href="courses.html"
@@ -56,7 +56,7 @@
                 ></i>
               </a>
               <div
-                class="pointer-events-none absolute left-0 top-[calc(100%+14px)] z-50 grid min-w-[230px] translate-y-2 gap-1 rounded-xl border border-brand-accent/25 bg-[#050505]/95 p-2.5 opacity-0 shadow-[0_18px_45px_rgba(0,0,0,0.35)] transition duration-200 before:absolute before:-top-4 before:left-0 before:right-0 before:h-4 before:content-[''] group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100"
+                class="site-header-dropdown pointer-events-none absolute left-0 top-[calc(100%+14px)] z-50 grid min-w-[230px] translate-y-2 gap-1 rounded-xl border border-brand-accent/25 site-header-dropdown bg-[#050505]/95 p-2.5 opacity-0 shadow-[0_18px_45px_rgba(0,0,0,0.35)] transition duration-200 before:absolute before:-top-4 before:left-0 before:right-0 before:h-4 before:content-[''] group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100"
               >
                 <a
                   class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
@@ -140,10 +140,10 @@
       </div>
 
       <div
-        class="site-mobile-nav hidden border-t border-black/10 dark:border-white/10 bg-[#010500] px-4 py-5 lg:hidden"
+        class="site-mobile-nav hidden border-t border-black/10 bg-white px-4 py-5 dark:border-white/10 dark:bg-[#010500] lg:hidden"
         data-mobile-nav
       >
-        <nav class="grid gap-4 text-sm text-white">
+        <nav class="grid gap-4 text-sm">
           <details class="group rounded-[10px]">
             <summary
               class="flex cursor-pointer list-none items-center justify-between transition marker:content-none [&::-webkit-details-marker]:hidden group-open:text-brand-accent"
@@ -217,7 +217,7 @@
     </header>
 
     <main
-      class="overflow-x-hidden relative [background:radial-gradient(circle_at_82%_7%,rgba(93,214,44,0.2),transparent_16%),radial-gradient(circle_at_0%_45%,rgba(93,214,44,0.13),transparent_16%),#ffffff] dark:[background:#090909]"
+      class="relative min-w-0 [background:radial-gradient(circle_at_82%_7%,rgba(93,214,44,0.2),transparent_16%),radial-gradient(circle_at_0%_45%,rgba(93,214,44,0.13),transparent_16%),#ffffff] dark:[background:#090909]"
     >
       <div
         class="absolute left-[-465px] top-[20px] w-[1000px] h-[950px] z-0"
@@ -473,7 +473,7 @@
                 </div>
               </div>
               <button
-                class="mt-[38px] flex h-[59px] w-full mx-auto max-w-[459px] items-center justify-center gap-2.5 rounded-[10px] bg-black px-6 sm:px-[80px] lg:px-[130px] py-[15px] text-lg sm:text-xl lg:text-2xl font-semibold leading-[29px] text-brand-accent shadow-[inset_7px_8px_8px_rgba(184,184,184,0.25)]"
+                class="mt-[38px] flex h-[59px] w-full mx-auto max-w-[459px] items-center justify-center gap-2.5 rounded-[10px] bg-black px-6 sm:px-[80px] lg:px-[130px] py-[15px] text-lg sm:text-xl lg:text-2xl font-semibold leading-[29px] text-brand-accent shadow-[inset_7px_8px_8px_rgba(184,184,184,0.25)] transition hover:bg-[#1a1a1a] hover:text-white"
               >
                 Join Demo Class
               </button>
@@ -496,25 +496,20 @@
             <article
               class="w-full rounded-[15px] bg-[#e3e3e3] dark:bg-[#1b1b1b] text-[#0d0d0d] dark:text-white flex flex-col"
             >
-              <div class="relative w-full h-[200px]">
-                <img
-                  src="../../static/assets/home/n5_live.jpg"
-                  alt="N5 class preview day 3"
-                  class="h-full w-full rounded-t-[15px] object-cover"
-                />
-                <div
-                  class="absolute inset-0 rounded-t-[15px] bg-gray-500/55"
-                ></div>
-                <span
-                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                >
-                  <i
-                    class="fa-solid fa-play text-[97px] leading-none text-black [-webkit-text-stroke:2px_#A9A9A9]"
-                  ></i>
-                </span>
+              <div class="youtube-embed-card">
+                <div class="youtube-embed-card__frame">
+                  <iframe
+                    src="https://www.youtube.com/embed/_ojVS-KgDEg"
+                    title="N5 Day-3| Batch o7| Alen — JLPT N5 Grammar (Game Gengo)"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
               </div>
               <h3
-                class="px-5 py-4 text-center text-[28px] font-semibold leading-[34px]"
+                class="px-5 py-4 text-center text-xl sm:text-[28px] font-semibold leading-tight sm:leading-[34px]"
               >
                 N5 Day-3| Batch o7| Alen
               </h3>
@@ -522,25 +517,20 @@
             <article
               class="w-full rounded-[15px] bg-[#e3e3e3] dark:bg-[#1b1b1b] text-[#0d0d0d] dark:text-white flex flex-col"
             >
-              <div class="relative w-full h-[200px]">
-                <img
-                  src="../../static/assets/home/n5_live.jpg"
-                  alt="N5 class preview day 3"
-                  class="h-full w-full rounded-t-[15px] object-cover"
-                />
-                <div
-                  class="absolute inset-0 rounded-t-[15px] bg-gray-500/55"
-                ></div>
-                <span
-                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                >
-                  <i
-                    class="fa-solid fa-play text-[97px] leading-none text-black [-webkit-text-stroke:2px_#A9A9A9]"
-                  ></i>
-                </span>
+              <div class="youtube-embed-card">
+                <div class="youtube-embed-card__frame">
+                  <iframe
+                    src="https://www.youtube.com/embed/qc6IhVATnzc"
+                    title="N5 Day-4| Batch o7| Alen — JLPT N5 Listening (Mochi Real Japanese)"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
               </div>
               <h3
-                class="px-5 py-4 text-center text-[28px] font-semibold leading-[34px]"
+                class="px-5 py-4 text-center text-xl sm:text-[28px] font-semibold leading-tight sm:leading-[34px]"
               >
                 N5 Day-4| Batch o7| Alen
               </h3>
@@ -548,25 +538,20 @@
             <article
               class="w-full rounded-[15px] bg-[#e3e3e3] dark:bg-[#1b1b1b] text-[#0d0d0d] dark:text-white flex flex-col"
             >
-              <div class="relative w-full h-[200px]">
-                <img
-                  src="../../static/assets/home/n5_live.jpg"
-                  alt="N5 class preview day 3"
-                  class="h-full w-full rounded-t-[15px] object-cover"
-                />
-                <div
-                  class="absolute inset-0 rounded-t-[15px] bg-gray-500/55"
-                ></div>
-                <span
-                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                >
-                  <i
-                    class="fa-solid fa-play text-[97px] leading-none text-black [-webkit-text-stroke:2px_#A9A9A9]"
-                  ></i>
-                </span>
+              <div class="youtube-embed-card">
+                <div class="youtube-embed-card__frame">
+                  <iframe
+                    src="https://www.youtube.com/embed/xnEfPMDX9Iw"
+                    title="N5 Day-5| Batch o7| Alen — Beginner Conversation N5/N4 (Simple Japanese)"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
               </div>
               <h3
-                class="px-5 py-4 text-center text-[28px] font-semibold leading-[34px]"
+                class="px-5 py-4 text-center text-xl sm:text-[28px] font-semibold leading-tight sm:leading-[34px]"
               >
                 N5 Day-5| Batch o7| Alen
               </h3>

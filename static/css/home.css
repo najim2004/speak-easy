@@ -17,3 +17,12 @@
     transform: translateX(-50%);
   }
 }
+
+.hero-practice-button:hover {
+  background-color: #e8ffe0;
+  color: #135601;
+}
+
+.dark .hero-practice-button:hover {
+  filter: brightness(1.08);
+}

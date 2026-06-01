@@ -22,7 +22,7 @@
   >
     <!-- Header Section -->
     <header
-      class="sticky top-0 z-40 border-b border-black/10 dark:border-white/10 bg-[#010500] text-white"
+      class="site-header sticky top-0 z-40 border-b border-black/10 bg-white text-[#0d0d0d] dark:border-white/10 dark:bg-[#010500] dark:text-white"
       data-site-header
     >
       <div
@@ -43,7 +43,7 @@
         </a>
 
         <div class="flex items-center gap-9">
-          <nav class="hidden items-center gap-5 text-sm text-white lg:flex">
+          <nav class="hidden items-center gap-5 text-sm lg:flex">
             <div class="group relative">
               <a
                 href="#courses"
@@ -55,7 +55,7 @@
                 ></i>
               </a>
               <div
-                class="pointer-events-none absolute left-0 top-[calc(100%+14px)] z-50 grid min-w-[230px] translate-y-2 gap-1 rounded-xl border border-brand-accent/25 bg-[#050505]/95 p-2.5 opacity-0 shadow-[0_18px_45px_rgba(0,0,0,0.35)] transition duration-200 before:absolute before:-top-4 before:left-0 before:right-0 before:h-4 before:content-[''] group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100"
+                class="pointer-events-none absolute left-0 top-[calc(100%+14px)] z-50 grid min-w-[230px] translate-y-2 gap-1 rounded-xl border border-brand-accent/25 site-header-dropdown bg-[#050505]/95 p-2.5 opacity-0 shadow-[0_18px_45px_rgba(0,0,0,0.35)] transition duration-200 before:absolute before:-top-4 before:left-0 before:right-0 before:h-4 before:content-[''] group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:opacity-100"
               >
                 <a
                   class="rounded-lg px-3 py-2.5 text-white transition hover:bg-brand-accent/15 hover:text-brand-accent focus-visible:bg-brand-accent/15 focus-visible:text-brand-accent focus-visible:outline-none"
@@ -139,10 +139,10 @@
       </div>
 
       <div
-        class="site-mobile-nav hidden border-t border-black/10 dark:border-white/10 bg-[#010500] px-4 py-5 lg:hidden"
+        class="site-mobile-nav hidden border-t border-black/10 bg-white px-4 py-5 dark:border-white/10 dark:bg-[#010500] lg:hidden"
         data-mobile-nav
       >
-        <nav class="grid gap-4 text-sm text-white">
+        <nav class="grid gap-4 text-sm">
           <details class="group rounded-[10px]">
             <summary
               class="flex cursor-pointer list-none items-center justify-between transition marker:content-none [&::-webkit-details-marker]:hidden group-open:text-brand-accent"
@@ -262,50 +262,53 @@
           id="course-filters"
           class="mx-auto mb-10 mt-10 grid w-full max-w-section grid-cols-1 gap-3 px-4 sm:grid-cols-2 sm:px-6 lg:mb-[77px] lg:mt-[77px] lg:flex lg:items-center lg:justify-between lg:gap-[26px] xl:px-0"
         >
-          <label class="relative block w-full lg:flex-grow">
+          <label class="site-select-wrap relative block w-full lg:flex-grow">
             <span class="sr-only">Course level</span>
             <select
-              class="h-12 w-full appearance-none rounded-[15px] bg-brand-accent px-4 pr-11 font-inter text-base font-medium leading-6 text-[#135601] outline-none sm:text-lg lg:h-[53px] lg:px-5 lg:text-[22px] lg:leading-[27px]"
+              class="site-select site-select--brand h-12 w-full rounded-[15px] px-4 pr-11 font-inter text-base font-medium leading-6 text-[#135601] outline-none sm:text-lg lg:h-[53px] lg:px-5 lg:text-[22px] lg:leading-[27px]"
             >
-              <option>All Levels</option>
-              <option>JLPT N5 Beginner</option>
-              <option>JLPT N4 Elementary</option>
-              <option>JLPT N3 Intermediate</option>
-              <option>JLPT N2 Advanced</option>
+              <option value="all">All Levels</option>
+              <option value="n5">JLPT N5 Beginner</option>
+              <option value="n4">JLPT N4 Elementary</option>
+              <option value="n3">JLPT N3 Intermediate</option>
+              <option value="n2">JLPT N2 Advanced</option>
             </select>
             <i
-              class="fa-solid fa-chevron-down pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm leading-none text-[#262626]"
+              class="fa-solid fa-chevron-down site-select-chevron pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm leading-none text-[#262626]"
+              aria-hidden="true"
             ></i>
           </label>
-          <label class="relative block w-full lg:flex-grow">
+          <label class="site-select-wrap relative block w-full lg:flex-grow">
             <span class="sr-only">Course type</span>
             <select
-              class="h-12 w-full appearance-none rounded-[15px] bg-brand-accent px-4 pr-11 font-inter text-base font-medium leading-6 text-[#135601] outline-none sm:text-lg lg:h-[53px] lg:px-5 lg:text-2xl lg:leading-[29px]"
+              class="site-select site-select--brand h-12 w-full rounded-[15px] px-4 pr-11 font-inter text-base font-medium leading-6 text-[#135601] outline-none sm:text-lg lg:h-[53px] lg:px-5 lg:text-2xl lg:leading-[29px]"
             >
-              <option>Play Games</option>
-              <option>Live Classes</option>
-              <option>Practice Lab</option>
-              <option>Quizzes</option>
+              <option value="games">Play Games</option>
+              <option value="live">Live Classes</option>
+              <option value="practice">Practice Lab</option>
+              <option value="quizzes">Quizzes</option>
             </select>
             <i
-              class="fa-solid fa-chevron-down pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm leading-none text-[#262626]"
+              class="fa-solid fa-chevron-down site-select-chevron pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm leading-none text-[#262626]"
+              aria-hidden="true"
             ></i>
           </label>
           <div
             class="flex w-full items-center gap-3 sm:col-span-2 lg:col-span-1 lg:flex-grow"
           >
-            <label class="relative block min-w-0 flex-1">
+            <label class="site-select-wrap relative block min-w-0 flex-1">
               <span class="sr-only">Sort courses</span>
               <select
-                class="h-12 w-full appearance-none rounded-[15px] bg-brand-accent px-4 pr-11 font-inter text-base font-medium leading-6 text-[#135601] shadow-[0_4px_4px_rgba(0,0,0,0.25)] outline-none sm:text-lg lg:h-[53px] lg:px-5 lg:text-2xl lg:leading-[29px]"
+                class="site-select site-select--brand h-12 w-full rounded-[15px] px-4 pr-11 font-inter text-base font-medium leading-6 text-[#135601] shadow-[0_4px_4px_rgba(0,0,0,0.25)] outline-none sm:text-lg lg:h-[53px] lg:px-5 lg:text-2xl lg:leading-[29px]"
               >
-                <option>Sort By: Most Popular</option>
-                <option>Sort By: Newest</option>
-                <option>Sort By: Beginner Friendly</option>
-                <option>Sort By: Duration</option>
+                <option value="popular">Sort By: Most Popular</option>
+                <option value="newest">Sort By: Newest</option>
+                <option value="beginner">Sort By: Beginner Friendly</option>
+                <option value="duration">Sort By: Duration</option>
               </select>
               <i
-                class="fa-solid fa-chevron-down pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm leading-none text-[#0E0E0E]"
+                class="fa-solid fa-chevron-down site-select-chevron pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-sm leading-none text-[#0E0E0E]"
+                aria-hidden="true"
               ></i>
             </label>
             <button
